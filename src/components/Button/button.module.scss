@@ -1,0 +1,144 @@
+@import '../breakpoints.scss';
+@import '../sizes.scss';
+@import '../colors.scss';
+@import '../font-face.scss';
+
+@mixin hover-gray() {
+	&:hover, &:focus, &:active,
+	&:visited:hover, &:visited:focus, &:visited:active {
+		color: $gray-900;
+	}
+}
+@mixin hover-purple() {
+	&:hover, &:focus, &:active,
+	&:visited:hover, &:visited:focus, &:visited:active {
+		border-color: $color-purple;
+		color: $color-purple !important;
+	}
+}
+@mixin hover-red() {
+	&:hover, &:focus, &:active,
+	&:visited:hover, &:visited:focus, &:visited:active {
+		border-color: $color-red;
+		color: $color-red !important;
+	}
+}
+@mixin visited-gray() {
+	&:visited {
+		color: $gray-900;
+	}
+}
+@mixin visited-white() {
+	&:visited {
+		color: $color-white !important;
+	}
+}
+
+.button {
+	box-shadow: 0 0 0 1px #000 inset;
+	font: {
+		size: 1rem;
+		weight: 700;
+	}
+	padding: $size-md $size-lg;
+	margin-bottom: $size-lg;
+	cursor: pointer;
+	text: {
+		decoration: none;
+		transform: uppercase;
+	}
+	border: 1px solid $color-yellow;
+
+	&:hover, &:focus {
+		border-color: $color-white;
+		background-color: $color-white;
+		color: $gray-900 !important;
+		transition: background .3s ease;
+	}
+	&:active {
+		box-shadow: 0px 0px 0px 2px #000 inset;
+	}
+	&__block {
+		display: block;
+		width: fit-content;
+		margin: 0 auto;
+	}
+
+	&__fill {
+		border: none;
+		color: $gray-900;
+
+		&__color {
+			&__red {
+				color: $color-white !important;
+				border-color: $color-red;
+				background-color: $color-red;
+
+				@include visited-white();
+				@include hover-red();
+			}
+			&__purple {
+				color: $color-white !important;
+				border-color: $color-purple;
+				background-color: $color-purple;
+
+				@include visited-white();
+				@include hover-purple();
+			}
+			&__yellow {
+				background-color: $color-yellow;
+				color: $gray-900 !important;
+				@include visited-gray();
+			}
+		}
+	}
+
+	&__color {
+		&__red {
+			border-color: $color-red;
+			color: $color-red;
+			@include hover-gray();
+
+			&:visited {
+				color: $color-red;
+				@include hover-gray();
+			}
+		}
+		&__purple {
+			border-color: $color-purple;
+			color: $color-purple;
+			@include hover-gray();
+
+			&:visited {
+				color: $color-purple;
+				@include hover-gray();
+			}
+		}
+		&__yellow {
+			border-color: $color-yellow;
+			color: $color-yellow;
+
+			@include hover-gray();
+
+			&:visited {
+				color: $color-yellow;
+				@include hover-gray();
+			}
+		}
+	}
+
+	&__disabled {
+		background: $gray-400;
+		border-color: transparent;
+		cursor: default;
+
+		&:hover, &:focus {
+			background: $gray-400;
+			color: $color-white !important;
+			border-color: transparent !important;
+		}
+		&:active {
+			box-shadow: 0 0 0 1px #000 inset;
+		}
+	}
+}
