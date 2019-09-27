@@ -18,6 +18,11 @@ const IndexPage = props => (
     >
       Early Bird tickets from €205
     </Button>
+
+    <p className="info">
+      Have questions, wish to sponsor us? Let us know:
+      <br /> <a href="mailto:team@jsconfbp.com">team@jsconfbp.com</a>
+    </p>
   </div>
 )
 
