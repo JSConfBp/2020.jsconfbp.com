@@ -22,9 +22,9 @@ const IndexPage = props => (
     </Button>
 
     <p className="info">
-      <a href="http://2015.jsconfbp.com/">2015</a> ∙
-      <a href="http://2016.jsconfbp.com/">2016</a> ∙
-      <a href="http://2017.jsconfbp.com/">2017</a> ∙
+      <a href="http://2015.jsconfbp.com/">2015</a> ∙{' '}
+      <a href="http://2016.jsconfbp.com/">2016</a> ∙{' '}
+      <a href="http://2017.jsconfbp.com/">2017</a> ∙{' '}
       <a href="https://2019.jsconfbp.com/">2019</a>
     </p>
 
