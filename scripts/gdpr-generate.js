@@ -19,8 +19,6 @@ const readFile = promisify(fs.readFile)
 
 
 const setup = async function () {
-
-
 	const privacyPolicy = await fetch(PRIVACY_POLICY_URL)
 		.then( r => r.json() )
 
