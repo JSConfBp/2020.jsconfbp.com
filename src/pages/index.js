@@ -6,7 +6,7 @@ import Button from '../components/Button'
 import css from './index.module.scss'
 
 const IndexPage = props => (
-  <Layout>
+  <Layout pathName="/">
     <div className={css.logo}></div>
 
     <h1 className={css.title}>JSConf Budapest 2020</h1>

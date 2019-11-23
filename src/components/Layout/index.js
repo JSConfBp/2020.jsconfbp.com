@@ -1,57 +1,41 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
+import Meta from '../Meta'
+
 import css from './layout.module.scss'
 
 import Footer from '../Footer/'
 
 //import Header from '../Header/'
 
-const MainLayout = props => (
-  <StaticQuery
-    query={graphql`
-      query LayoutQuery {
-        site {
-          siteMetadata {
-            title
-            keywords
-            description
-          }
-        }
-      }
-    `}
-    render={data => (
-      <div className={css.layout}>
-        <Helmet
-          title={data.site.siteMetadata.title}
-          meta={[
-            {
-              name: 'description',
-              content: data.site.siteMetadata.description,
-            },
-            { name: 'keywords', content: data.site.siteMetadata.keywords },
-          ]}
-        >
-          <html lang="en" />
-        </Helmet>
-        {/* <Header /> */}
-        <main className={[css.main, ...props.mainClassNames].join(' ')}>
-          {props.children}
-        </main>
-        <Footer />
-      </div>
-    )}
-  />
+const Layout = ({
+  title = '',
+  description = '',
+  pathName,
+  className,
+  children
+}) => (
+  <div className={css.layout}>
+    <Meta
+      title={title}
+      description={description}
+      pathName={pathName}
+    />
+    {/* <Header /> */}
+    <main className={[css.main, className].join(' ')}>
+      {children}
+    </main>
+    <Footer />
+  </div>
 )
 
-MainLayout.propTypes = {
+Layout.propTypes = {
   children: PropTypes.node.isRequired,
   mainClassNames: PropTypes.array,
 }
 
-MainLayout.defaultProps = {
+Layout.defaultProps = {
   mainClassNames: [],
 }
 
-export default MainLayout
+export default Layout
