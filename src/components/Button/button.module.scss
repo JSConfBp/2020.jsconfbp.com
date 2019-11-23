@@ -1,7 +1,7 @@
 @import '../breakpoints.scss';
 @import '../sizes.scss';
 @import '../colors.scss';
-@import '../font-face.scss';
+@import '../text.scss';
 
 @mixin hover-gray() {
 	&:hover, &:focus, &:active,
