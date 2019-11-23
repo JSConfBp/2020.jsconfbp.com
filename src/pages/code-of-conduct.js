@@ -1,10 +1,10 @@
 import React from 'react'
-import Layout from '../components/Layout/index'
+import Layout from '../components/Layout'
 //import styles from './simpletext.module.scss'
 
 const CodeOfConduct = () => (
   <Layout>
-      <h1>Code of Conduct</h1>
+      <h1>Code of Conduct of JSConf Budapest</h1>
       <p>
         All attendees, speakers, sponsors and volunteers at JSConf Budapest are
         required to agree with the following code of conduct. Organizers will
@@ -163,7 +163,7 @@ const CodeOfConduct = () => (
         , <a href="https://wealljs.org/code-of-conduct">WeAllJS</a>, and{' '}
         <a href="http://confcodeofconduct.com/">Conference Code of Conduct</a>.
       </p>
-    
+
   </Layout>
 )
 

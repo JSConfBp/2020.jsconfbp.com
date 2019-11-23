@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import css from './layout.module.scss'
 
-//import Footer from '../Footer/'
+import Footer from '../Footer/'
 
 //import Header from '../Header/'
 
@@ -22,7 +22,7 @@ const MainLayout = props => (
       }
     `}
     render={data => (
-      <div className={css.grid2}>
+      <div className={css.layout}>
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
@@ -39,9 +39,7 @@ const MainLayout = props => (
         <main className={[css.main, ...props.mainClassNames].join(' ')}>
           {props.children}
         </main>
-        {/* <footer className={styles.footer}>
-          <Footer />
-        </footer> */}
+        <Footer />
       </div>
     )}
   />

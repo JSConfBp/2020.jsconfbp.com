@@ -2,31 +2,27 @@
 @import '../components/reset.scss';
 @import '../components/colors.scss';
 @import '../components/fonts.scss';
-@import '../components/font-face.scss';
+@import '../components/text.scss';
 @import '../components/sizes.scss';
-
-.home {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
 
 .logo {
 	background-image: url("../images/logo.png");
 	background-size: 140%;
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: 22% 50%;
 	display: block;
 	width: 18rem;
 	height: 18rem;
 	margin-top: 4rem;
 }
 
+.title {
+  text-align: center;
+}
+
 .tickets {
 	margin-top: 2rem;
 }
-
 
 .info {
 	margin-top: 2rem;
