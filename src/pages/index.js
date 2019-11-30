@@ -34,7 +34,7 @@ const IndexPage = props => (
       color="purple"
       className={'tickets'}
     >
-      Early Bird tickets from €205
+      Buy tickets from €205
     </Button>
 
     <p className={'info'}>
