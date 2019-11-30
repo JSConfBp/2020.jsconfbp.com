@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import styles from './button.module.scss'
+import './button.scss'
 
 export default class Button extends React.Component {
   getButtonClass() {
@@ -12,24 +12,24 @@ export default class Button extends React.Component {
       className: propClasses = [],
     } = this.props
 
-    const className = [styles.button]
+    const className = ['button']
 
     if (block) {
-      className.push(styles.button__block)
+      className.push('button__block')
     }
 
     if (disabled) {
-      className.push(styles.button__disabled)
+      className.push('button__disabled')
     }
 
     if (fill) {
       if (color) {
-        className.push(styles[`button__fill__color__${color}`])
+        className.push(`button__fill__color__${color}`)
       } else {
-        className.push(styles.button__fill)
+        className.push('button__fill')
       }
     } else if (color) {
-      className.push(styles[`button__color__${color}`])
+      className.push(`button__color__${color}`)
     }
 
     return className.concat(propClasses).join(' ')
