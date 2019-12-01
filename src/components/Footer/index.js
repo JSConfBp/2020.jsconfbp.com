@@ -2,12 +2,12 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import css from './footer.module.scss'
+import  './footer.scss'
 
 export default () => (
-  <footer className={css.footer}>
+  <footer className={"footer"}>
     <nav>
-      <ul>
+      <ul className="unstyled">
         <li>
           <Link to={'/code-of-conduct'}>Code of Conduct</Link>
         </li>

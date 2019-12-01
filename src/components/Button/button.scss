@@ -12,8 +12,9 @@
 @mixin hover-purple() {
 	&:hover, &:focus, &:active,
 	&:visited:hover, &:visited:focus, &:visited:active {
-		border-color: $color-purple;
-		color: $color-purple !important;
+    border-color: $color-black;
+    background-color: $color-black;
+		color: $color-white !important;
 	}
 }
 @mixin hover-red() {
@@ -35,7 +36,6 @@
 }
 
 .button {
-	box-shadow: 0 0 0 1px #000 inset;
 	font: {
 		size: 1rem;
 		weight: 700;
@@ -47,7 +47,7 @@
 		decoration: none;
 		transform: uppercase;
 	}
-	border: 1px solid $color-yellow;
+	border: 2px solid $color-yellow;
 
 	&:hover, &:focus {
 		border-color: $color-white;
@@ -79,8 +79,8 @@
 			}
 			&__purple {
 				color: $color-white !important;
-				border-color: $color-purple;
-				background-color: $color-purple;
+				border-color: $color-rebeccapurple;
+				background-color: $color-rebeccapurple;
 
 				@include visited-white();
 				@include hover-purple();
@@ -105,13 +105,13 @@
 			}
 		}
 		&__purple {
-			border-color: $color-purple;
-			color: $color-purple;
+			border-color: $color-rebeccapurple;
+			color: $color-rebeccapurple;
 			@include hover-gray();
 
 			&:visited {
-				color: $color-purple;
-				@include hover-gray();
+				color: $color-rebeccapurple;
+				@include hover-purple();
 			}
 		}
 		&__yellow {
@@ -140,5 +140,9 @@
 		&:active {
 			box-shadow: 0 0 0 1px #000 inset;
 		}
-	}
+  }
+
+  & + p {
+    margin-top: 1rem;
+  }
 }
