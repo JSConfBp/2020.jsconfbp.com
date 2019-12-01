@@ -84,7 +84,7 @@ const CallForSpeakers = () => (
           let us know, but you may have to cover extra nights, though.
         </li>
         <li>
-          <strong>Entrance to the conference + CSSConf Budapest.</strong>
+          <strong>Entrance to the conference</strong>
           <br />
           We probably won’t be done with the speaker selections by the end of
           the ticket sales, so if you want to make sure you can attend, just
