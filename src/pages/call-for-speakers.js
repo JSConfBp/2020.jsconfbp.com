@@ -44,6 +44,7 @@ const CallForSpeakers = () => (
         </li>
         <li>Crazy Ideas &amp; Crazy Hacks.</li>
         <li>Developer Culture, improving JavaScript developers’ lives.</li>
+        <li>Security and Privacy on the Web</li>
         <li>Machine Learning & JS</li>
         <li>Mobile & JS</li>
         <li>Hardware & JS</li>
