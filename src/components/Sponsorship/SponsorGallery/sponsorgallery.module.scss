@@ -1,0 +1,24 @@
+@import '../../colors.scss';
+@import '../../fonts.scss';
+@import '../sponsoration_common.modules.scss';
+
+.gallery {
+  height: calc(calc(100vw / 5.63) * 2);
+
+  background-color: $color-black;
+  text-align: center;
+
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: stretch;
+
+  &_item {
+    --setHeight: calc(100vw / 5.63);
+    display: block;
+    height: var(--setHeight);
+    width: calc(var(--aspectRatio) * var(--setHeight));
+  }
+}

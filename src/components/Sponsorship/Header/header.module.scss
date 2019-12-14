@@ -1,0 +1,79 @@
+@import '../../colors.scss';
+@import '../../fonts.scss';
+@import '../sponsoration_common.modules.scss';
+
+
+.title {
+	font-size: 2rem;
+	text-align: center;
+	font-family: $heading-font;
+	padding-top: 8rem;
+	font-weight: bold;
+
+	@media screen and (max-width: 767px) {
+		padding-top: 10rem;
+	}
+}
+
+.sponsor_header {
+
+	@extend %block;
+	@extend %block_end;
+
+	@media screen and (max-width: 767px) {
+		padding-top: 0rem;
+	}
+}
+
+.jsconf {
+	display: block;
+	height: 16rem;
+	width: 16rem;
+	position: absolute;
+	top: 1rem;
+	left: 50%;
+	background-size: cover;
+
+	@media screen and (max-width: 767px) {
+		top: 3rem;
+	}
+}
+
+.jsconf {
+  transform: translateX(-50%);
+  margin-left: -31px;
+	background-image: url('../../../images/logo.png');
+}
+
+.nav {
+	margin: 3rem 0 0;
+	text-align: center;
+
+	&_list {
+		display: inline;
+	}
+
+	&_item {
+    &::before {
+      display: none;
+    }
+
+		display: inline-block;
+
+		@media screen and (max-width: 767px) {
+			display: block;
+			padding: .3rem 1rem;
+		}
+
+		padding: 0 1rem;
+		font-weight: 200;
+
+		a, a:visited {
+            color: $color-purple;
+
+            &:hover, &:active {
+                text-decoration: none;
+            }
+        }
+	}
+}

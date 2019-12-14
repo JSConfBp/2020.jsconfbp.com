@@ -1,0 +1,74 @@
+@import '../../colors.scss';
+@import '../../fonts.scss';
+@import '../sponsoration_common.modules.scss';
+
+.sponsor {
+  @extend %block;
+  @extend %block_end;
+
+  @media screen and (max-width: 767px) {
+      padding-bottom: 0rem;
+  }
+
+  background-color: $gray-200;
+  text-align: center;
+
+  h2 {
+    color: $color-blue;
+  }
+
+	&_subtitle {
+		text-align: center;
+		margin-bottom: 4rem;
+	}
+
+	&_list {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+//		margin-bottom: 4rem;
+
+    li::before {
+      display: none;
+    }
+
+		&_big {
+			flex-wrap: wrap;
+		}
+
+		&_medium {
+			flex-wrap: wrap;
+
+			li {
+        margin: 1rem 2rem;
+			}
+		}
+	}
+
+	&_list:last-of-type {
+		margin-bottom: 0rem;
+	}
+
+	&_big {
+		width: 400px;
+		margin: 2rem;
+	}
+
+	&_med {
+		width: 250px;
+	}
+
+	&_sm {
+		width: 180px;
+	}
+
+	&_scholarship {
+		width: 300px;
+	}
+
+	&_partner {
+		width: 120px;
+	}
+}
