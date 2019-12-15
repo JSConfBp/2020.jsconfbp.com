@@ -25,6 +25,14 @@ module.exports = {
         ignore: [ `**/\.*` ], // ignore files starting with a dot
       }
     },
+    {
+      resolve:`gatsby-source-filesystem`,
+      options:{
+        name:`team-pics`,
+        path: `${__dirname}/static/team`,
+        ignore: [ `**/\.*` ], // ignore files starting with a dot
+      }
+    },
     'gatsby-plugin-force-trailing-slashes',
     'gatsby-plugin-react-helmet',
 

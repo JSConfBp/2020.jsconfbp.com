@@ -4,7 +4,6 @@
 
 .past_summary {
     @extend %block;
-    @extend %block_end;
 
 
     @media screen and (max-width: 767px) {
@@ -84,22 +83,27 @@
     }
 
     .video {
-        width: 100%;
-        height: 0;
-        padding-bottom: 56%;
-        position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: calc(0.5625 * 100vw);
+      position: relative;
 
-        iframe {
-            position: absolute;
-            left: 0;
-            top: 0;
+      iframe {
+        width: 100vw;
+        transform: translateX(-50vw);
 
-            @media screen and (max-width: 767px) {
-                left: -2rem;
-                top: -2rem;
-                width: 100vw;
-                height: calc(0.5625 * 100vw);
-            }
+        height: calc(0.5625 * 100vw);
+
+        position: absolute;
+        left: 50%;
+        top: 0;
+
+        @media screen and (max-width: 767px) {
+          left: -2rem;
+          top: -2rem;
+          width: 100vw;
+          height: calc(0.5625 * 100vw);
         }
+      }
     }
 }

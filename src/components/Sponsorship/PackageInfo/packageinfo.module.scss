@@ -20,7 +20,7 @@
     .package_levels {
         font-size: 1rem;
         padding:  2rem 8rem;
-        margin-top: 4rem;
+
         background-color: $color-grey-1;
 
         p:first-child {
@@ -28,25 +28,15 @@
         }
     }
 
-    .scholarships {
-        background-color: $color-green;
-        color: $color-white;
-        padding: 0 4rem 4rem;
-        margin-top: 4rem;
 
-        @media screen and (max-width: 767px) {
-            padding: 0 1rem 3rem;
-            margin-top: 3rem;
+    .info_title {
+        &:not(:first-child) {
+          margin-top: 2rem;
         }
-    }
 
-    .info_title,
-    .info_title__scholarships {
-        @extend %block;
         font-family: $base-font;
         font-size: 2rem;
         font-weight: 200;
-        margin: 0;
     }
 
     .info_title__scholarships {

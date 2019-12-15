@@ -1,4 +1,5 @@
 import React from 'react'
+import classnames from 'classnames'
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 import Tooltip from '@material-ui/core/Tooltip'
 import InfoIcon from '@material-ui/icons/Info'
@@ -28,13 +29,6 @@ const perk_list = [
     info:
       'High quality coffee by Espresso Embassy Budapest, branded with your company',
     price: '€4,000',
-  },
-  {
-    name: 'party1',
-    label: 'CSS Closing Party',
-    info:
-      'Vast chance to present company during the event and form party face for serving your purposes. Attendees will have better experience with a sposorated party, filled with activities not just drinking and talking',
-    price: '€5,000',
   },
   {
     name: 'party2',
@@ -88,7 +82,7 @@ const perk_list = [
 ]
 
 const PerkList = () => (
-  <ul className={styles.perk_list}>
+  <ul className={classnames(styles.perk_list, 'unstyled')}>
     {perk_list.map(perk => (
       <li key={`perk_${perk.label}`}>
         <strong className={styles.perk_label}>
@@ -113,7 +107,7 @@ const Perks = () => (
       <div className={styles.perks}>
         <div className={styles.block_inner}>
           <a name="perks" />
-          <h2 className={styles.title}>A’la Carte Sponsorship</h2>
+          <h2 className={styles.title}>Perks</h2>
 
           <p>
             Exclusive perks, brand tailored to your Company, each sold once.{' '}

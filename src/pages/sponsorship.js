@@ -9,6 +9,9 @@ import NextYear from '../components/Sponsorship/NextYear'
 import PastSponsors from '../components/Sponsorship/PastSponsors'
 import SponsorGallery from '../components/Sponsorship/SponsorGallery'
 import Packages from '../components/Sponsorship/Packages'
+import PackageInfo from '../components/Sponsorship/PackageInfo'
+import Scholarships from '../components/Sponsorship/Scholarships'
+import Combinations from '../components/Sponsorship/Combinations'
 import Perks from '../components/Sponsorship/Perks'
 import Contact from '../components/Sponsorship/Contact'
 import Impressum from '../components/Sponsorship/Impressum'
@@ -28,11 +31,13 @@ const IndexPage = () => (
     <SponsorGallery />
     <NextYear />
     <Packages />
+    <Scholarships />
     <Perks />
+    <Combinations />
+    <PackageInfo />
     <Contact />
     <Impressum />
   </SponsorationLayout>
-  <GuideLines />
   </>
 )
 

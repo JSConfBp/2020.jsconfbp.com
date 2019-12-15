@@ -15,7 +15,7 @@
 
     .title {
         font-weight: normal;
-        margin-bottom: 4rem;
+        margin-bottom: 3rem;
 
         @media screen and (max-width: 767px) {
             margin-bottom: 3rem;
@@ -37,6 +37,9 @@
         }
 
         li {
+            &::before {
+              display: none;
+            }
 
             list-style-type: none;
             margin: 0;
