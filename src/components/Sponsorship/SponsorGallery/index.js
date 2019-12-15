@@ -62,9 +62,6 @@ export default () => {
     }
   `)
 
-
-
-
   return (<div className={css.gallery}>
     {
       [...images[0], ...images[1]].map((img, i) => {

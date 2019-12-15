@@ -28,18 +28,6 @@
         }
     }
 
-    .scholarships {
-        background-color: $color-green;
-        color: $color-white;
-        padding: 0 4rem 4rem;
-        margin-top: 4rem;
-
-        @media screen and (max-width: 767px) {
-            padding: 0 1rem 3rem;
-            margin-top: 3rem;
-        }
-    }
-
     .info_title {
         font-family: $base-font;
         font-size: 2rem;
@@ -67,17 +55,49 @@
         }
     }
 
-    @mixin package_name {
-        padding: .5rem 0;
-        font-family: $base-font;
-        font-weight: bold;
-        min-height: 2rem;
-        color: $color-black;
 
-        @media screen and (max-width: 767px) {
-            padding-top: 1.3rem;
-            min-height: auto;
-            margin-top: 3rem;
+    .example {
+      margin: 0 auto;
+      width: 36rem;
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: 18rem 18rem;
+
+      .input {
+        li {
+          display: grid;
+          grid-template-columns: 12rem 6rem;
+          text-align: right;
+          padding: .3rem 0;
+
+          span {
+            text-align: right;
+            padding-right: 1rem;
+          }
+
+          &:nth-child(2) {
+            border-bottom: 1px solid $color-grey-3;
+          }
+          &.package {
+            background-color: $color-grey-2;
+          }
+          &.total {
+            background-color: $color-grey-4;
+            font-weight: bold;
+          }
         }
+      }
+
+      .result {
+        margin: 0;
+        padding: 0 2rem;
+        background-color: $color-grey-4;
+        display: flex;
+        align-items: center;
+
+        p {
+          margin-bottom: 0;
+        }
+      }
     }
 }
