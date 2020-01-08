@@ -8,7 +8,22 @@ module.exports = {
     twitter: '@jsconfbp'
   },
   plugins: [
-    `gatsby-mdx`,
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "updates",
+        path: `${__dirname}/updates`
+      }
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: ['.mdx', '.md'],
+        gatsbyRemarkPlugins: [
+          'gatsby-remark-smartypants'
+        ],
+      },
+    },
 
     'gatsby-plugin-force-trailing-slashes',
     'gatsby-plugin-react-helmet',

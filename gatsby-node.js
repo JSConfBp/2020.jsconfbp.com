@@ -5,56 +5,67 @@
  */
 
 const path = require(`path`);
+const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage, createRedirect } = actions;
-/* 
-  createRedirect({
-    fromPath: `/sponsoration/`,
-    isPermanent: true,
-    redirectInBrowser: true,
-    toPath: `/sponsorship/`,
-  })
+  const { createPage } = actions;
 
-  return new Promise((resolve, reject) => {
-    resolve(
-      graphql(
-        `
-          {
-            allMdx {
-              edges {
-                node {
-                  id
-                  parent {
-                    ... on File {
-                      name
-                      sourceInstanceName
-                    }
-                  }
-                  code {
-                    scope
-                  }
-                }
+  return graphql(
+    `{
+      allMdx {
+        edges {
+          node {
+            id
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+            }
+            parent {
+              ... on File {
+                name
+                sourceInstanceName
               }
             }
           }
-        `
-      ).then(result => {
-        if (result.errors) {
-          console.log(result.errors);
-          reject(result.errors);
         }
-        // Create blog posts pages.
-        result.data.allMdx.edges.forEach(({ node }) => {
-          const { sourceInstanceName } = node.parent
+      }
+    }`
+  )
+  .then(result => {
+    if (result.errors) {
+      console.log(result.errors);
+      throw result.errors
+    }
 
-          createPage({
-            path: `/${sourceInstanceName}/${node.parent.name}`,
-            component: path.resolve(`./src/templates/${sourceInstanceName}-content.js`),
-            context: { id: node.id }
-          });
-        });
-      })
-    );
-  });*/
+    // Create blog posts pages.
+    result.data.allMdx.edges.forEach(({ node }) => {
+      const { sourceInstanceName } = node.parent
+      const slug = node.fields.slug
+
+      createPage({
+        path: `/${sourceInstanceName}${slug}`,
+        component: path.resolve(`./src/templates/${sourceInstanceName}.js`),
+        context: {
+          id: node.id,
+          slug
+        }
+      });
+    });
+  })
 };
+
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions
+
+  if (node.internal.type === `Mdx`) {
+    const value = createFilePath({ node, getNode })
+    createNodeField({
+      name: `slug`,
+      node,
+      value,
+    })
+
+  }
+}
