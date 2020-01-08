@@ -6,6 +6,8 @@ import { MDXProvider } from '@mdx-js/react'
 import Layout from '../components/Layout'
 import SocialMeta from '../components/SocialMeta/index'
 
+import './updates.scss'
+
 function UpdatesContentTemplate({ data: { mdx } }) {
 
 
