@@ -1,0 +1,35 @@
+@import '../../colors.scss';
+@import '../../fonts.scss';
+@import '../sponsoration_common.modules.scss';
+
+.scholarship {
+  @extend %block;
+  @extend %block_end;
+
+  @media screen and (max-width: 767px) {
+      padding-bottom: 0rem;
+  }
+
+  text-align: center;
+
+  h2 {
+    color: $color-blue;
+  }
+
+  background-color: $color-green;
+  color: $color-white;
+
+
+  @media screen and (max-width: 767px) {
+      padding: 0 1rem 3rem;
+      margin-top: 3rem;
+  }
+
+  & &_title {
+    font-family: $base-font;
+    font-size: 2rem;
+    font-weight: 200;
+    margin: 0 0 3rem;
+    color: $color-white;
+  }
+}

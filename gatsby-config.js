@@ -48,7 +48,30 @@ module.exports = {
         ],
       },
     },
-
+    {
+      resolve:`gatsby-source-filesystem`,
+      options:{
+        name:`sponsor-images`,
+        path: `${__dirname}/static/sponsors`,
+        ignore: [ `**/\.*` ], // ignore files starting with a dot
+      }
+    },
+    {
+      resolve:`gatsby-source-filesystem`,
+      options:{
+        name:`sponsor-gallery`,
+        path: `${__dirname}/static/past-sponsors`,
+        ignore: [ `**/\.*` ], // ignore files starting with a dot
+      }
+    },
+    {
+      resolve:`gatsby-source-filesystem`,
+      options:{
+        name:`team-pics`,
+        path: `${__dirname}/static/team`,
+        ignore: [ `**/\.*` ], // ignore files starting with a dot
+      }
+    },
     'gatsby-plugin-force-trailing-slashes',
     'gatsby-plugin-react-helmet',
 

@@ -5,3 +5,4 @@ src/gdpr/*.json
 tmp
 .vscode
 .DS_Store
+.env

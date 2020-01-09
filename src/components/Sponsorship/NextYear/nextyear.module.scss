@@ -1,0 +1,96 @@
+@import '../../colors.scss';
+@import '../../fonts.scss';
+@import '../sponsoration_common.modules.scss';
+
+.nextyear {
+    @extend %block;
+    @extend %block_end;
+
+    background: {
+      image: url('./akvarium2.jpg');
+      size: cover;
+      position: top center;
+    }
+
+    text-align: center;
+
+    h2, h3, h4, h5 {
+        color: $color-white;
+    }
+
+    h3 {
+        font-weight: normal;
+    }
+
+    .conferences {
+
+        @extend %block;
+        @extend %block_end;
+
+        display: flex;
+        justify-content: center;
+
+        color: $color-white;
+
+        ul {
+            font-weight: 200;
+            margin: 0;
+            padding: 0;
+
+            li {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        h5 {
+            font: {
+                weight: bold;
+                size: 1.5rem;
+            }
+        }
+
+        .jsconf {
+            display: grid;
+            text-align: left;
+            grid-template-columns: 20rem 20rem;
+            grid-gap: 12rem;
+
+
+            min-height: 10rem;
+
+            background: {
+                repeat: no-repeat;
+                size: 10rem 10rem;
+                position: center;
+                image: url('./jsconf.png');
+            }
+
+            @media screen and (max-width: 767px) {
+                background: {
+                    size: 8rem 8rem;
+                }
+                min-width: 8rem;
+                background-position: top left;
+                padding-right: 0rem;
+                padding-top: 11rem;
+            }
+
+            h5 {
+              text-align: right;
+              padding-left: 10rem;
+            }
+
+            li::before { display: none; }
+          }
+    }
+
+    .venue {
+        color: $color-white;
+
+        p {
+            font-weight: 200;
+        }
+    }
+}
