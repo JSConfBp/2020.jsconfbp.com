@@ -15,7 +15,6 @@ const NextYear = () => (
         </h3>
 
         <div className={styles.conferences}>
-
           <div className={styles.jsconf}>
             <h5>JSConf Budapest 2020</h5>
             <ul>
@@ -25,14 +24,12 @@ const NextYear = () => (
               <li>2 parties</li>
             </ul>
           </div>
-
         </div>
 
         <div className={styles.venue}>
           <h2>Venue</h2>
 
           <h5>TBD</h5>
-
         </div>
       </div>
     </div>

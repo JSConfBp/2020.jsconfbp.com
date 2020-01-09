@@ -5,8 +5,6 @@ export default () => (
   <>
     <div className={styles.packages}>
       <div className={styles.block_inner}>
-
-
         <h4 className={styles.info_title}>We can help with your presence</h4>
 
         <p className={styles.info_text}>

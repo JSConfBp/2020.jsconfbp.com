@@ -11,7 +11,6 @@ import './updates.scss'
 
 const shortcodes = { PostImage }
 
-
 function UpdatesContentTemplate({ data: { mdx } }) {
   return (
     <Layout>
@@ -20,7 +19,7 @@ function UpdatesContentTemplate({ data: { mdx } }) {
         description={mdx.frontmatter.lead}
         image={mdx.frontmatter.socialCard || 'social-card.png'}
       />
-      <MDXProvider components={ shortcodes }>
+      <MDXProvider components={shortcodes}>
         <MDXRenderer>{mdx.body}</MDXRenderer>
       </MDXProvider>
     </Layout>

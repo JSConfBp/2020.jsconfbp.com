@@ -9,7 +9,7 @@ const Header = () => (
         <span className={styles.jsconf} />
         JSConf Budapest 2020
         <br />
-         Sponsorship
+        Sponsorship
       </h1>
 
       <nav className={styles.nav}>

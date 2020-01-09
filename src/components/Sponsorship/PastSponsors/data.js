@@ -112,5 +112,5 @@ export default {
       link: 'https://jobs.zalando.com/tech/',
       image: 'zalando',
     },
-  ]
+  ],
 }

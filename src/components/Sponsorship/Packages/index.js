@@ -66,7 +66,7 @@ const packages = [
   },
 ]
 
-const Value = ({field, value}) => {
+const Value = ({ field, value }) => {
   const isString = typeof value === 'string'
   let data = 'no'
 
@@ -78,8 +78,16 @@ const Value = ({field, value}) => {
 
   const sqrm = field === 'booth' && value
 
-return <>{data}{sqrm && <>m<sup>2</sup></>}</>
-
+  return (
+    <>
+      {data}
+      {sqrm && (
+        <>
+          m<sup>2</sup>
+        </>
+      )}
+    </>
+  )
 }
 
 const Price = props => (
@@ -150,7 +158,6 @@ const Packages = () => (
         </h3>
 
         <PackageTable />
-
       </div>
     </div>
   </>

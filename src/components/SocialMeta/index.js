@@ -1,12 +1,12 @@
 import React from 'react'
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from 'gatsby'
 import Helmet from 'react-helmet'
 
 const SocialMeta = ({
   title,
   description,
   href,
-  image = 'jsconfbp_2020.jpg'
+  image = 'jsconfbp_2020.jpg',
 }) => {
   const query = graphql`
     query SiteSocialMetaQuery {
@@ -22,14 +22,18 @@ const SocialMeta = ({
   `
   const {
     site: {
-      siteMetadata: { title: siteTitle, twitter, siteUrl, description: siteDescription },
+      siteMetadata: {
+        title: siteTitle,
+        twitter,
+        siteUrl,
+        description: siteDescription,
+      },
     },
   } = useStaticQuery(query)
 
   return (
     <Helmet
       meta={[
-
         { name: 'og:type', content: 'website' },
         { name: 'og:title', content: title || siteTitle },
         { name: 'og:description', content: description || siteDescription },
@@ -41,10 +45,12 @@ const SocialMeta = ({
         { name: 'twitter:site', content: twitter },
         { name: 'twitter:creator', content: twitter },
         { name: 'twitter:title', content: title || siteTitle },
-        { name: 'twitter:description', content: description || siteDescription },
+        {
+          name: 'twitter:description',
+          content: description || siteDescription,
+        },
         { name: 'twitter:url', content: href || siteUrl },
         { name: 'twitter:image', content: `${siteUrl}/social/${image}` },
-
       ]}
     />
   )

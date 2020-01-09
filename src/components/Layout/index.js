@@ -14,18 +14,12 @@ const Layout = ({
   pathName,
   className,
   skipHeader = false,
-  children
+  children,
 }) => (
   <div className={'layout'}>
-    <Meta
-      title={title}
-      description={description}
-      pathName={pathName}
-    />
-    { !skipHeader && <Header /> }
-    <main className={['main', className].join(' ')}>
-      {children}
-    </main>
+    <Meta title={title} description={description} pathName={pathName} />
+    {!skipHeader && <Header />}
+    <main className={['main', className].join(' ')}>{children}</main>
     <Footer />
   </div>
 )

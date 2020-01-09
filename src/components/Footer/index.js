@@ -1,11 +1,10 @@
-
 import React from 'react'
 import { Link } from 'gatsby'
 
-import  './footer.scss'
+import './footer.scss'
 
 export default () => (
-  <footer className={"footer"}>
+  <footer className={'footer'}>
     <nav>
       <ul className="unstyled">
         <li>
@@ -18,4 +17,3 @@ export default () => (
     </nav>
   </footer>
 )
-

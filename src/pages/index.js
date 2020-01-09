@@ -7,10 +7,7 @@ import Button from '../components/Button'
 import './index.scss'
 
 const IndexPage = props => (
-  <Layout
-    skipHeader
-    pathName="/"
-  >
+  <Layout skipHeader pathName="/">
     <div className={'index-logo'}></div>
 
     <h1 className={'title'}>JSConf Budapest 2020</h1>
@@ -25,7 +22,6 @@ const IndexPage = props => (
     >
       Submit your talk!
     </Button>
-
 
     <Button
       href="https://ti.to/jsconf-bp/jsconf-budapest-2020"
@@ -48,8 +44,6 @@ const IndexPage = props => (
       Have questions, wish to sponsor us? Let us know:
       <br /> <a href="mailto:team@jsconfbp.com">team@jsconfbp.com</a>
     </p>
-
-
   </Layout>
 )
 

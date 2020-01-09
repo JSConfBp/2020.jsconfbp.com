@@ -34,23 +34,21 @@ export default ({ src, className = '', align = 'full', alt = '' }) => (
           const { relativePath } = node
           return relativePath.includes(src)
         })
-        .map(({ node }, i) => (<span className={classNames.join(' ')} key={`${src}-${i}`}>
-          { node.childImageSharp && (
-             <Img
-              className={css.image}
-              fluid={node.childImageSharp.fluid}
-              alt={alt}
-            />
-          )}
-          { !node.childImageSharp && (
-             <img
-              className={css.image}
-              src={node.publicURL}
-              alt={alt}
-             />
-          )}
-          <small className={css.description}>{alt}</small>
-        </span>))
+        .map(({ node }, i) => (
+          <span className={classNames.join(' ')} key={`${src}-${i}`}>
+            {node.childImageSharp && (
+              <Img
+                className={css.image}
+                fluid={node.childImageSharp.fluid}
+                alt={alt}
+              />
+            )}
+            {!node.childImageSharp && (
+              <img className={css.image} src={node.publicURL} alt={alt} />
+            )}
+            <small className={css.description}>{alt}</small>
+          </span>
+        ))
     }}
   />
 )
