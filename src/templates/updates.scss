@@ -3,10 +3,10 @@
 .expense_list {
   display: grid;
   grid-template-columns: 70% 30%;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   margin-bottom: 2rem;
-  margin-top: 2rem;
+
 
 
   dt,dd {
@@ -27,7 +27,7 @@
   dt {
     padding-right: 5%;
     box-sizing: border-box;
-    padding-left: 5%;
+
   }
   dd {
     text-align: right;

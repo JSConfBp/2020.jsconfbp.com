@@ -12,7 +12,31 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "updates",
-        path: `${__dirname}/updates`
+        path: `${__dirname}/updates`,
+        ignore: [
+          `**/*.jpg`,
+          `**/*.svg`,
+          `**/*.gif`,
+          `**/*.jpeg`,
+          `**/*.webp`,
+          `**/*.png`,
+          `**/*.js`,
+          `**/*.mp4`,
+          `**/*.m4v`
+        ],
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'postimages',
+        path: `${__dirname}/updates`,
+        ignore: [
+          `**/*.mdx`,
+          `**/*.js`,
+          `**/*.mp4`,
+          `**/*.m4v`
+        ],
       }
     },
     {

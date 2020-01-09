@@ -3,16 +3,16 @@ import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { MDXProvider } from '@mdx-js/react'
 
+import PostImage from '../components/PostImage'
 import Layout from '../components/Layout'
 import SocialMeta from '../components/SocialMeta/index'
 
 import './updates.scss'
 
+const shortcodes = { PostImage }
+
+
 function UpdatesContentTemplate({ data: { mdx } }) {
-
-
-  console.log(mdx);
-
   return (
     <Layout>
       <SocialMeta
@@ -20,9 +20,9 @@ function UpdatesContentTemplate({ data: { mdx } }) {
         description={mdx.frontmatter.lead}
         image={mdx.frontmatter.socialCard || 'social-card.png'}
       />
-
+      <MDXProvider components={ shortcodes }>
         <MDXRenderer>{mdx.body}</MDXRenderer>
-
+      </MDXProvider>
     </Layout>
   )
 }
