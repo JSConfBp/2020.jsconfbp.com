@@ -13,5 +13,17 @@
   max-width: 64rem;
   margin: 0 auto;
   padding: 0 2rem;
-  box-sizing: content-box;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 28rem) {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .main {
+    @media screen and (max-width: 28rem) {
+      width: 100%;
+    }
+  }
 }

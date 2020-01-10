@@ -19,6 +19,7 @@ function UpdatesContentTemplate({ data: { mdx } }) {
         description={mdx.frontmatter.lead}
         image={mdx.frontmatter.socialCard || 'social-card.png'}
       />
+      <h1>{ mdx.frontmatter.title }</h1>
       <MDXProvider components={shortcodes}>
         <MDXRenderer>{mdx.body}</MDXRenderer>
       </MDXProvider>

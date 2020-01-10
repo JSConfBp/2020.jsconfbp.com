@@ -2,13 +2,20 @@ import React from 'react'
 
 import { Link } from 'gatsby'
 
+import UpdatesList from '../components/UpdatesList'
+import Youtube from '../components/Youtube'
 import Layout from '../components/Layout'
 import Button from '../components/Button'
 import './index.scss'
 
 const IndexPage = props => (
   <Layout skipHeader pathName="/">
-    <div className={'index-logo'}></div>
+    {/* <div className={'index-logo'}></div> */}
+
+    <div className="impression_video">
+      <Youtube src="oWmPuKDiRV4" />
+    </div>
+
 
     <h1 className={'title'}>JSConf Budapest 2020</h1>
     <h2 className={'title'}>September 24-25</h2>
@@ -41,9 +48,13 @@ const IndexPage = props => (
     </p>
 
     <p className={'info'}>
-      Have questions, wish to sponsor us? Let us know:
+      Have questions, <Link to={'/sponsorship'}>wish to sponsor us</Link>? Let us know:
       <br /> <a href="mailto:team@jsconfbp.com">team@jsconfbp.com</a>
     </p>
+
+    <UpdatesList />
+
+
   </Layout>
 )
 

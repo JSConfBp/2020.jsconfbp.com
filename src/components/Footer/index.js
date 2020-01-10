@@ -13,6 +13,9 @@ export default () => (
         <li>
           <Link to={'/privacy-policy'}>Privacy Policy</Link>
         </li>
+        <li>
+          <Link to={'/sponsorship'}>Sponsorship</Link>
+        </li>
       </ul>
     </nav>
   </footer>
