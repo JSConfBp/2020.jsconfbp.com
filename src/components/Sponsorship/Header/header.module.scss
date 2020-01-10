@@ -10,8 +10,8 @@
 	padding-top: 8rem;
 	font-weight: bold;
 
-	@media screen and (max-width: 767px) {
-		padding-top: 10rem;
+	@media screen and (max-width: 48rem) {
+		padding-top: 14rem;
 	}
 }
 
@@ -20,7 +20,7 @@
 	@extend %block;
 	@extend %block_end;
 
-	@media screen and (max-width: 767px) {
+	@media screen and (max-width: 48rem) {
 		padding-top: 0rem;
 	}
 }
@@ -33,10 +33,6 @@
 	top: 1rem;
 	left: 50%;
 	background-size: cover;
-
-	@media screen and (max-width: 767px) {
-		top: 3rem;
-	}
 }
 
 .jsconf {
