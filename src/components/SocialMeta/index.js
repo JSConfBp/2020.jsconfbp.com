@@ -37,12 +37,12 @@ const SocialMeta = ({
         { name: 'og:type', content: 'website' },
         { name: 'og:title', content: title || siteTitle },
         { name: 'og:description', content: description || siteDescription },
-        { name: 'og:site_name', content: title },
+        { name: 'og:site_name', content: siteTitle },
         { name: 'og:url', content: href || siteUrl },
         { name: 'og:image', content: `${siteUrl}/social/${image}` },
 
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:site', content: twitter },
+        { name: 'twitter:site', content: siteTitle },
         { name: 'twitter:creator', content: twitter },
         { name: 'twitter:title', content: title || siteTitle },
         {
