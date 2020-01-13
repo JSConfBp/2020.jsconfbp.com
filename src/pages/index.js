@@ -52,7 +52,7 @@ const IndexPage = props => (
       <br /> <a href="mailto:team@jsconfbp.com">team@jsconfbp.com</a>
     </p>
 
-    <UpdatesList />
+    {/* <UpdatesList /> */}
 
 
   </Layout>
