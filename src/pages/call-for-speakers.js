@@ -40,12 +40,12 @@ const CallForSpeakers = () => (
         Cutting-edge technological advances in the world of JavaScript or
         computer science in general, if somehow applicable to JavaScript.
       </li>
-      <li>Crazy Ideas &amp; Crazy Hacks.</li>
+      <li>Wild Ideas &amp; Mind-bending Hacks</li>
       <li>Developer Culture, improving JavaScript developers’ lives.</li>
       <li>Security and Privacy on the Web</li>
       <li>Machine Learning & JS</li>
-      <li>Mobile & JS</li>
-      <li>Hardware & JS</li>
+      <li>Mobile &amp; JS</li>
+      <li>Hardware &amp; JS</li>
       <li>Modern re-visit of JavaScript Fundamentals</li>
       <li>
         And finally: Anything you want, that you feel passionate about and
@@ -181,7 +181,7 @@ const CallForSpeakers = () => (
     <p>
       We follow the{' '}
       <a href="https://blog.cssconf.eu/2015/08/15/a-talk-selection-process-explained/">
-        selection process laid out by our mentors at JSConf & CSSconf EU
+        selection process developed by our mentors at JSConf & CSSconf EU
       </a>{' '}
       and value:
     </p>
@@ -218,7 +218,7 @@ const CallForSpeakers = () => (
     </p>
 
     <p>
-      If you need practice giving talks, get in touch, we can hook you up with
+      If you need practice giving talks, get in touch, we can connect you with
       local groups.
       <br />
       Again, whatever else you might need, we’re here to help.
