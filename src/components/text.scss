@@ -54,7 +54,7 @@ ol + h3 {
 ul + p,
 ol + p {
   margin-top: 1rem;
-}
+}□
 
 h3, h4, h5 {
     font-family: $primary-font;
@@ -62,7 +62,7 @@ h3, h4, h5 {
 
 ul:not(.unstyled) li {
   position: relative;
-  margin-left: 1rem;
+  margin-left: 1.2rem;
 
   &:not(:last-child) {
     margin-bottom: .5rem;
@@ -72,7 +72,21 @@ ul:not(.unstyled) li {
     content: '■';
     color: $color-rebeccapurple;
     position: absolute;
-    left: -1rem;
+    left: -1.2rem;
+    top: -0.05rem;
+  }
+}
+
+ul:not(.unstyled) li ul {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+
+  li::before {
+    content: '□';
+    color: lighten($color-rebeccapurple, 20);
+    position: absolute;
+    left: -1.2rem;
     top: -0.05rem;
   }
 }
