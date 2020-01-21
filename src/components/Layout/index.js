@@ -17,8 +17,8 @@ const Layout = ({
   children,
 }) => (
   <div className={'layout'}>
-    <Meta title={title} description={description} pathName={pathName} />
     {!skipHeader && <Header />}
+    <Meta title={title} description={description} pathName={pathName} />
     <main className={['main', className].join(' ')}>{children}</main>
     <Footer />
   </div>
