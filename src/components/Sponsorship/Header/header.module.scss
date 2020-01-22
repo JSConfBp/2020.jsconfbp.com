@@ -4,7 +4,8 @@
 
 
 .title {
-	font-size: 2rem;
+  font-size: 2rem;
+  line-height: calc(2rem * 1.45);
 	text-align: center;
 	font-family: $heading-font;
 	padding-top: 8rem;
