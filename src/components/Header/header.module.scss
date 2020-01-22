@@ -49,6 +49,11 @@
     text-transform: lowercase;
 
     .logo {}
+
+    .logoSvg {
+      width: 20rem;
+      height: 20rem;
+    }
   }
   .city {
     display: block;

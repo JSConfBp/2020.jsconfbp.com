@@ -2,6 +2,8 @@ import React from 'react'
 import css from './header.module.scss'
 import { Link } from 'gatsby'
 
+import Logo from '../Logo'
+
 export default () => (
   <header className={ css.header }>
     <div className={ css.inner }>
@@ -9,6 +11,9 @@ export default () => (
 
         <h1 className={ css.mainTitle }>
           <span className={ css.jsconf }>
+
+            <Logo className={ css.logoSvg } />
+
             <span className={ css.logo }>JS</span>Conf
           </span>
           <span className={ css.city }>Budapest</span>
