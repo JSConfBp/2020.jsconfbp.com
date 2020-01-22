@@ -17,6 +17,11 @@
         color: $color-white;
     }
 
+    .title {
+      margin-bottom: 2rem;
+      line-height: 3rem;
+    }
+
     .big_summary {
         @extend %block;
         @extend %block_end;

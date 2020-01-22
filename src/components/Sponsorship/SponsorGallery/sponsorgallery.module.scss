@@ -3,8 +3,23 @@
 @import '../sponsoration_common.modules.scss';
 
 .gallery {
-  height: calc(calc(100vw / 5.63) * 2);
+  height: calc(calc(100vw / 5.72) * 2);
 
+  @media (min-width: 480px) {
+    height: calc(calc(100vw / 5.82) * 2);
+  }
+
+  @media (min-width: 768px) {
+    height: calc(calc(100vw / 5.75) * 2);
+  }
+
+  @media (min-width: 1024px) {
+    height: calc(calc(100vw / 5.72) * 2);
+  }
+
+  @media (min-width: 1368px) {
+    height: calc(calc(100vw / 5.692) * 2);
+  }
   background-color: $color-black;
   text-align: center;
 
@@ -16,7 +31,23 @@
   align-content: stretch;
 
   &_item {
-    --setHeight: calc(100vw / 5.63);
+
+    --setHeight: calc(100vw / 5.9);
+
+    @media (min-width: 480px) {
+      --setHeight: calc(100vw / 5.82);
+    }
+    @media (min-width: 768px) {
+      --setHeight: calc(100vw / 5.75);
+    }
+    @media (min-width: 1024px) {
+      --setHeight: calc(100vw / 5.72);
+    }
+    @media (min-width: 1368px) {
+      --setHeight: calc(100vw / 5.692);
+    }
+
+
     display: block;
     height: var(--setHeight);
     width: calc(var(--aspectRatio) * var(--setHeight));

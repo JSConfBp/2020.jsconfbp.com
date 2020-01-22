@@ -18,8 +18,13 @@
         color: $color-white;
     }
 
+    .title {
+      margin-bottom: 2rem;
+    }
+
     h3 {
         font-weight: normal;
+        line-height: 2rem;
     }
 
     .conferences {
@@ -56,8 +61,6 @@
             text-align: left;
             grid-template-columns: 20rem 20rem;
             grid-gap: 12rem;
-
-
             min-height: 10rem;
 
             background: {
@@ -70,7 +73,7 @@
             @media screen and (max-width: 48rem) {
                 background: {
                     size: 8rem 8rem;
-                    position: 11.5rem top;
+                    position: 15.5rem top;
                 }
 
                 grid-template-columns: none;
@@ -86,8 +89,8 @@
               padding-left: 10rem;
 
               @media screen and (max-width: 48rem) {
-                padding-right: 14rem;
-                padding-left: 3rem;
+                padding-right: 16rem;
+                padding-left: 8rem;
               }
             }
 
