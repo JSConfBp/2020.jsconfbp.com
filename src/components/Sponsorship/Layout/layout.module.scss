@@ -2,26 +2,9 @@
 @import '../../fonts.scss';
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html {
-    height: 100%;
-}
-
-body {
-    background: {
-        color: #fafafa;
-        image: none;
-    }
-    color: $main-color;
-    font: {
-        family: $base-font;
-        size: 18px;
-    }
-    height: 100%;
-    line-height: 1.5;
-}
 
 .inner {
     padding-top: 0;
