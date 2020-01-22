@@ -5,7 +5,6 @@ import Meta from '../Meta'
 import './layout.scss'
 
 import Footer from '../Footer/'
-
 import Header from '../Header/'
 
 const Layout = ({

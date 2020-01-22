@@ -110,13 +110,17 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Roboto`,
-            variants: [`300`,`400`,`700`],
+            family: `Titillium Web`,
+            variants: [`300`,`600`,`700`],
           },
           {
-            family: `Rubik`,
-            variants: [`300`,`400`,`700`]
+            family: `Source Sans Pro`,
+            variants: [`400`,`400i`,`700`]
           },
+          {
+            family: 'Noto Sans JP',
+            variants: ['700']
+          }
         ],
       },
     }

@@ -11,18 +11,21 @@
 	align-items: center;
   justify-content: center;
   //max-width: 64rem;
-  
+
   box-sizing: border-box;
 
   @media screen and (max-width: 28rem) {
     max-width: 100%;
     width: 100%;
-    padding: 0 1rem;
   }
 
   .main {
+    max-width: 64rem;
+    padding-top: 3rem;
+
     @media screen and (max-width: 28rem) {
       width: 100%;
+      padding: 0 1.5rem;
     }
   }
 }

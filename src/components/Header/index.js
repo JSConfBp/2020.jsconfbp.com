@@ -9,10 +9,10 @@ export default () => (
     <div className={ css.inner }>
       <div className={ css.title }>
 
+            <Logo className={ css.logoSvg } />
         <h1 className={ css.mainTitle }>
           <span className={ css.jsconf }>
 
-            <Logo className={ css.logoSvg } />
 
             <span className={ css.logo }>JS</span>Conf
           </span>
@@ -28,7 +28,14 @@ export default () => (
 
       </div>
       <nav className={ css.navigation }>
-
+        <ul className={ css.menu }>
+          <li><a href="">Tickets</a></li>
+          <li><a href="">Speakers</a></li>
+          <li><a href="">Sholarship</a></li>
+          <li><a href="">Updates</a></li>
+          <li><a href="">Venue</a></li>
+          <li><a href="">Workshops</a></li>
+        </ul>
       </nav>
 
     {/* <Link to="/">

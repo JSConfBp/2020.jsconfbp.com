@@ -22,9 +22,9 @@ p {
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: $primary-font;
+    font-family: $heading-font;
     color: $color-rebeccapurple;
-    font-weight: 400;
+    font-weight: 700;
     font-variant-ligatures: no-common-ligatures;
 }
 
@@ -65,7 +65,7 @@ ol + p {
 }□
 
 h3, h4, h5 {
-    font-family: $primary-font;
+    font-family: $heading-font
 }
 
 ul:not(.unstyled) li {
