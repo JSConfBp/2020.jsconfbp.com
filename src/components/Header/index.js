@@ -1,6 +1,6 @@
 import React from 'react'
 import css from './header.module.scss'
-import { Link } from 'gatsby'
+//import { Link } from 'gatsby'
 
 import Logo from '../Logo'
 
@@ -8,11 +8,12 @@ export default () => (
   <header className={ css.header }>
     <div className={ css.inner }>
       <div className={ css.title }>
-        <Logo className={ css.logoSvg } />
+        <Logo className={ css.logoSvg } polygonClassName={ css.polygons } />
 
         <h1 className={ css.mainTitle }>
           <span className={ css.jsconf }>
-            <span className={ css.logo }>JS</span>Conf
+            <span className={ css.logo }>JS</span>
+            <span className={ css.conf }>Conf</span>
           </span>
           <span className={ css.city }>Budapest</span>
         </h1>
@@ -43,10 +44,10 @@ export default () => (
     </div>
 
 
-    {/* <div className={ css.line1 }></div>
+    <div className={ css.line1 }></div>
     <div className={ css.line2 }></div>
     <div className={ css.line3 }></div>
     <div className={ css.line4 }></div>
-    <div className={ css.line5 }></div> */}
+    <div className={ css.line5 }></div>
   </header>
 )

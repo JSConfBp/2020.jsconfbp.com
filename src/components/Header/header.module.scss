@@ -1,10 +1,22 @@
 @import '../colors.scss';
 @import '../fonts.scss';
+@import '../sizes.scss';
+
+//$header-main-color: $color-salmon;
+$header-main-color: #ffffff;
+//$header-secondary-color: $color-lightpurple;
+$header-secondary-color: #777;
+//$header-nav-color: $color-lightsalmon;
+$header-nav-color: #bbbbbb;
+
+$main-header-fontSize: 6.7rem;
+$secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fontSize) / $ratio;
 
 .header {
   position: relative;
   width: 100%;
-  background: linear-gradient(124.24deg, #240D37 0%, #47103E 100%);
+  //background: linear-gradient(124.24deg, #240D37 0%, #47103E 100%);
+  background: black;
 
   min-height: 40rem;
   height: 80vh;
@@ -19,7 +31,6 @@
     height: 17.5rem;
     min-height: 0;
   }
-
 
   .inner {
     max-width: 64rem;
@@ -59,7 +70,8 @@
 
 
       position: absolute;
-      top: 12.3rem;
+      top: 61.8033%;
+      transform: translateY(-17.9rem);
       left: 61.8033%;
 
       .menu {
@@ -76,7 +88,7 @@
 
           a {
             padding-bottom: .48rem;
-            color: $color-lightsalmon;
+            color: $header-nav-color;
             text-decoration: none;
             display: inline-block;
             //border-bottom: 4px solid;
@@ -89,11 +101,15 @@
       position: absolute;
       width: 10.938rem;
       height: 10.938rem;
-      top: -5.94rem;
-      right: 15.1rem;
+      top: -6.3rem;
+      right: 14rem;
+
+      .polygons {
+        opacity: .4;
+      }
 
       polygon, path {
-        fill: $color-salmon;
+        fill: $header-main-color;
       }
 
       @media screen and (max-width: 28rem) {
@@ -114,8 +130,8 @@
 
   .jsconf {
     display: block;
-    color: $color-salmon;
-    font-size: 6.4rem;
+    color: $header-main-color;
+    font-size: $main-header-fontSize;
     display: block;
     height: 4.3rem;
     //text-transform: lowercase;
@@ -129,6 +145,11 @@
       position: absolute;
     }
 
+    .conf {
+      transform: scaleX(0.95) translateX(.9rem);
+      display: block;
+    }
+
     @media screen and (max-width: 28rem) {
       font-size: 2.4rem;
       height: auto;
@@ -140,9 +161,8 @@
     font-family: $heading-font;
     font-weight: 600;
     display: block;
-    color: $color-lightpurple;
-    font-size: 3.54rem;
-
+    color: $header-secondary-color;
+    font-size: ($ratio * $main-header-fontSize) - $main-header-fontSize;
 
     @media screen and (max-width: 28rem) {
       font-size: 1.4rem;
@@ -154,14 +174,14 @@
 
 .date {
   display: block;
-  border-top: 7px solid $color-lightpurple;
+  border-top: 7px solid $header-secondary-color;
   padding: {
     top: 2rem;
     left: 16rem;
   }
-  color: $color-salmon;
+  color: $header-main-color;
   font-family: $heading-font;
-  font-size: 2.5rem;
+  font-size: $secondary-header-fontSize;
   font-weight: 600;
   line-height: calc(2.5rem * 1.1);
 
@@ -175,8 +195,8 @@
 
   .year {
     display: block;
-    color: $color-lightpurple;
-    font-size: 1.625rem;
+    color: $header-secondary-color;
+    font-size: $secondary-header-fontSize / $ratio;
     font-weight: 300;
 
 

@@ -2,10 +2,10 @@ import React from 'react'
 import classnames from 'classnames'
 import css from './logo.module.scss'
 
-export default ({ className }) => (<div className={ classnames(css.wrap, className) }>
+export default ({ className, polygonClassName }) => (<div className={ classnames(css.wrap, className) }>
   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 	 viewBox="0 0 720 720" enableBackground="new 0 0 720 720" className={ css.svg }>
-    <g id="Yellow_square">
+    <g id="Yellow_square" className={ polygonClassName }>
       <path d="M577.1,577H142.8V142.7h434.3V577z M144.8,575h430.3V144.7H144.8V575z"/>
     </g>
     <g id="JS" transform="translate(0.000000,1052.000000) scale(0.100000,-0.100000)">
@@ -23,7 +23,7 @@ export default ({ className }) => (<div className={ classnames(css.wrap, classNa
         c74-147.6,202.1-259.2,356.3-310.4c162.9-54.1,372-49.2,525.3,12.4c183.9,74.4,291.8,228.2,320.3,456.7
         c2.5,23.1,4.1,281.5,4.1,767.6v732.8h-202.5h-202.1L3398.5,6391.5z"/>
     </g>
-    <g id="Triangles">
+    <g id="Triangles" className={ polygonClassName }>
       <g id="Blue_triangles">
         <g>
           <path d="M276,188h-91.4l45.7-45.7L276,188z M189.5,186h81.7l-40.9-40.8L189.5,186z"/>
