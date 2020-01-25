@@ -8,12 +8,10 @@ export default () => (
   <header className={ css.header }>
     <div className={ css.inner }>
       <div className={ css.title }>
+        <Logo className={ css.logoSvg } />
 
-            <Logo className={ css.logoSvg } />
         <h1 className={ css.mainTitle }>
           <span className={ css.jsconf }>
-
-
             <span className={ css.logo }>JS</span>Conf
           </span>
           <span className={ css.city }>Budapest</span>
@@ -43,5 +41,12 @@ export default () => (
     </Link>
  */}
     </div>
+
+
+    {/* <div className={ css.line1 }></div>
+    <div className={ css.line2 }></div>
+    <div className={ css.line3 }></div>
+    <div className={ css.line4 }></div>
+    <div className={ css.line5 }></div> */}
   </header>
 )

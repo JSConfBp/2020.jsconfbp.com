@@ -2,6 +2,7 @@
 @import '../fonts.scss';
 
 .header {
+  position: relative;
   width: 100%;
   background: linear-gradient(124.24deg, #240D37 0%, #47103E 100%);
 
@@ -22,7 +23,6 @@
 
   .inner {
     max-width: 64rem;
-    position: relative;
     padding-top: 12rem;
 
     @media screen and (max-width: 28rem) {
@@ -32,9 +32,10 @@
 
     .title {
       width: 32rem;
-      transform: translateX(-50%);
+      position: absolute;
+      transform: translate(-100%, -52.3%);
       text-align: right;
-
+      top: 61.8033%;
 
       @media screen and (max-width: 28rem) {
         width: 100%;
@@ -58,8 +59,8 @@
 
 
       position: absolute;
-      top: 10.7rem;
-      left: calc(50% + 7.25rem);
+      top: 12.3rem;
+      left: 61.8033%;
 
       .menu {
         li {
@@ -78,7 +79,7 @@
             color: $color-lightsalmon;
             text-decoration: none;
             display: inline-block;
-            border-bottom: 4px solid;
+            //border-bottom: 4px solid;
           }
         }
       }
@@ -184,4 +185,47 @@
     font-size: 1.25rem;
   }
   }
+}
+
+
+
+
+
+.line1,
+.line2,
+.line3,
+.line4,
+.line5 {
+  position: absolute;
+  background-color: cyan;
+  z-index: 100;
+}
+
+.line1 {
+  height: 1px;
+  width: 100vw;
+  top: 61.8033%;
+}
+
+.line2 {
+  height: 1px;
+  width: 100vw;
+  top: 38.1967%;
+}
+
+.line3 {
+  width: 1px;
+  height: 100vh;
+  left: 61.8033%;
+}
+.line4 {
+  width: 1px;
+  height: 100vh;
+  left: 38.1967%;
+}
+
+.line5 {
+  width: 1px;
+  height: 100vh;
+  left: 50%;
 }
