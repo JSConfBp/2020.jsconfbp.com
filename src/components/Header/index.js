@@ -1,11 +1,56 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import classnames from 'classnames';
 import css from './header.module.scss'
+import Triangles from './../Triangles'
 //import { Link } from 'gatsby'
 
 import Logo from '../Logo'
 
-export default () => (
-  <header className={ css.header }>
+
+const marquee = (source, current, marqueeDirection, setMarqueeDirection) => {
+  let direction = marqueeDirection
+  if (marqueeDirection < 0 && current.length === 0) {
+    direction = 1
+    setMarqueeDirection(1)
+  }
+
+  if (marqueeDirection > 0 && current.length == source.length) {
+    direction = -1
+    setMarqueeDirection(-1)
+  }
+
+  if (direction > 0) {
+    return current + source.charAt(current.length)
+  } else {
+    return current.slice(0,-1)
+  }
+
+}
+
+
+export default () => {
+
+  const [triangleText, setTriangleText] = useState('')
+  const [marqueeDirection, setMarqueeDirection] = useState(1)
+
+  const text = 'JSConf Budapest 2020, 24-25 September 2020 - Cfp is open until the end of February'
+
+  useEffect(() => {
+    let interval
+
+    const writer = () => {
+      const newtext = marquee(text, triangleText, marqueeDirection, setMarqueeDirection)
+      setTriangleText(newtext);
+    }
+
+    interval = setTimeout(writer, 500)
+
+    return () => {
+      clearTimeout(interval)
+    }
+  }, [triangleText])
+
+  return (<header className={ css.header }>
     <div className={ css.inner }>
       <div className={ css.title }>
         <Logo className={ css.logoSvg } polygonClassName={ css.polygons } />
@@ -43,11 +88,19 @@ export default () => (
  */}
     </div>
 
+    <Triangles
+      text={ triangleText }
+      width={ 800 }
+      height={ 800 }
+      className={ classnames(css.background, css.bottomRight) }
+      edgeSize={80}
+      start={ 'top right' }
+    />
 
     <div className={ css.line1 }></div>
     <div className={ css.line2 }></div>
     <div className={ css.line3 }></div>
     <div className={ css.line4 }></div>
     <div className={ css.line5 }></div>
-  </header>
-)
+  </header>)
+}
