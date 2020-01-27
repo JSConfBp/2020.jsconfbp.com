@@ -2,12 +2,12 @@
 @import '../fonts.scss';
 @import '../sizes.scss';
 
-//$header-main-color: $color-salmon;
-$header-main-color: #ffffff;
-//$header-secondary-color: $color-lightpurple;
-$header-secondary-color: #777;
-//$header-nav-color: $color-lightsalmon;
-$header-nav-color: #bbbbbb;
+$header-main-color: $color-salmon;
+//$header-main-color: #ffffff;
+$header-secondary-color: $color-lightpurple;
+//$header-secondary-color: #777;
+$header-nav-color: $color-lightsalmon;
+//$header-nav-color: #bbbbbb;
 
 $main-header-fontSize: 6.7rem;
 $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fontSize) / $ratio;
@@ -15,8 +15,9 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
 .header {
   position: relative;
   width: 100%;
-  //background: linear-gradient(124.24deg, #240D37 0%, #47103E 100%);
-  background: black;
+  overflow: hidden;
+  background: linear-gradient(124.24deg, #240D37 0%, #47103E 100%);
+  //background: black;
 
   min-height: 40rem;
   height: 80vh;
@@ -44,8 +45,7 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
     .title {
       width: 32rem;
       position: absolute;
-      transform: translate(-100%, -54.8%);
-      text-align: right;
+      transform: translate(-100%, -53%);
       top: 61.8033%;
 
       @media screen and (max-width: 28rem) {
@@ -55,6 +55,98 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
         flex-direction: row;
         justify-content: flex-end;
         flex-wrap: wrap;
+      }
+
+      .mainTitle {
+        padding-bottom: $secondary-header-fontSize;
+        margin-bottom: 0;
+
+        text-align: right;
+
+        @media screen and (max-width: 28rem) {
+          padding-bottom: 1rem;
+          width: 11.125rem;
+        }
+
+        .jsconf {
+          display: block;
+          height: 4.3rem;
+          margin-bottom: $secondary-header-fontSize;
+
+          color: $header-main-color;
+          font-size: $main-header-fontSize;
+          font-family: $logo-font;
+
+          .logo {
+            display: block;
+            overflow: hidden;
+            width: 0;
+            position: absolute;
+          }
+
+          .conf {
+            transform: scaleX(0.95) translateX(.9rem);
+            display: block;
+
+            line-height: .58;
+          }
+
+          @media screen and (max-width: 28rem) {
+            height: auto;
+            margin-bottom: 0;
+            font-size: 2.4rem;
+          }
+        }
+
+        .city {
+          display: block;
+
+          font-family: $heading-font;
+          font-weight: 600;
+          color: $header-secondary-color;
+          font-size: ($ratio * $main-header-fontSize) - $main-header-fontSize;
+
+          @media screen and (max-width: 28rem) {
+            height: auto;
+            font-size: 1.4rem;
+          }
+        }
+      }
+
+      .date {
+        text-align: right;
+        display: block;
+        border-top: 7px solid $header-secondary-color;
+        padding: {
+          top: $secondary-header-fontSize / $ratio;
+          left: 16rem;
+        }
+        color: $header-main-color;
+        font-family: $heading-font;
+        font-size: $secondary-header-fontSize;
+        font-weight: 600;
+        line-height: calc(2.5rem * 1.1);
+
+
+        @media screen and (max-width: 28rem) {
+          padding: 1rem 0 0 0;
+          font-size: 1.5rem;
+          line-height: calc(1.5rem * 1.1);
+          width: 11.125rem;
+        }
+
+        .year {
+          display: block;
+          color: $header-secondary-color;
+          font-size: $secondary-header-fontSize / $ratio;
+          font-weight: 300;
+          padding-top: .7rem;
+
+          @media screen and (max-width: 28rem) {
+            padding: 0;
+            font-size: 1.25rem;
+          }
+        }
       }
     }
 
@@ -83,16 +175,40 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
           margin: 0 0 2rem 0;
           padding: 0;
 
+
           &::before {
             display: none;
           }
 
           a {
+            position: relative;
             padding-bottom: .48rem;
             color: $header-nav-color;
             text-decoration: none;
             display: inline-block;
             //border-bottom: 4px solid;
+
+            &:hover {
+              color: $color-white;
+
+              &:after {
+                width: 100%;
+              }
+            }
+
+            &:after {
+              content: '';
+              display: block;
+              position: absolute;
+              width: 0%;
+              left: 0;
+              bottom: -4px;
+              height: 5px;
+              background: white;
+              transition: width .2s ease-in-out;
+            }
+
+
           }
         }
       }
@@ -121,111 +237,36 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
   }
 }
 
-.mainTitle {
-  padding-bottom: $secondary-header-fontSize;
-  margin-bottom: 0;
-
-  @media screen and (max-width: 28rem) {
-    padding-bottom: 1rem;
-    width: 11.125rem;
-  }
-
-  .jsconf {
-    display: block;
-    color: $header-main-color;
-    font-size: $main-header-fontSize;
-    display: block;
-    height: 4.3rem;
-    //text-transform: lowercase;
-    font-family: $logo-font;
-    margin-bottom: $secondary-header-fontSize;
-
-    .logo {
-      display: block;
-      overflow: hidden;
-      width: 0;
-      position: absolute;
-    }
-
-    .conf {
-      transform: scaleX(0.95) translateX(.9rem);
-      display: block;
-      line-height: .58;
-    }
-
-    @media screen and (max-width: 28rem) {
-      font-size: 2.4rem;
-      height: auto;
-      margin-bottom: 0;
-    }
-  }
-
-  .city {
-    font-family: $heading-font;
-    font-weight: 600;
-    display: block;
-    color: $header-secondary-color;
-    font-size: ($ratio * $main-header-fontSize) - $main-header-fontSize;
-
-    @media screen and (max-width: 28rem) {
-      font-size: 1.4rem;
-      height: auto;
-    }
-  }
-
-}
-
-.date {
-  display: block;
-  border-top: 7px solid $header-secondary-color;
-  padding: {
-    top: $secondary-header-fontSize / $ratio;
-    left: 16rem;
-  }
-  color: $header-main-color;
-  font-family: $heading-font;
-  font-size: $secondary-header-fontSize;
-  font-weight: 600;
-  line-height: calc(2.5rem * 1.1);
-
-
-  @media screen and (max-width: 28rem) {
-    padding: 1rem 0 0 0;
-    font-size: 1.5rem;
-    line-height: calc(1.5rem * 1.1);
-    width: 11.125rem;
-  }
-
-  .year {
-    display: block;
-    color: $header-secondary-color;
-    font-size: $secondary-header-fontSize / $ratio;
-    font-weight: 300;
-    padding-top: .7rem;
-
-  @media screen and (max-width: 28rem) {
-    padding: 0;
-    font-size: 1.25rem;
-  }
-  }
-}
-
-
 .background {
   position: absolute;
   right: 0;
   bottom: 0;
+  width: 100%;
+  height: 100%;
   opacity: .12;
   transform-origin: center center;
 }
 
 .bottomRight {
-  //transform: rotateX(60deg) rotateY(0deg) rotateZ(30deg) translate(62%, 62%);
-  transform: rotateX(68deg) rotateY(0deg) rotateZ(35deg) translate(48%, 63%) scale(2.5);
+  canvas {
+    transform: rotateX(64deg) rotateY(4deg) rotateZ(8deg) translate(-47%, 2%) scale(1.6);
+  }
 }
-
-
-
+.topRight {
+  canvas {
+    transform: rotateX(-64deg) rotateY(-8deg) rotateZ(16deg) translate(-33%, -67%) scale(1.6);
+  }
+}
+.topLeft {
+  canvas {
+    transform: rotateX(-55deg) rotateY(10deg) rotateZ(-14deg) translate(15%, -39%) scale(1.5);
+  }
+}
+.bottomLeft {
+  canvas {
+    transform: rotateX(62deg) rotateY(-11deg) rotateZ(-7deg) translate(-9%, -13%) scale(1.6);
+  }
+}
 
 // DEBUG RATIOS
 .line1,

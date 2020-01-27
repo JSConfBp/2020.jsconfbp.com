@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import classnames from 'classnames';
 import { Stage, Layer, Line } from 'react-konva';
 import Origami from '../../lib/index'
@@ -8,27 +8,27 @@ import css from './triangles.module.scss';
 export default ({
   text,
   className,
-  width,
-  height,
   edgeSize = 64,
-  start = 'center center',
-}) => {
-  const [triangles, setTriangles] = useState([])
-  const colors =  [
+  colors = [
     '#ffffff',
     '#eeeeee',
     '#dddddd',
     '#cccccc',
     '#bbbbbb',
-  ];
-
-  const _width = width || window.innerWidth;
-  const _height = height || window.innerHeight
+  ],
+  start// = 'center center',
+}) => {
+  const [triangles, setTriangles] = useState([])
+  const refContainer = useRef();
+  const [dimensions, setDimensions] = useState({})
 
   useEffect(() => {
+    const dim = refContainer.current.getBoundingClientRect()
+    setDimensions(dim)
+
     const canvas = {
-      width: _width,
-      height: _height
+      width: dim.width + 400,
+      height: dim.height + 400
     }
 
     if (text.length > 0) {
@@ -54,8 +54,8 @@ export default ({
 
 
   return (
-    <div className={ classnames(className, css.triangles) }>
-      <Stage width={ _width } height={ _height }>
+    <div className={ classnames(className, css.triangles) } ref={ refContainer }>
+      <Stage width={ dimensions.width + 400 || 0 } height={ dimensions.height + 400 || 0 }>
         <Layer>
           { triangles.map((triangle, i) => (
             <Line

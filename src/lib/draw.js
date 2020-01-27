@@ -10,7 +10,8 @@ const toPolygonPoints = (...corners) => corners.reduce((arr, points) => {
 export default (x, y, options, grid) => {
 
   const pickColor = (colors) => {
-    return options.random(shuffleArray(colors))
+    //return options.random(shuffleArray(colors))
+    return options.random(colors)
   }
 
   return new Promise(async resolve => {

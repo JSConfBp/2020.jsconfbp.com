@@ -14,7 +14,8 @@
     "develop": "gatsby develop",
     "format": "npx prettier --write \"src/**/*.js\"",
     "gdpr": "node scripts/gdpr-generate.js",
-    "storybook": "NODE_ENV=production npx start-storybook"
+    "storybook": "NODE_ENV=production npx start-storybook",
+    "build:storybook": "npx build-storybook -o ./public/storybook/"
   },
   "dependencies": {
     "@material-ui/core": "^4.8.3",
