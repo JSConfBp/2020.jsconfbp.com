@@ -43,8 +43,6 @@ export default () => (<header className={ css.header }>
  */}
     </div>
 
-    <Triangles />
-
    {/*  <div className={ css.line1 }></div>
     <div className={ css.line2 }></div>
     <div className={ css.line3 }></div>

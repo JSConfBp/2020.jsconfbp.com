@@ -3,10 +3,12 @@
 @import './fonts.scss';
 @import './sizes.scss';
 
+
+
 html, body {
     font-family: $primary-font;
     font-size: 18px;
-    line-height: 29px;
+    line-height: calc(1.6 * 18px);
     font-weight: 200;
 
     @media (max-width: 480px) {
@@ -14,8 +16,6 @@ html, body {
       line-height: 26px;
     }
 }
-
-//
 
 p {
   margin-bottom: 1rem;
@@ -29,33 +29,39 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-    font-size: $text-xxl;
-    line-height: $text-xxl * 1.3;
+    font-size: $text-h1;
+    line-height: $text-h1 * 1.4;
     margin-bottom: 1rem;
 }
 
 h2 {
-    font-size: $text-xl;
-    line-height: $text-xl * 1.3;
+    font-size: $text-h2;
+    line-height: $text-h2 * 1.4;
     margin-bottom: 1rem;
 }
 
 h3 {
-  font-size: $text-lg;
-  line-height: $text-lg * 1.3;
+  font-size: $text-h3;
+  line-height: $text-h3 * 1.4;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: $text-h4;
+  line-height: $text-h4 * 1.4;
   margin-bottom: 1rem;
 }
 
 p + h2,
 ul + h2,
 ol + h2 {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
 }
 
 p + h3,
 ul + h3,
 ol + h3 {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   margin-bottom: 1rem;
 }
 

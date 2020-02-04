@@ -20,12 +20,60 @@
   }
 
   .main {
-    max-width: 64rem;
-    padding-top: 3rem;
+    max-width: 60rem;
+    padding: {
+      top: 3rem;
+      left: 2rem;
+      right: 2rem;
+    };
 
     @media screen and (max-width: 28rem) {
       width: 100%;
       padding: 0 1.5rem;
+    }
+  }
+}
+
+
+:global {
+  .decorated {
+    position: relative;
+
+    &-left::before,
+    &-right::before {
+      position: absolute;
+      content: '';
+      width: 26rem;
+      height: 40rem;
+      bottom: 3rem;
+    }
+
+    &-purple::before {
+      background: $color-purple;
+    }
+    &-orange::before {
+      background: $color-orange;
+    }
+    &-lightpurple::before {
+      background: $color-lightpurple;
+    }
+    &-lightorange::before {
+      background: $color-lightorange;
+    }
+
+    &-left::before {
+      // --offset: calc( calc(calc(100vw - 21rem) / -2));
+      --offset: calc(calc(100vw + 83rem) * 0.35);
+      transform: rotate(-13deg) translateY(129%) translateX(var(--offset));
+      left: 0;
+    }
+
+
+    &-right::before {
+      // --offset: calc( calc(calc(100vw - 21rem) / -2));
+      --offset: calc(calc(95vw + 34rem) * -0.34);
+      transform: rotate(-13deg) translateX(var(--offset));
+      left: 0;
     }
   }
 }

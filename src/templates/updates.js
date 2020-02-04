@@ -3,13 +3,23 @@ import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { MDXProvider } from '@mdx-js/react'
 
+import useHeadingDecorator from '../hooks/useHeadingDecorator'
 import PostImage from '../components/PostImage'
 import Layout from '../components/Layout'
 import SocialMeta from '../components/SocialMeta/index'
 
 import './updates.scss'
 
-const shortcodes = { PostImage }
+const getClassName = useHeadingDecorator()
+
+const H2 = ({children}) => {
+  return <h2 className={ getClassName() }>{ children }</h2>
+}
+
+const shortcodes = {
+  PostImage,
+  h2: H2,
+}
 
 function UpdatesContentTemplate({ data: { mdx } }) {
   return (
@@ -21,7 +31,9 @@ function UpdatesContentTemplate({ data: { mdx } }) {
       />
       <h1>{ mdx.frontmatter.title }</h1>
       <MDXProvider components={shortcodes}>
-        <MDXRenderer>{mdx.body}</MDXRenderer>
+          <MDXRenderer>
+            {mdx.body}
+          </MDXRenderer>
       </MDXProvider>
     </Layout>
   )

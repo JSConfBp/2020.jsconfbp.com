@@ -2,11 +2,11 @@
 @import '../fonts.scss';
 @import '../sizes.scss';
 
-$header-main-color: $color-salmon;
+$header-main-color: $color-orange;
 //$header-main-color: #ffffff;
 $header-secondary-color: $color-lightpurple;
 //$header-secondary-color: #777;
-$header-nav-color: $color-lightsalmon;
+$header-nav-color: $color-lightorange;
 //$header-nav-color: #bbbbbb;
 
 $main-header-fontSize: 6.7rem;
@@ -26,6 +26,7 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
 	flex-direction: column;
 	align-items: center;
   justify-content: flex-start;
+  display: none;
 
   @media screen and (max-width: 28rem) {
     width: 100%;

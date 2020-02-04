@@ -22,7 +22,7 @@ module.exports = {
           `**/*.png`,
           `**/*.js`,
           `**/*.mp4`,
-          `**/*.m4v`
+          `**/*.m4v`,
         ],
       }
     },
@@ -35,7 +35,7 @@ module.exports = {
           `**/*.mdx`,
           `**/*.js`,
           `**/*.mp4`,
-          `**/*.m4v`
+          `**/*.m4v`,
         ],
       }
     },
@@ -44,7 +44,7 @@ module.exports = {
       options: {
         extensions: ['.mdx', '.md'],
         gatsbyRemarkPlugins: [
-          'gatsby-remark-smartypants'
+          'gatsby-remark-smartypants',
         ],
       },
     },
@@ -114,12 +114,12 @@ module.exports = {
             variants: [`300`,`600`,`700`],
           },
           {
-            family: `Source Sans Pro`,
-            variants: [`400`,`400i`,`700`]
+            family: `Roboto`,
+            variants: [`300`,`400`,`700`],
           },
           {
             family: 'Noto Sans JP',
-            variants: ['700']
+            variants: ['700'],
           }
         ],
       },
