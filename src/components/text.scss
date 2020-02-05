@@ -83,7 +83,7 @@ ul:not(.unstyled) li {
   }
 
   &::before {
-    content: '▪︎';
+    content: "\25AA";
     color: $color-rebeccapurple;
     position: absolute;
     left: -1.2rem;

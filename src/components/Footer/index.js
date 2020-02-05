@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link } from 'gatsby'
-
-import './footer.scss'
+import Logo from '../Logo'
+import css from './footer.module.scss'
 
 export default () => (
-  <footer className={'footer'}>
+  <footer className={ css.footer }>
+    <section>
+    <p>JSConf Budapest welcomes everybody, please be nice to each other.</p>
     <nav>
       <ul className="unstyled">
         <li>
@@ -16,7 +18,14 @@ export default () => (
         <li>
           <Link to={'/sponsorship'}>Sponsorship</Link>
         </li>
+        <li>
+          <a href="https://twitter.com/jsconfbp">@jsconfbp</a>
+        </li>
       </ul>
     </nav>
+
+    <Link to={'/'}><Logo className={ css.logo } polygonClassName={ css.logoFill } /></Link>
+    <small>JSConf Budapest 2020</small>
+    </section>
   </footer>
 )
