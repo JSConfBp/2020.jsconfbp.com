@@ -45,7 +45,7 @@
       position: absolute;
       content: '';
       width: 26rem;
-      height: 40vw;
+      height: 60vw;
       bottom: 3rem;
     }
 
@@ -72,7 +72,7 @@
 
     &-right::before {
       // --offset: calc( calc(calc(100vw - 21rem) / -2));
-      --offset: calc(calc(95vw + 34rem) * -0.34);
+      --offset: calc(calc(120vw + 34rem) * -0.31);
       transform: rotate(-13deg) translateX(var(--offset));
       left: 0;
     }
