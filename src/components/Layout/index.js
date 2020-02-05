@@ -16,7 +16,7 @@ const Layout = ({
   children,
 }) => (
   <div className={'layout'}>
-    <GuideLines />
+    {/* <GuideLines /> */}
     {!skipHeader && <Header />}
     <Meta title={title} description={description} pathName={pathName} />
     <main className={['main', className].join(' ')}>{children}</main>
