@@ -7,7 +7,7 @@ import './layout.scss'
 import Footer from '../Footer/'
 import Header from '../Header/'
 
-const Layout = ({
+export default ({
   title = '',
   description = '',
   pathName,
@@ -23,14 +23,3 @@ const Layout = ({
     <Footer />
   </div>
 )
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-  mainClassNames: PropTypes.array,
-}
-
-Layout.defaultProps = {
-  mainClassNames: [],
-}
-
-export default Layout
