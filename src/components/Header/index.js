@@ -53,17 +53,16 @@ export default () => {
         </div>
       </div>
 
-      {/* <nav className={ css.navigation }>
+      <nav className={ css.navigation }>
         <ul className={ css.menu }>
-          <li><a href="">Tickets</a></li>
-          <li><a href="">Speakers</a></li>
-          <li><a href="">Sholarship</a></li>
-          <li><a href="">Updates</a></li>
-          <li><a href="">Venue</a></li>
-          <li><a href="">Workshops</a></li>
+          <li><a href="/">Workshops</a></li>
+          <li><a href="/">Speakers</a></li>
+          <li><a href="/">Scholarship</a></li>
+          <li><a href="/">Venue</a></li>
+          <li><a href="/">Code of Conduct</a></li>
         </ul>
       </nav>
- */}
+
     {/* <Link to="/">
       <div className={ css.logo }></div>
     </Link>

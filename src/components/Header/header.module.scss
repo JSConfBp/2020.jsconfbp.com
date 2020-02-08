@@ -162,64 +162,40 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
     }
 
     .navigation {
-      // temp
-      width: 400px;
-      height: 411px;
-      // temp
-
-      @media screen and (max-width: 28rem) {
-        display: none;
-      }
-
-
       position: absolute;
+      top: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
       z-index: 10;
-      top: 61.8033%;
-      transform: translateY(-17.9rem);
-      left: 61.8033%;
+      width: 80vw;
+      min-width: 60rem;
+      background-color: #000;
 
       .menu {
+        position: absolute;
+        right: 0;
+
         li {
-          font-family: $heading-font;
-          font-size: 2.25rem;
-          font-weight: 600;
-          margin: 0 0 2rem 0;
+          display: inline-block;
           padding: 0;
+          padding-left: 2rem;
+          margin: 0;
 
-
-          &::before {
+          &:before {
             display: none;
           }
 
           a {
-            position: relative;
-            padding-bottom: .48rem;
-            color: $header-nav-color;
+            font-family: $heading-font;
+            color: $color-white;
             text-decoration: none;
-            display: inline-block;
-            //border-bottom: 4px solid;
+            font-weight: 500;
+
 
             &:hover {
-              color: $color-white;
 
-              &:after {
-                width: 100%;
-              }
+              text-decoration: underline;
             }
-
-            &:after {
-              content: '';
-              display: block;
-              position: absolute;
-              width: 0%;
-              left: 0;
-              bottom: -4px;
-              height: 5px;
-              background: white;
-              transition: width .2s ease-in-out;
-            }
-
-
           }
         }
       }
@@ -247,6 +223,7 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
     }
 
     .hero {
+      z-index: 1;
       position: absolute;
       height: 100%;
       width: 57vw;
@@ -254,7 +231,7 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
       top: 0;
 
       .mask {
-        background-color: $color-purple;
+        background-color: $color-darkpurple;
         width: 102%;
         height: 102%;
         transform-origin: top left;
