@@ -21,7 +21,7 @@
   }
 
   .main {
-    max-width: 60rem;
+    max-width: 53.333rem;
     padding: {
       top: 3rem;
       left: 2rem;
@@ -64,7 +64,7 @@
 
     &-left::before {
       // --offset: calc( calc(calc(100vw - 21rem) / -2));
-      --offset: calc(calc(100vw + 83rem) * 0.35);
+      --offset: calc(calc(100vw + 67rem) * 0.35);
       transform: rotate(-13deg) translateY(129%) translateX(var(--offset));
       left: 0;
     }
