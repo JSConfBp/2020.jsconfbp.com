@@ -13,9 +13,10 @@
   overflow-x: hidden;
   box-sizing: border-box;
 
-  @media screen and (max-width: 28rem) {
+  @media screen and (max-width: 480px) {
     max-width: 100%;
     width: 100%;
+    overflow-x: visible;
   }
 }
 
@@ -27,7 +28,7 @@
     right: 2rem;
   };
 
-  @media screen and (max-width: 28rem) {
+  @media screen and (max-width: 480px) {
     width: 100%;
     padding: 0 1.5rem;
   }
@@ -64,6 +65,10 @@
       --offset: calc(calc(100vw + 67rem) * 0.35);
       transform: rotate(-13deg) translateY(129%) translateX(var(--offset));
       left: 0;
+
+      @media screen and (max-width: 480px) {
+        display: none;
+      }
     }
 
 
@@ -72,6 +77,11 @@
       --offset: calc(calc(120vw + 34rem) * -0.31);
       transform: rotate(-13deg) translateX(var(--offset));
       left: 0;
+
+
+      @media screen and (max-width: 480px) {
+        display: none;
+      }
     }
   }
 }

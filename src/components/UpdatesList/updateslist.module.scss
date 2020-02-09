@@ -13,7 +13,6 @@
 
   margin-top: -3rem;
 
-
   padding-bottom: 6rem; // until we don't have venue content on home
 
 
@@ -46,6 +45,14 @@
     transform-origin: top left;
   }
 
+  @media (max-width: 480px) {
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
+
+
 }
 
 .inner {
@@ -55,6 +62,10 @@
   h2 {
     margin-bottom: 3rem;
   }
+
+  @media screen and (max-width: 480px) {
+    padding: 0 1rem;
+  }
 }
 
 .list {
@@ -63,6 +74,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 2rem;
+
+  @media screen and (max-width: 480px) {
+    grid-template-columns: 1fr;
+    padding-bottom: 2rem;
+  }
 
   li {
     position: relative;
