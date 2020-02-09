@@ -87,13 +87,12 @@ export default () => {
       </nav>
     </div>
 
-
 {/*
    <div className={ css.line1 }></div>
     <div className={ css.line2 }></div>
     <div className={ css.line3 }></div>
     <div className={ css.line4 }></div>
     <div className={ css.line5 }></div>
-     */}
+ */}
   </header>)
 }
