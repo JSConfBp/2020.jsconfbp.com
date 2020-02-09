@@ -6,19 +6,27 @@ import Logo from '../Logo'
 
 export default () => {
 
-/*   const data = useStaticQuery(graphql`
-    query MyQuery {
-      file(relativePath: { eq: "images/hero.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
+  const data = useStaticQuery(graphql`
+    query HeroImageQuery {
+      source: allFile(
+        filter: {sourceInstanceName: {eq: "images"},
+        relativePath: {in: "hero.jpg"}}
+      ) {
+        edges {
+          node {
+            relativePath
+            childImageSharp {
+              fluid(maxWidth: 1200) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
           }
         }
       }
     }
-  `)
+  `);
 
-  console.log(data); */
+  const { fluid } = data.source.edges[0].node.childImageSharp;
 
 
   return (<header className={ css.header }>
@@ -42,13 +50,27 @@ export default () => {
         </div>
       </div>
 
+
       <div className={ css.hero }>
+
+        <div className={ css.cta }>
+
+          <a href="/" className={ css.button }>
+            Buy Tickets
+            <small>Starting from €205</small>
+          </a>
+
+        </div>
+
         <div className={ css.mask }>
           <div className={ css.content }>
-{/*             <Img
-              fluid={ data.file.childImageSharp.fluid }
+            <Img
+              className={ css.image }
+              fluid={ fluid }
               alt=""
-            /> */}
+            />
+            <div className={ css.overlay }></div>
+            <div className={ css.shadow }></div>
           </div>
         </div>
       </div>
