@@ -124,7 +124,7 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
           line-height: 1;
           font-size: ($ratio * $main-header-fontSize) - $main-header-fontSize;
 
-          @media screen and (max-width: 28rem) {
+          @media screen and (max-width: 480px) {
             height: auto;
             font-size: 2.1rem;
           }
@@ -150,7 +150,7 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
         line-height: calc(2.5rem * 1.1);
 
 
-        @media screen and (max-width: 28rem) {
+        @media screen and (max-width: 480px) {
           padding: 1rem 0 0 0;
           font-size: 1.5rem;
           line-height: calc(1.5rem * 1.1);
@@ -164,11 +164,44 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
           font-weight: 600;
           padding-top: .3rem;
 
-          @media screen and (max-width: 28rem) {
+          @media screen and (max-width: 480px) {
             padding: 0;
             font-size: 1.25rem;
           }
         }
+      }
+    }
+
+    .mobileMenuTrigger {
+      @media screen and (min-width: 480px) {
+        display: none;
+      }
+
+      position: absolute;
+      z-index: 11;
+      width: 2rem;
+      height: 2rem;
+      background: black;
+      top: 2rem;
+      right: 2rem;
+    }
+
+    .triggerCheckbox {
+      @media screen and (min-width: 480px) {
+        display: none;
+      }
+
+      position: absolute;
+      top: -100%;
+    }
+
+    @media screen and (max-width: 480px) {
+      .triggerCheckbox:checked ~ .navigation {
+        transform: rotate(13deg);
+      }
+
+      .triggerCheckbox:checked ~ .mobileMenuTrigger {
+        background: red;
       }
     }
 
@@ -179,7 +212,6 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
       width: 100%;
       //transform: translateX(-50%);
       z-index: 10;
-
 
       @media screen and (max-width: 80rem) {
         font-size: $text-small;
@@ -197,6 +229,11 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
 
           @media screen and (max-width: 70rem) {
             padding-left: 1.4rem;
+          }
+
+
+          @media screen and (max-width: 480px) {
+            padding-bottom: 1rem;
           }
 
           &:before {
@@ -217,10 +254,39 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
 
             &:hover {
               border-bottom: 2px solid $color-white;
-            }
-          }
 
+              @media screen and (max-width: 480px) {
+                border-bottom: none;
+              }
+            }
+
+          }
         }
+
+        @media screen and (max-width: 480px) {
+          width: 70vw;
+          height: 100%;
+          padding-top: 3rem;
+          padding-bottom: 6rem;
+          top: 0;
+          right: 0;
+          transform: rotate(-13deg);
+          transform-origin: bottom right;
+          display: flex;
+          flex-direction: column;
+        }
+
+      }
+
+      @media screen and (max-width: 480px) {
+        background: $color-purple;
+        width: 100vw;
+        height: 60vh;
+        top: 0;
+        right: 0;
+        transform: rotate(90deg);
+        transform-origin: top right;
+        transition: transform .2s ease-in-out;
       }
     }
 

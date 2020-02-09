@@ -76,6 +76,11 @@ export default () => {
         </div>
       </div>
 
+
+      <input
+        id="MobileMenuTrigger"
+        type="checkbox"
+        className={ css.triggerCheckbox } aria-hidden="true" />
       <nav className={ css.navigation }>
         <ul className={ css.menu }>
           <li><Link to={ "/" }>Workshops</Link></li>
@@ -85,6 +90,10 @@ export default () => {
           <li><Link to={ "/code-of-conduct" }>Code of Conduct</Link></li>
         </ul>
       </nav>
+      <label
+        for="MobileMenuTrigger"
+        className={ css.mobileMenuTrigger }
+        aria-hidden="true">asd</label>
     </div>
 
 {/*
