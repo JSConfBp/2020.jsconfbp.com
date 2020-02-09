@@ -78,11 +78,11 @@ export default () => {
 
       <nav className={ css.navigation }>
         <ul className={ css.menu }>
-          <li><a href="/">Workshops</a></li>
-          <li><a href="/">Speakers</a></li>
-          <li><a href="/">Scholarship</a></li>
-          <li><a href="/">Venue</a></li>
-          <li><a href="/">Code of Conduct</a></li>
+          <li><Link to={ "/" }>Workshops</Link></li>
+          <li><Link to={ "/" }>Speakers</Link></li>
+          <li><Link to={ "/" }>Scholarship</Link></li>
+          <li><Link to={ "/" }>Venue</Link></li>
+          <li><Link to={ "/code-of-conduct" }>Code of Conduct</Link></li>
         </ul>
       </nav>
     </div>
