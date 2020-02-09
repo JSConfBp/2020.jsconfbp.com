@@ -262,6 +262,7 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
           display: block;
           font-size: .8rem;
           font-weight: 500;
+          color: $color-text-dark;
         }
 
         &:after {

@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import useHeadingDecorator from '../hooks/useHeadingDecorator'
 //import styles from './simpletext.module.scss'
-
 import Button from '../components/Button'
 
 const CFPButton = () => (
@@ -16,6 +16,7 @@ const CFPButton = () => (
     Submit your talk!
   </Button>
 )
+const [, getClassName] = useHeadingDecorator()
 
 const CallForSpeakers = () => (
   <Layout title="Call for Speakers" pathName="/call-for-speakers">
@@ -31,7 +32,7 @@ const CallForSpeakers = () => (
 
     <CFPButton />
 
-    <h2>Topics</h2>
+    <h2 className={ getClassName() }>Topics</h2>
 
     <p>We like to see anything that fits into the topics like:</p>
 
@@ -53,7 +54,7 @@ const CallForSpeakers = () => (
       </li>
     </ul>
 
-    <h2>Perks</h2>
+    <h2 className={ getClassName() }>Perks</h2>
 
     <p>
       If you get selected as a speaker at JSConf Budapest, here’s what we
@@ -111,7 +112,7 @@ const CallForSpeakers = () => (
       we can usually work these things out.
     </p>
 
-    <h2>Guidelines</h2>
+    <h2 className={ getClassName() }>Guidelines</h2>
 
     <p>
       Submit your proposal by <strong>Febr 29th 2020, 23:59:59 CEST</strong>.
@@ -193,7 +194,7 @@ const CallForSpeakers = () => (
     </ul>
     <p>in a submission.</p>
 
-    <h2>We are here to help!</h2>
+    <h2 className={ getClassName() }>We are here to help!</h2>
     <p>
       Not everybody is a natural talent on stage. Not everybody can produce
       kick-ass slide-decks. Not everybody is a live-demo-god. Not everybody

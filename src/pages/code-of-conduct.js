@@ -1,10 +1,13 @@
 import React from 'react'
 import Layout from '../components/Layout'
 //import styles from './simpletext.module.scss'
+import useHeadingDecorator from '../hooks/useHeadingDecorator'
+
+const [, getClassName] = useHeadingDecorator()
 
 const CodeOfConduct = () => (
   <Layout title="Code of Conduct" pathName="/code-of-conduct">
-    <h1>Code of Conduct of JSConf Budapest</h1>
+    <h1 className={ getClassName() }>Code of Conduct of JSConf Budapest</h1>
     <p>
       All attendees, speakers, sponsors and volunteers at JSConf Budapest are
       required to agree with the following code of conduct. Organizers will
@@ -28,7 +31,7 @@ const CodeOfConduct = () => (
       conference.
     </p>
     <p>We value your attendance.</p>
-    <h2>Purpose of this document</h2>
+    <h2 className={ getClassName() }>Purpose of this document</h2>
     <p>
       JSConf Budapest is dedicated to providing a harassment-free conference
       experience for everyone, regardless of gender, sexual orientation,
@@ -81,7 +84,7 @@ const CodeOfConduct = () => (
       We expect participants to follow these rules at conference and workshop
       venues and conference-related social events.
     </p>
-    <h2>Harassment</h2>
+    <h2 className={ getClassName() }>Harassment</h2>
     <p>Harassment includes, but is not limited to:</p>
     <ul>
       <li>
@@ -113,7 +116,7 @@ const CodeOfConduct = () => (
         should you ask if you may
       </li>
     </ul>
-    <h2>Inclusive language</h2>
+    <h2 className={ getClassName() }>Inclusive language</h2>
     <p>
       In our commitment to a harassment-free and inclusive environment we
       strongly believe it's important to pay attention to harmful language

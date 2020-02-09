@@ -10,7 +10,7 @@ import SocialMeta from '../components/SocialMeta/index'
 
 import './updates.scss'
 
-const getClassName = useHeadingDecorator()
+const [getClassName] = useHeadingDecorator()
 
 const H2 = ({children}) => {
   return <h2 className={ getClassName() }>{ children }</h2>
