@@ -168,12 +168,15 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
     .navigation {
       position: absolute;
       top: 2rem;
-      left: 50%;
-      transform: translateX(-50%);
+      right: calc(100vw * .08);
+      width: 100%;
+      //transform: translateX(-50%);
       z-index: 10;
-      width: 80vw;
-      min-width: 60rem;
-      background-color: #000;
+
+
+      @media screen and (max-width: 80rem) {
+        font-size: $text-small;
+      }
 
       .menu {
         position: absolute;
@@ -184,6 +187,10 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
           padding: 0;
           padding-left: 2rem;
           margin: 0;
+
+          @media screen and (max-width: 70rem) {
+            padding-left: 1.4rem;
+          }
 
           &:before {
             display: none;
@@ -197,10 +204,15 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
             font-weight: 500;
             padding-bottom: .25rem;
 
+            @media screen and (max-width: 70rem) {
+              font-size: $text-small;
+            }
+
             &:hover {
               border-bottom: 2px solid $color-white;
             }
           }
+
         }
       }
     }
