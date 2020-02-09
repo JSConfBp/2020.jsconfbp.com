@@ -5,11 +5,47 @@
 
 
 .updates {
+  z-index: 1;
   background: $color-lightestpurple;
+  position: relative;
   width: 100%;
   padding: 4rem 0;
 
-  margin-top: 2rem;
+  margin-top: -3rem;
+
+
+  padding-bottom: 6rem; // until we don't have venue content on home
+
+
+  &::after {
+    position: absolute;
+    z-index: 2;
+    content: '';
+    width: 26rem;
+    height: 40rem;
+    top: 0;
+    right: -20rem;
+    background: $color-lightorange;
+    --offset: calc(calc(100vw - 108rem) * 0.35);
+    transform: rotate(-13deg); //translateY(-60.1%) translateX(var(--offset));
+    transform-origin: top left;
+  }
+
+
+  &::before { // until we don't have venue content on home
+    position: absolute;
+    z-index: 1;
+    content: '';
+    width: 31rem;
+    height: 11rem;
+    top: -5rem;
+    right: 0rem;
+    background: $color-lightestpurple;
+    --offset: calc(calc(100vw - 108rem) * 0.35);
+    transform: rotate(-13deg); //translateY(-60.1%) translateX(var(--offset));
+    transform-origin: top left;
+  }
+
 }
 
 .inner {
