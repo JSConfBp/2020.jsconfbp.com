@@ -11,30 +11,27 @@
 	align-items: center;
   justify-content: center;
   overflow-x: hidden;
-  //max-width: 64rem;
-
   box-sizing: border-box;
 
   @media screen and (max-width: 28rem) {
     max-width: 100%;
     width: 100%;
   }
-
-  .main {
-    max-width: 53.333rem;
-    padding: {
-      top: 3rem;
-      left: 2rem;
-      right: 2rem;
-    };
-
-    @media screen and (max-width: 28rem) {
-      width: 100%;
-      padding: 0 1.5rem;
-    }
-  }
 }
 
+.main {
+  max-width: 53.333rem;
+  padding: {
+    top: 3rem;
+    left: 2rem;
+    right: 2rem;
+  };
+
+  @media screen and (max-width: 28rem) {
+    width: 100%;
+    padding: 0 1.5rem;
+  }
+}
 
 :global {
   .decorated {

@@ -1,10 +1,11 @@
 import React from 'react'
+import classnames from 'classnames'
 import { Link } from 'gatsby'
 import Logo from '../Logo'
 import css from './footer.module.scss'
 
-export default () => (
-  <footer className={ css.footer }>
+export default ({ className = '' }) => (
+  <footer className={ classnames(className ,css.footer) }>
     <section>
     <p>JSConf Budapest welcomes everybody, please be nice to each other.</p>
     <nav>

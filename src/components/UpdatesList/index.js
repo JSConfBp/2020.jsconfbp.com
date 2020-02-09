@@ -1,7 +1,7 @@
 import React from 'react'
 import classnames from 'classnames'
 import { useStaticQuery, graphql, Link } from "gatsby"
-import styles from './updateslist.module.scss'
+import css from './updateslist.module.scss'
 
 const UpdatesList = props => {
 
@@ -30,38 +30,61 @@ const UpdatesList = props => {
 `)
 
   return (
-    <ul className={classnames('unstyled', styles.updates_list)}>
-      {data.allMdx.edges
-        .filter(({ node }) => node.parent.sourceInstanceName === 'updates')
-        .sort((prev, next) => {
-          const prevDate = new Date(prev.node.frontmatter.date)
-          const nextDate = new Date(next.node.frontmatter.date)
+  <div className={ css.updates }>
+    <div className={ css.inner }>
 
-          if (prevDate > nextDate) return -1
+      <h2>Updates</h2>
 
-          if (prevDate < nextDate) return 1
+      <ul className={classnames('unstyled', css.list)}>
+        <li key={'1'} className={css.updates_list_item}>
+        <h3><Link
+          className={css.title}
+          to={`/call-for-speakers`}
+          >
+          Call for Speakers
+        </Link></h3>
+        <small className={css.date}>2019-12-01</small>
+        <p className={css.lead}>
+          We invite the JavaScript community to submit talks for the upcoming
+          JSConf Budapest! Our Call for Speakers open till <strong>February 29th, 2020</strong>
+        </p>
+        <Link to={`/call-for-speakers`}>
+          Submit your talk!
+        </Link>
+        </li>
+        {data.allMdx.edges
+          .filter(({ node }) => node.parent.sourceInstanceName === 'updates')
+          .sort((prev, next) => {
+            const prevDate = new Date(prev.node.frontmatter.date)
+            const nextDate = new Date(next.node.frontmatter.date)
 
-          return 0
-        })
-        .slice(0, 3)
-        .map(({ node }) => (
-          <li key={node.id} className={styles.updates_list_item}>
-            {/* <span className={styles.date}>{node.frontmatter.date}</span> */}
-            <Link
-              className={styles.title}
-              to={`/${node.parent.sourceInstanceName}/${node.parent.name}`}
-            >
-              {node.frontmatter.title}
-            </Link>
-            <p className={styles.lead}>
-              {node.frontmatter.lead}
-            </p>
-            <Link to={`/${node.parent.sourceInstanceName}/${node.parent.name}`}>
-              Read more
-            </Link>
-          </li>
-        ))}
-    </ul>)
+            if (prevDate > nextDate) return 1 //-1
+
+            if (prevDate < nextDate) return -1 //1
+
+            return 0
+          })
+          .slice(0, 3)
+          .map(({ node }) => (
+            <li key={node.id} className={css.updates_list_item}>
+              <h3><Link
+                className={css.title}
+                to={`/${node.parent.sourceInstanceName}/${node.parent.name}`}
+                >
+                {node.frontmatter.title}
+              </Link></h3>
+              <small className={css.date}>{node.frontmatter.date}</small>
+              <p className={css.lead}>
+                {node.frontmatter.lead}
+              </p>
+              <Link to={`/${node.parent.sourceInstanceName}/${node.parent.name}`}>
+                Read more
+              </Link>
+            </li>
+          ))}
+      </ul>
+    </div>
+  </div>)
 }
 
 export default UpdatesList
