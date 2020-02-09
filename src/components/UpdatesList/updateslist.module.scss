@@ -70,6 +70,10 @@
     list-style-type: none;
     display: inline-block;
 
+    a {
+      color: $color-purple;
+    }
+
     h3 {
       font-weight: 600;
       margin-bottom: 2rem;
@@ -90,7 +94,6 @@
 
 .updates_list {
     &_item:not(:last-child) {
- //       border-bottom: 1px dashed $gray-500;
         margin-bottom: $size-lg;
         padding-bottom: $size-lg;
     }
