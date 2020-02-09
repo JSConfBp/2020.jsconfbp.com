@@ -8,7 +8,7 @@ const pickColor = (count) => {
 }
 
 const pickSide = (count) => {
-  return count % 2 > 0 ? 'left' : 'right'
+  return count % 2 > 0 ? 'right' : 'left'
 }
 
 export default () => {
@@ -34,13 +34,13 @@ export default () => {
 
         return className
     },
-    () => {
+    ({ color, side } = {}) => {
       let className = ''
       const h = useContext(headings)
       className = classnames(
         `decorated`,
-        `decorated-${pickSide(h.count)}`,
-        `decorated-${pickColor(h.count)}`
+        `decorated-${ side || pickSide(h.count)}`,
+        `decorated-${ color || pickColor(h.count)}`
       )
       h.count += 1
       return className

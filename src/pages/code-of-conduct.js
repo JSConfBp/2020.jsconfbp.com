@@ -7,7 +7,7 @@ const [, getClassName] = useHeadingDecorator()
 
 const CodeOfConduct = () => (
   <Layout title="Code of Conduct" pathName="/code-of-conduct">
-    <h1 className={ getClassName() }>Code of Conduct of JSConf Budapest</h1>
+    <h1 className={ getClassName({ color: 'orange', side: 'left'}) }>Code of Conduct of JSConf Budapest</h1>
     <p>
       All attendees, speakers, sponsors and volunteers at JSConf Budapest are
       required to agree with the following code of conduct. Organizers will

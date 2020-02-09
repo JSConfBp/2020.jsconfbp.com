@@ -62,7 +62,7 @@
       background: $color-lightorange;
     }
 
-    &-left::before {
+    &-right::before {
       // --offset: calc( calc(calc(100vw - 21rem) / -2));
       --offset: calc(calc(100vw + 67rem) * 0.35);
       transform: rotate(-13deg) translateY(129%) translateX(var(--offset));
@@ -70,7 +70,7 @@
     }
 
 
-    &-right::before {
+    &-left::before {
       // --offset: calc( calc(calc(100vw - 21rem) / -2));
       --offset: calc(calc(120vw + 34rem) * -0.31);
       transform: rotate(-13deg) translateX(var(--offset));
