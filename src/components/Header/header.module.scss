@@ -74,6 +74,10 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
           width: 11.125rem;
         }
 
+        a {
+          text-decoration: none;
+        }
+
         .jsconf {
           display: block;
           height: 4.3rem;
@@ -94,6 +98,7 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
             transform: scaleX(0.95) translateX(.9rem);
             display: block;
             line-height: .58;
+
           }
 
           @media screen and (max-width: 28rem) {

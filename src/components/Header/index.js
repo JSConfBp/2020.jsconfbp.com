@@ -32,14 +32,18 @@ export default () => {
   return (<header className={ css.header }>
     <div className={ css.inner }>
       <div className={ css.title }>
-        <Logo className={ css.logoSvg } polygonClassName={ css.polygons } />
+        <Link to={"/"}>
+          <Logo className={ css.logoSvg } polygonClassName={ css.polygons } />
+        </Link>
 
         <h1 className={ css.jsconfBp }>
-          <span className={ css.jsconf }>
-            <span className={ css.logo }>JS</span>
-            <span className={ css.conf }>Conf</span>
-          </span>
-          <span className={ css.budapest }>Budapest</span>
+          <Link to={"/"}>
+            <span className={ css.jsconf }>
+              <span className={ css.logo }>JS</span>
+              <span className={ css.conf }>Conf</span>
+            </span>
+            <span className={ css.budapest }>Budapest</span>
+          </Link>
         </h1>
 
         <div className={ css.date }>
@@ -52,14 +56,11 @@ export default () => {
 
 
       <div className={ css.hero }>
-
         <div className={ css.cta }>
-
-          <a href="/" className={ css.button }>
+          <a href="https://ti.to/jsconf-bp/jsconf-budapest-2020" className={ css.button }>
             Buy Tickets
             <small>Starting from €205</small>
           </a>
-
         </div>
 
         <div className={ css.mask }>
@@ -84,11 +85,6 @@ export default () => {
           <li><a href="/">Code of Conduct</a></li>
         </ul>
       </nav>
-
-    {/* <Link to="/">
-      <div className={ css.logo }></div>
-    </Link>
- */}
     </div>
 
 
