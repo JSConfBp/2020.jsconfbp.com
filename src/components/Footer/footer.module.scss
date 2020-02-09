@@ -30,6 +30,7 @@
   }
 
   section {
+    padding-top: 2rem;
     max-width: 60rem;
     text-align: center;
     color: $color-white;
@@ -74,12 +75,29 @@
           }
         }
       }
+
+      &.years {
+        font-size: .7rem;
+        li {
+          &::before {
+            display: none;
+          }
+
+          &:not(:last-child) {
+            padding-right: 1rem;
+          }
+        }
+      }
+    }
+
+    .jsconfbp {
+      font-size: .7rem;
     }
 
     .logo {
       width: 3rem;
       height: 3rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
       fill: $color-white;
     }
   }
