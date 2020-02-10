@@ -29,8 +29,22 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
 
   @media screen and (max-width: 480px) {
     width: 100%;
-    //height: 17.5rem;
     min-height: 0;
+    padding-bottom: 2rem;
+    z-index: 10;
+    overflow: visible;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 100vh;
+      z-index: 1;
+      background-color: $color-white;
+      bottom: 8%;
+      left: -17%;
+      transform: rotate(-13deg);
+    }
   }
 
   .inner {
@@ -53,14 +67,15 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
       right: 50%;
 
       @media screen and (max-width: 480px) {
-        top: 37.7%;
+        top: 61%;
         width: 100%;
         transform: none;
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
         flex-wrap: wrap;
-        transform: translateX(calc(7.4vw * var(--ratio)));
+        z-index: 5;
+        transform: translateX(calc(18vw * var(--ratio)));
       }
 
       .jsconfBp {
@@ -176,14 +191,47 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
       @media screen and (min-width: 480px) {
         display: none;
       }
-
+      cursor: pointer;
       position: absolute;
       z-index: 11;
       width: 2rem;
       height: 2rem;
-      background: black;
       top: 2rem;
       right: 2rem;
+
+      &::after,
+      &::before {
+        content: '';
+        left: 0;
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 1px;
+        background-color: $color-purple;
+        transition: transform .5 ease-in-out;
+      }
+
+      &::before {
+        top: 25%
+      }
+      &::after {
+        top: 75%
+      }
+
+      span {
+        display: block;
+        text-indent: -1000rem;
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $color-purple;
+        transition: width .5 ease-in-out, background-color .5 ease-in-out;
+      }
     }
 
     .triggerCheckbox {
@@ -201,7 +249,19 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
       }
 
       .triggerCheckbox:checked ~ .mobileMenuTrigger {
-        background: red;
+        span {
+          width: 0%;
+        }
+        &::after,
+        &::before {
+          background-color: $color-white;
+        }
+        &::before {
+          transform: rotate(45deg) translateX(-16%) translateY(1.05rem);
+        }
+        &::after {
+          transform: rotate(-45deg) translateX(-19%) translateY(-1.1rem);
+        }
       }
     }
 
@@ -281,7 +341,7 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
       @media screen and (max-width: 480px) {
         background: $color-purple;
         width: 100vw;
-        height: 60vh;
+        height: 70vh;
         top: 0;
         right: 0;
         transform: rotate(90deg);

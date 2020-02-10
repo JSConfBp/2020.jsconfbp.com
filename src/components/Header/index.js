@@ -91,9 +91,9 @@ export default () => {
         </ul>
       </nav>
       <label
-        for="MobileMenuTrigger"
+        htmlFor="MobileMenuTrigger"
         className={ css.mobileMenuTrigger }
-        aria-hidden="true">asd</label>
+        aria-hidden="true"><span>Open Menu</span></label>
     </div>
 
 {/*
