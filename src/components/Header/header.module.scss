@@ -37,12 +37,12 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
     &::after {
       content: '';
       position: absolute;
-      width: 200%;
-      height: 100vh;
+      width: 220%;
+      height: 170vw;
       z-index: 1;
       background-color: $color-white;
-      bottom: 8%;
-      left: -17%;
+      bottom: 9%;
+      right: -103%;
       transform: rotate(-13deg);
     }
   }
@@ -329,7 +329,7 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
           padding-top: 3rem;
           padding-bottom: 6rem;
           top: 0;
-          right: 0;
+          left: 8rem;
           transform: rotate(-13deg);
           transform-origin: bottom right;
           display: flex;
