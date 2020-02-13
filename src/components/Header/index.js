@@ -28,7 +28,6 @@ export default () => {
 
   const { fluid } = data.source.edges[0].node.childImageSharp;
 
-
   return (<header className={ css.header }>
     <div className={ css.inner }>
       <div className={ css.title }>
@@ -75,7 +74,6 @@ export default () => {
           </div>
         </div>
       </div>
-
 
       <input
         id="MobileMenuTrigger"
