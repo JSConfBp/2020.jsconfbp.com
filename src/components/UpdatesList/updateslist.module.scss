@@ -32,14 +32,11 @@
     position: absolute;
     z-index: 1;
     content: '';
-    width: 31rem;
-    height: 11rem;
-    top: -5rem;
+    width: 43vw;
+    height: 13vw;
+    top: -13vw;
     right: 0rem;
     background: $color-lightestpurple;
-    --offset: calc(calc(100vw - 108rem) * 0.35);
-    transform: rotate(-13deg); //translateY(-60.1%) translateX(var(--offset));
-    transform-origin: top left;
   }
 
   @media (max-width: 480px) {
