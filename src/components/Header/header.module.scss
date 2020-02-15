@@ -308,6 +308,7 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
             font-weight: 500;
             padding-bottom: .25rem;
 
+
             @media screen and (max-width: 70rem) {
               font-size: $text-small;
             }
@@ -465,6 +466,16 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
         .heroContent {
           height: 100%;
           transform: translateY(5%);
+        }
+
+        .shadow {
+          background: linear-gradient(to bottom, rgba(0,0,0,.9) 0%,rgba(0,0,0,0) 34%,rgba(0,0,0,0) 35%);
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          z-index: 11;
+          top: 0;
+          mix-blend-mode: overlay;
         }
       }
     }
