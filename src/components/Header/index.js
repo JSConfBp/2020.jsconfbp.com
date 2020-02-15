@@ -64,13 +64,17 @@ export default () => {
 
         <div className={ css.mask }>
           <div className={ css.content }>
-            <Img
+            {/* <Img
               className={ css.image }
               fluid={ fluid }
               alt=""
-            />
-            <div className={ css.overlay }></div>
-            <div className={ css.shadow }></div>
+            /> */}
+            <video autoPlay loop muted playsInline className={ css.heroContent }>
+              <source src="/video/hero-1.webm" type="video/webm" />
+              <source src="/video/hero-1.mp4" type="video/mp4" />
+            </video>
+            {/* <div className={ css.overlay }></div>
+            <div className={ css.shadow }></div> */}
           </div>
         </div>
       </div>
