@@ -16,7 +16,6 @@ import Perks from '../components/Sponsorship/Perks'
 import Contact from '../components/Sponsorship/Contact'
 import Impressum from '../components/Sponsorship/Impressum'
 
-import GuideLines from '../components/GuideLines'
 import styles from './sponsorship.module.scss'
 
 const IndexPage = () => (

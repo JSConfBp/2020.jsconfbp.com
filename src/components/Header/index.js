@@ -1,33 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import css from './header.module.scss'
-import { Link, useStaticQuery, graphql } from 'gatsby'
-import Img from "gatsby-image"
+import { Link } from 'gatsby'
 import Logo from '../Logo'
 
 export default () => {
   const [videoSource, setVideoSource] = useState('')
-
-  const data = useStaticQuery(graphql`
-    query HeroImageQuery {
-      source: allFile(
-        filter: {sourceInstanceName: {eq: "images"},
-        relativePath: {in: "hero.jpg"}}
-      ) {
-        edges {
-          node {
-            relativePath
-            childImageSharp {
-              fluid(maxWidth: 1200) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
-        }
-      }
-    }
-  `);
-
-  const { fluid } = data.source.edges[0].node.childImageSharp;
 
   const DecorVideoSource = () => (<>
     <source src="/video/hero-2.webm" type="video/webm" />
@@ -77,7 +54,6 @@ export default () => {
         </div>
       </div>
 
-
       <div className={ css.hero }>
         <div className={ css.cta }>
           <a href="https://ti.to/jsconf-bp/jsconf-budapest-2020" className={ css.button }>
@@ -88,11 +64,6 @@ export default () => {
 
         <div className={ css.mask }>
           <div className={ css.content }>
-            {/* <Img
-              className={ css.image }
-              fluid={ fluid }
-              alt=""
-            /> */}
             <DecorVideo source={ videoSource } />
             <div className={ css.shadow }></div>
           </div>
