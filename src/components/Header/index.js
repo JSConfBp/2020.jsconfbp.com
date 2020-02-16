@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import css from './header.module.scss'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import Img from "gatsby-image"
 import Logo from '../Logo'
 
 export default () => {
+  const [videoSource, setVideoSource] = useState('')
 
   const data = useStaticQuery(graphql`
     query HeroImageQuery {
@@ -27,6 +28,28 @@ export default () => {
   `);
 
   const { fluid } = data.source.edges[0].node.childImageSharp;
+
+  const DecorVideoSource = () => (<>
+    <source src="/video/hero-2.webm" type="video/webm" />
+    <source src="/video/hero-2.mp4" type="video/mp4" />
+  </>)
+
+  useEffect(() => {
+    setVideoSource(<DecorVideoSource />)
+  }, [false])
+
+
+  const DecorVideo = ({ source }) => (<video
+    autoPlay
+    loop
+    muted
+    playsInline
+    className={ css.heroContent }
+    poster="/video/hero-poster.jpg"
+  >
+    { source }
+  </video>)
+
 
   return (<header className={ css.header }>
     <div className={ css.inner }>
@@ -69,17 +92,7 @@ export default () => {
               fluid={ fluid }
               alt=""
             /> */}
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className={ css.heroContent }
-              poster="/video/hero-poster.jpg"
-            >
-              <source src="/video/hero-2.webm" type="video/webm" />
-              <source src="/video/hero-2.mp4" type="video/mp4" />
-            </video>
+            <DecorVideo source={ videoSource } />
             <div className={ css.shadow }></div>
           </div>
         </div>
