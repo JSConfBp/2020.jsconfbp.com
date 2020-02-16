@@ -1,7 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import useHeadingDecorator from '../hooks/useHeadingDecorator'
-//import styles from './simpletext.module.scss'
 import Button from '../components/Button'
 
 const CFPButton = () => (

@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import css from './sponsorgallery.module.scss'
 
-const random = (min, max) => Math.floor(Math.random() * max) + min
+// const random = (min, max) => Math.floor(Math.random() * max) + min
 const images = [
   ['48874115243', '48874134593', '48874134803', '48874661891', '48874143948'],
   ['48874149958', '48874678641', '48874150418', '48874647261', '48874112928'],

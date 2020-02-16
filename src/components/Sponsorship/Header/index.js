@@ -15,16 +15,16 @@ const Header = () => (
       <nav className={styles.nav}>
         <ul className={styles.nav_list}>
           <li className={styles.nav_item}>
-            <a href="#packages">Packages</a>
+            <a href="#Packages">Packages</a>
           </li>
           <li className={styles.nav_item}>
-            <a href="#perks">Perks</a>
+            <a href="#Perks">Perks</a>
           </li>
           <li className={styles.nav_item}>
-            <a href="#workshops">Workshops</a>
+            <a href="#Workshops">Workshops</a>
           </li>
           <li className={styles.nav_item}>
-            <a href="#reach">Our Reach</a>
+            <a href="#Reach">Our Reach</a>
           </li>
         </ul>
       </nav>

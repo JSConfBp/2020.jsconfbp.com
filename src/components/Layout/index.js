@@ -1,11 +1,9 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Meta from '../Meta'
-import GuideLines from '../GuideLines'
-import css from './layout.module.scss'
-
 import Footer from '../Footer/'
 import Header from '../Header/'
+
+import css from './layout.module.scss'
 
 export default ({
   title = '',
@@ -22,6 +20,5 @@ export default ({
     <Meta title={title} description={description} pathName={pathName} />
     <main className={[ mainClassName, css.main].join(' ')}>{children}</main>
     <Footer className={ footerClassName} />
-    {/* <GuideLines /> */}
   </div>
 )
