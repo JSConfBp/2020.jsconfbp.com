@@ -18,7 +18,11 @@ export default ({
   <div className={ css.layout }>
     {!skipHeader && <Header className={ headerClassName} />}
     <Meta title={title} description={description} pathName={pathName} />
-    <main className={[ mainClassName, css.main].join(' ')}>{children}</main>
+
+    <main className={[ mainClassName, css.main].join(' ')}>
+      {children}
+    </main>
+
     <Footer className={ footerClassName} />
   </div>
 )
