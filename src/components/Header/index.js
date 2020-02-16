@@ -35,9 +35,11 @@ export default () => {
   </>)
 
   useEffect(() => {
-    setVideoSource(<DecorVideoSource />)
+    // not happy, but
+    if (window.innerWidth > 480) {
+      setVideoSource(<DecorVideoSource />)
+    }
   }, [false])
-
 
   const DecorVideo = ({ source }) => (<video
     autoPlay
@@ -49,7 +51,6 @@ export default () => {
   >
     { source }
   </video>)
-
 
   return (<header className={ css.header }>
     <div className={ css.inner }>
