@@ -43,6 +43,9 @@
     &::after {
       right: -22rem;
     }
+    &::before {
+      width: 30vw;
+    }
   }
 
   @media (max-width: 480px) {
