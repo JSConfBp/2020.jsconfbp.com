@@ -69,13 +69,18 @@ export default () => {
               fluid={ fluid }
               alt=""
             /> */}
-            <video autoPlay loop muted playsInline className={ css.heroContent }>
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className={ css.heroContent }
+              poster="/video/hero-poster.jpg"
+            >
               <source src="/video/hero-2.webm" type="video/webm" />
               <source src="/video/hero-2.mp4" type="video/mp4" />
             </video>
             <div className={ css.shadow }></div>
-            {/* <div className={ css.overlay }></div>
-             */}
           </div>
         </div>
       </div>
