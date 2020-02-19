@@ -33,7 +33,7 @@ const UpdatesList = props => {
   <div className={ css.updates }>
     <div className={ css.inner }>
 
-      <h2>Updates</h2>
+      <h2 id="Updates">Updates</h2>
 
       <ul className={classnames('unstyled', css.list)}>
         <li key={'1'} className={css.updates_list_item}>

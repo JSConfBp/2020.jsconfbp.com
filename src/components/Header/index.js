@@ -76,10 +76,11 @@ export default () => {
         className={ css.triggerCheckbox } aria-hidden="true" />
       <nav className={ css.navigation }>
         <ul className={ css.menu }>
+          <li><Link to={ "https://ti.to/jsconf-bp/jsconf-budapest-2020" }>Tickets</Link></li>
           <li><Link to={ "/call-for-speakers" }>Call for Speakers</Link></li>
-          <li><Link to={ "/" }>Sponsorship</Link></li>
-          <li><Link to={ "/" }>Updates</Link></li>
-          <li><Link to={ "/" }>Scholarship</Link></li>
+          <li><Link to={ "/sponsorship" }>Sponsorship</Link></li>
+          <li><Link to={ "/#Updates" }>Updates</Link></li>
+          {/* <li><Link to={ "/" }>Scholarship</Link></li> */}
           <li><Link to={ "/code-of-conduct" }>Code of Conduct</Link></li>
         </ul>
       </nav>
@@ -88,13 +89,5 @@ export default () => {
         className={ css.mobileMenuTrigger }
         aria-hidden="true"><span>Open Menu</span></label>
     </div>
-
-{/*
-   <div className={ css.line1 }></div>
-    <div className={ css.line2 }></div>
-    <div className={ css.line3 }></div>
-    <div className={ css.line4 }></div>
-    <div className={ css.line5 }></div>
- */}
   </header>)
 }
