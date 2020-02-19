@@ -107,6 +107,7 @@
 
     &::before {
       content: "\25AA";
+      font-size: .8rem;
       color: $color-rebeccapurple;
       position: absolute;
       left: -1.2rem;
