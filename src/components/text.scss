@@ -12,7 +12,7 @@
 
       @media (max-width: 480px) {
         font-size: 16px;
-        line-height: calc(1.6 * 16px);
+        line-height: calc(1.8 * 16px);
       }
   }
 
@@ -39,24 +39,40 @@
       font-size: $text-h1;
       line-height: $text-h1 * 1.4;
       margin-bottom: 3rem;
+
+      @media (max-width: 480px) {
+        line-height: $text-h1 * 1.2;
+      }
   }
 
   h2 {
       font-size: $text-h2;
       line-height: $text-h2 * 1.4;
       margin-bottom: 1rem;
+
+      @media (max-width: 480px) {
+        line-height: $text-h2 * 1.2;
+      }
   }
 
   h3 {
     font-size: $text-h3;
     line-height: $text-h3 * 1.4;
     margin-bottom: 1rem;
+
+    @media (max-width: 480px) {
+      line-height: $text-h3 * 1.2;
+    }
   }
 
   h4 {
     font-size: $text-h4;
     line-height: $text-h4 * 1.4;
     margin-bottom: 1rem;
+
+    @media (max-width: 480px) {
+      line-height: $text-h4 * 1.2;
+    }
   }
 
   p + h2,
