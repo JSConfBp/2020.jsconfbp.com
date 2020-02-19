@@ -11,7 +11,7 @@ export default ({ className = '' }) => (
       <nav>
         <ul className="unstyled">
           <li>
-            <Link to={'/code-of-conduct'}>About Us</Link>
+            <Link to={'/about'}>About Us</Link>
           </li>
           <li>
             <Link to={'/code-of-conduct'}>Code of Conduct</Link>
@@ -23,7 +23,7 @@ export default ({ className = '' }) => (
             <Link to={'/sponsorship'}>Sponsorship</Link>
           </li>
           <li>
-            <Link to={'/code-of-conduct'}>Impressum</Link>
+            <Link to={'/impressum'}>Impressum</Link>
           </li>
           <li>
             <a href="https://twitter.com/jsconfbp">@jsconfbp</a>
