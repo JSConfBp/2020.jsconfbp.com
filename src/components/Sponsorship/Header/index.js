@@ -1,15 +1,17 @@
 import React from 'react'
-
+import { Link } from 'gatsby'
 import styles from './header.module.scss'
 
 const Header = () => (
   <div className={styles.sponsor_header}>
     <div className={styles.block_inner}>
       <h1 className={styles.title}>
-        <span className={styles.jsconf} />
-        JSConf Budapest 2020
-        <br />
-        Sponsorship
+        <Link to={ "/" }>
+          <span className={styles.jsconf} />
+          JSConf Budapest 2020
+          <br />
+          Sponsorship
+        </Link>
       </h1>
 
       <nav className={styles.nav}>

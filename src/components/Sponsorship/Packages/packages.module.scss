@@ -79,9 +79,10 @@
     @mixin package_name {
         padding: .5rem 0;
         font-family: $base-font;
-        font-weight: bold;
+        font-weight: normal;
         min-height: 2rem;
         color: $color-black;
+        font-size: 1.1rem;
 
         @media screen and (max-width: 767px) {
             padding-top: 1.3rem;

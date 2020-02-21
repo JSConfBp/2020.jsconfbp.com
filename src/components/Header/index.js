@@ -83,7 +83,7 @@ export default ({ pathName }) => {
         className={ css.triggerCheckbox } aria-hidden="true" />
       <nav className={ css.navigation }>
         <ul className={ css.menu }>
-          <li><Link to={ "https://ti.to/jsconf-bp/jsconf-budapest-2020" }>Tickets</Link></li>
+          <li><a href="https://ti.to/jsconf-bp/jsconf-budapest-2020">Tickets</a></li>
           <li><Link to={ "/call-for-speakers" }>Call for Speakers</Link></li>
           <li><Link to={ "/sponsorship" }>Sponsorship</Link></li>
           <li><Link to={ "/#Updates" }>Updates</Link></li>
