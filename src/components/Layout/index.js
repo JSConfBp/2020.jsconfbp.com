@@ -6,9 +6,10 @@ import Header from '../Header/'
 import css from './layout.module.scss'
 
 export default ({
+  pathName,
   title = '',
   description = '',
-  pathName,
+  image = '',
   mainClassName = '',
   footerClassName = '',
   headerClassName = '',
@@ -17,7 +18,7 @@ export default ({
 }) => (
   <div className={ css.layout }>
     {!skipHeader && <Header className={ headerClassName} pathName={pathName} />}
-    <Meta title={title} description={description} pathName={pathName} />
+    <Meta title={title} description={description} pathName={pathName} image={image} />
 
     <main className={[ mainClassName, css.main].join(' ')}>
       {children}

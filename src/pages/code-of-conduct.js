@@ -5,7 +5,11 @@ import useHeadingDecorator from '../hooks/useHeadingDecorator'
 const [, getClassName] = useHeadingDecorator()
 
 const CodeOfConduct = () => (
-  <Layout title="Code of Conduct" pathName="/code-of-conduct">
+  <Layout
+    title="Code of Conduct"
+    pathName="/code-of-conduct"
+    image="coc_page.jpg"
+  >
     <h1 className={ getClassName({ color: 'orange', side: 'left'}) }>Code of Conduct of JSConf Budapest</h1>
     <p>
       All attendees, speakers, sponsors and volunteers at JSConf Budapest are
