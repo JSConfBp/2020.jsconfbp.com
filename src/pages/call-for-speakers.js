@@ -18,7 +18,7 @@ const CFPButton = () => (
 const [, getClassName] = useHeadingDecorator()
 
 const CallForSpeakers = () => (
-  <Layout title="Call for Speakers" pathName="/call-for-speakers">
+  <Layout title="Call for Speakers" pathName="/call-for-speakers" image="cfp_page.jpg">
     <h1>JSConf Budapest 2020 Call for Speakers</h1>
 
     <p>
