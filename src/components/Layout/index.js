@@ -16,7 +16,7 @@ export default ({
   children,
 }) => (
   <div className={ css.layout }>
-    {!skipHeader && <Header className={ headerClassName} />}
+    {!skipHeader && <Header className={ headerClassName} pathName={pathName} />}
     <Meta title={title} description={description} pathName={pathName} />
 
     <main className={[ mainClassName, css.main].join(' ')}>

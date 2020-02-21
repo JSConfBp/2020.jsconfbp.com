@@ -23,7 +23,7 @@ const shortcodes = {
 
 function UpdatesContentTemplate({ data: { mdx } }) {
   return (
-    <Layout>
+    <Layout title={mdx.frontmatter.title} pathName={ mdx.fields.slug }>
       <SocialMeta
         title={mdx.frontmatter.title}
         description={mdx.frontmatter.lead}

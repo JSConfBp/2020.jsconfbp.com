@@ -4,10 +4,10 @@ import css from './header.module.scss'
 import { Link } from 'gatsby'
 import Logo from '../Logo'
 
-export default () => {
+export default ({ pathName }) => {
   const [videoSource, setVideoSource] = useState('')
   const [autoPlay, setAutoPlay] = useState('')
-  const [isHomePage, setIsHomePage] = useState(typeof window !== 'undefined' ? window.location.pathname === '/' : true)
+  const [isHomePage, setIsHomePage] = useState(pathName === '/')
 
   const DecorVideoSource = () => (<>
     <source src="/video/hero-2.webm" type="video/webm" />
@@ -15,18 +15,14 @@ export default () => {
   </>)
 
   useEffect(() => {
-
-    let home = false
-    if (typeof window !== 'undefined') {
-      home = window.location.pathname === '/'
-    }
+    const home = pathName === '/'
     setIsHomePage(home)
     // not happy, but
     if (window.innerWidth > 480) {
       setVideoSource(<DecorVideoSource />)
       setAutoPlay(home)
     }
-  }, [false])
+  }, [pathName])
 
   const DecorVideo = ({ source, autoPlay }) => (<video
     autoPlay={ autoPlay }

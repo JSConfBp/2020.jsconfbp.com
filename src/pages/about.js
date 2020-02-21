@@ -6,7 +6,7 @@ import useHeadingDecorator from '../hooks/useHeadingDecorator'
 const [, getClassName] = useHeadingDecorator()
 
 const About = () => (
-  <Layout title="Impressum" pathName="/impressum">
+  <Layout title="Impressum" pathName="/about">
     <h1 className={ getClassName({ color: 'purple', side: 'left'}) }>
       SZIA! ПРИВІТ! CZEŚĆ! SALUT! ЋАО! AHOJ! DOBRÝ DEN! ΓΕΙΆ ΣΟΥ! HOI! BUNĂ!
       ЗДРАВЕЙТЕ! ПРИВЕТ! HELLO!
