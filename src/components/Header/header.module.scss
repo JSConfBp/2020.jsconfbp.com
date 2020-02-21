@@ -68,8 +68,8 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
     }
 
     @media screen and (max-width: 480px) {
-      top: 50%;
-      transform: translateX(calc(18vw * var(--ratio)));
+      top: 45%;
+      transform: translateX(calc(18vw * var(--ratio))) scale(.8);
     }
 
   }
@@ -98,7 +98,7 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
       }
 
       @media screen and (max-width: 480px) {
-        top: 50%;
+        top: 45%;
         width: 100%;
         transform: none;
         display: flex;
@@ -106,7 +106,7 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
         justify-content: flex-end;
         flex-wrap: wrap;
         z-index: 5;
-        transform: translateX(calc(18vw * var(--ratio)));
+        transform: translateX(calc(18vw * var(--ratio))) scale(.8);
       }
 
       .jsconfBp {
@@ -446,6 +446,12 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
         transform: translate(0, -50%);
       }
 
+      @media screen and (max-width: 480px) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
 
       .button {
         position: relative;
@@ -463,11 +469,23 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
         font-weight: 600;
 
         border-radius: 3px;
-
         transition: color .1s ease-in-out;
+
 
         &:hover {
           color: $color-orange;
+        }
+
+        @media screen and (max-width: 480px) {
+          font-size: 1.2rem;
+          line-height: 1.4;
+          background: $color-orange;
+          color: $color-white;
+          padding: .3rem 0 .5rem;
+
+          &:hover {
+            color: $color-purple;
+          }
         }
 
         small {
@@ -476,6 +494,11 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
           font-size: .8rem;
           font-weight: 500;
           color: $color-text-dark;
+
+          @media screen and (max-width: 480px) {
+            color: $color-white;
+            padding-top: 0;
+          }
         }
 
         &:after {
@@ -487,6 +510,10 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
           background: $color-orange;
           transform: rotate(13deg);
           transition: transform .2s ease-in-out;
+
+          @media screen and (max-width: 480px) {
+            display: none;
+          }
         }
 
         &:hover::after {
@@ -505,8 +532,12 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
       right: 0;
       top: 0;
 
+
       @media screen and (max-width: 480px) {
-        display: none;
+        width: 100%;
+        height: 4rem;
+        z-index: 10;
+        top: 95vw;
       }
 
       .mask {
@@ -516,6 +547,10 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
         transform-origin: top left;
         transform: rotate(-13deg);
         overflow: hidden;
+
+        @media screen and (max-width: 480px) {
+          display: none;
+        }
       }
 
       .content {
@@ -560,6 +595,11 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
     left: 20%;
     top: 45%;
     transform: translate(0, -50%);
+
+    @media screen and (max-width: 480px) {
+      transform: translate(-50%, -50%);
+      left: 50%;
+    }
   }
 
 }
