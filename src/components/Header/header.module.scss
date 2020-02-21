@@ -29,6 +29,11 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
   &.subpage {
     min-height: 28rem;
     height: 30vh;
+
+    @media screen and (max-width: 480px) {
+      min-height: 0;
+      height: 125vw;
+    }
   }
 
   @media screen and (max-width: 480px) {
@@ -56,6 +61,17 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
   &.subpage .inner .title {
     top: 61%;
     transform: translateX(calc(-7.3vw * var(--ratio))) scale(.8);
+
+    @media screen and (max-width: 768px) {
+      top: 50%;
+      transform: translateX(calc(-2.3vw * var(--ratio))) scale(.9);
+    }
+
+    @media screen and (max-width: 480px) {
+      top: 50%;
+      transform: translateX(calc(18vw * var(--ratio)));
+    }
+
   }
 
   .inner {
@@ -120,6 +136,12 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
           font-size: $text-huge;
           font-family: $logo-font;
 
+          @media screen and (max-width: 480px) {
+            height: auto;
+            margin-bottom: 1.1rem;
+            font-size: 3.4rem;
+          }
+
           .logo {
             display: block;
             overflow: hidden;
@@ -138,11 +160,6 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
 
           }
 
-          @media screen and (max-width: 480px) {
-            height: auto;
-            margin-bottom: .7rem;
-            font-size: 3.4rem;
-          }
         }
 
         .budapest {
@@ -411,7 +428,7 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
       @media screen and (max-width: 480px) {
         width: 5.65rem;
         height: 5.65rem;
-        bottom: 3.24rem;
+        bottom: 3.7rem;
         right: 7.2rem;
       }
     }
