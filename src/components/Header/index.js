@@ -7,7 +7,7 @@ import Logo from '../Logo'
 export default () => {
   const [videoSource, setVideoSource] = useState('')
   const [autoPlay, setAutoPlay] = useState('')
-  const [isHomePage, setIsHomePage] = useState(typeof window !== 'undefined' ? window.location.pathname === '/' : false)
+  const [isHomePage, setIsHomePage] = useState(typeof window !== 'undefined' ? window.location.pathname === '/' : true)
 
   const DecorVideoSource = () => (<>
     <source src="/video/hero-2.webm" type="video/webm" />
