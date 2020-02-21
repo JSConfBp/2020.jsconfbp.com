@@ -7,7 +7,7 @@ import Logo from '../Logo'
 export default () => {
   const [videoSource, setVideoSource] = useState('')
   const [autoPlay, setAutoPlay] = useState('')
-  const [isHomePage, setIsHomePage] = useState(window.location.pathname === '/')
+  const [isHomePage, setIsHomePage] = useState(typeof window !== 'undefined' ? window.location.pathname === '/' : false)
 
   const DecorVideoSource = () => (<>
     <source src="/video/hero-2.webm" type="video/webm" />
@@ -15,7 +15,11 @@ export default () => {
   </>)
 
   useEffect(() => {
-    const home = window.location.pathname === '/'
+
+    let home = false
+    if (typeof window !== 'undefined') {
+      home = window.location.pathname === '/'
+    }
     setIsHomePage(home)
     // not happy, but
     if (window.innerWidth > 480) {
