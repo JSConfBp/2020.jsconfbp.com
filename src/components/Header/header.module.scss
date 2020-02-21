@@ -26,6 +26,10 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
 	align-items: center;
   justify-content: flex-start;
 
+  &.subpage {
+    min-height: 28rem;
+    height: 30vh;
+  }
 
   @media screen and (max-width: 480px) {
     width: 100%;
@@ -46,6 +50,12 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
       right: -103%;
       transform: rotate(-13deg);
     }
+  }
+
+
+  &.subpage .inner .title {
+    top: 61%;
+    transform: translateX(calc(-7.3vw * var(--ratio))) scale(.8);
   }
 
   .inner {
@@ -469,6 +479,7 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
       }
     }
 
+
     .hero {
       z-index: 1;
       position: absolute;
@@ -506,7 +517,7 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
         }
 
         .shadow {
-          background: linear-gradient(to bottom, rgba(0,0,0,.9) 0%,rgba(0,0,0,0) 34%,rgba(0,0,0,0) 35%);
+          background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 34%,rgba(0,0,0,0) 35%);
           position: absolute;
           height: 100%;
           width: 100%;
@@ -516,7 +527,23 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
         }
       }
     }
-
   }
+
+  &.subpage .inner .hero .content {
+    width: 57vw;
+    height: auto;
+
+    .heroContent {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &.subpage .inner .cta {
+    left: 20%;
+    top: 45%;
+    transform: translate(0, -50%);
+  }
+
 }
 

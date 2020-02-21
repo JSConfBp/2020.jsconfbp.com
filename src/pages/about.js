@@ -1,11 +1,13 @@
 import React from 'react'
 import Layout from '../components/Layout'
-
 import Youtube from '../components/Youtube'
+import useHeadingDecorator from '../hooks/useHeadingDecorator'
+
+const [, getClassName] = useHeadingDecorator()
 
 const About = () => (
   <Layout title="Impressum" pathName="/impressum">
-    <h1>
+    <h1 className={ getClassName({ color: 'purple', side: 'left'}) }>
       SZIA! ПРИВІТ! CZEŚĆ! SALUT! ЋАО! AHOJ! DOBRÝ DEN! ΓΕΙΆ ΣΟΥ! HOI! BUNĂ!
       ЗДРАВЕЙТЕ! ПРИВЕТ! HELLO!
     </h1>
@@ -28,7 +30,7 @@ const About = () => (
       title="JSConf Budapest 2016 Mood video"
     />
 
-    <h2>JSConf Budapest so far</h2>
+    <h2 className={ getClassName({ color: 'orange', side: 'right'}) }>JSConf Budapest so far</h2>
 
     <p>Check out our earlier events!</p>
 
@@ -69,7 +71,7 @@ const About = () => (
       </a>
     </p>
 
-    <h2>The Team</h2>
+    <h2 className={ getClassName({ color: 'lightorange', side: 'left'}) }>The Team</h2>
 
     <ul>
       <li>

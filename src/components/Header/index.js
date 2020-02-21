@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react'
+import classnames from 'classnames'
 import css from './header.module.scss'
 import { Link } from 'gatsby'
 import Logo from '../Logo'
 
 export default () => {
   const [videoSource, setVideoSource] = useState('')
+  const [autoPlay, setAutoPlay] = useState('')
+  const [isHomePage, setIsHomePage] = useState(window.location.pathname === '/')
 
   const DecorVideoSource = () => (<>
     <source src="/video/hero-2.webm" type="video/webm" />
@@ -12,14 +15,17 @@ export default () => {
   </>)
 
   useEffect(() => {
+    const home = window.location.pathname === '/'
+    setIsHomePage(home)
     // not happy, but
     if (window.innerWidth > 480) {
       setVideoSource(<DecorVideoSource />)
+      setAutoPlay(home)
     }
   }, [false])
 
-  const DecorVideo = ({ source }) => (<video
-    autoPlay
+  const DecorVideo = ({ source, autoPlay }) => (<video
+    autoPlay={ autoPlay }
     loop
     muted
     playsInline
@@ -29,7 +35,7 @@ export default () => {
     { source }
   </video>)
 
-  return (<header className={ css.header }>
+  return (<header className={ classnames(css.header, !isHomePage && css.subpage) }>
     <div className={ css.inner }>
       <div className={ css.title }>
         <Link to={"/"}>
@@ -64,7 +70,7 @@ export default () => {
 
         <div className={ css.mask }>
           <div className={ css.content }>
-            <DecorVideo source={ videoSource } />
+            <DecorVideo source={ videoSource } autoPlay={ autoPlay } />
             <div className={ css.shadow }></div>
           </div>
         </div>
