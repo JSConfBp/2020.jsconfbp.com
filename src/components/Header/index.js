@@ -53,7 +53,7 @@ export default ({ pathName }) => {
         </h1>
 
         <div className={ css.date }>
-          25-26 September
+          24-25 September
           <span className={ css.year }>
             2020
           </span>
