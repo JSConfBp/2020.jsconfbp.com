@@ -16,11 +16,12 @@ export default ({ pathName }) => {
 
   useEffect(() => {
     const home = pathName === '/'
+    const useReducedMotion = matchMedia('(prefers-reduced-motion)').matches
     setIsHomePage(home)
     // not happy, but
     if (window.innerWidth > 480) {
       setVideoSource(<DecorVideoSource />)
-      setAutoPlay(home)
+      setAutoPlay(home && !useReducedMotion)
     }
   }, [pathName])
 
