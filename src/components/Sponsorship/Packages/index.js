@@ -27,7 +27,7 @@ const packages = [
   },
   {
     name: 'Gold',
-    price: '€7,000',
+    price: '€6,000',
     content: {
       branding: true,
       tickets: '10',
@@ -54,7 +54,7 @@ const packages = [
   },
   {
     name: 'Platinum',
-    price: '€10,000',
+    price: '€8,000',
     content: {
       branding: true,
       tickets: '15',

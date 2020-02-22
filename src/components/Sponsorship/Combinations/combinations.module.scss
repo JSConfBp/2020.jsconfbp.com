@@ -63,6 +63,11 @@
       display: grid;
       grid-template-columns: 18rem 18rem;
 
+      @media screen and (max-width: 480px) {
+        grid-template-columns: 1fr;
+        width: 100%;
+      }
+
       .input {
         li {
           display: grid;
