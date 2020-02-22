@@ -15,13 +15,18 @@ export default ({ pathName }) => {
   </>)
 
   useEffect(() => {
-    const home = pathName === '/'
-    const useReducedMotion = matchMedia('(prefers-reduced-motion)').matches
-    setIsHomePage(home)
+    const onHomePage = pathName === '/'
+
+    const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection || { effectiveType: '3g' };
+    const isFastNetwork = !(/[23]g/.test(connection.effectiveType))
+
+    const allowMotion = !matchMedia('(prefers-reduced-motion)').matches
+
+    setIsHomePage(onHomePage)
     // not happy, but
-    if (window.innerWidth > 480) {
+    if (window.innerWidth > 480 && isFastNetwork) {
       setVideoSource(<DecorVideoSource />)
-      setAutoPlay(home && !useReducedMotion)
+      setAutoPlay(onHomePage && allowMotion)
     }
   }, [pathName])
 
