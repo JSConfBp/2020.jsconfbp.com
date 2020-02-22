@@ -13,7 +13,9 @@
     "copy": "cp -Rf CNAME public",
     "develop": "gatsby develop",
     "format": "npx prettier --write \"src/**/*.js\"",
-    "gdpr": "node scripts/gdpr-generate.js"
+    "gdpr": "node scripts/gdpr-generate.js",
+    "storybook": "NODE_ENV=production npx start-storybook",
+    "build:storybook": "npx build-storybook -o ./public/storybook/"
   },
   "dependencies": {
     "@material-ui/core": "^4.8.3",
@@ -54,5 +56,10 @@
   ],
   "watch": {
     "build": "src/**/*.*"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^5.3.9",
+    "@storybook/react": "^5.3.9",
+    "react-scripts": "^3.3.0"
   }
 }

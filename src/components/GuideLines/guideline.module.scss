@@ -1,0 +1,17 @@
+.guides {
+  position: absolute;
+  height: 1000%;
+  width: 100%;
+  top:0;
+  left: 0;
+  z-index: 10000;
+
+  .center {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background: cyan;
+    top: 0;
+    left: 50%;
+  }
+}

@@ -106,8 +106,7 @@ const Perks = () => (
     <MuiThemeProvider theme={theme}>
       <div className={styles.perks}>
         <div className={styles.block_inner}>
-          <a name="perks" />
-          <h2 className={styles.title}>Perks</h2>
+          <h2 className={styles.title} id="Perks">Perks</h2>
 
           <p>
             Exclusive perks, brand tailored to your Company, each sold once.{' '}

@@ -7,7 +7,6 @@ $size-xl: 1.999rem;
 $size-xxl: 2.872rem;
 $size-xxxl: 3.998rem;
 
-
 $text-xs: .75rem;
 $text-sm: .875rem;
 $text-md: 1rem;
@@ -15,7 +14,31 @@ $text-lg: 1.125rem;
 $text-xl: 1.45rem;
 $text-xxl: 2rem;
 
+$text-small: .875rem;
+$text-body: 1rem;
+$text-h4: 1.438rem;
+$text-h3: 1.813rem;
+$text-h2: 2.313rem;
+$text-h1: 2.938rem;
+$text-large: 3.75rem;
+$text-huge: 4.75rem;
+
 $title-sm: 1.5rem;
 $title-md: 2rem;
 $title-lg: 3rem;
 $title-xl: 4rem;
+
+$text-small: .875rem;
+$text-body: 1rem;
+$text-h4: 1.438rem;
+$text-h3: 1.813rem;
+$text-h2: 2.313rem;
+$text-h1: 2.938rem;
+$text-large: 3.75rem;
+$text-huge: 4.75rem;
+
+$ratio: 1.618033988749;
+
+:root {
+  --ratio: 1.618033988749;
+}

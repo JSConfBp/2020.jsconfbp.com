@@ -1,36 +1,29 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Meta from '../Meta'
-
-import './layout.scss'
-
 import Footer from '../Footer/'
-
 import Header from '../Header/'
 
-const Layout = ({
+import css from './layout.module.scss'
+
+export default ({
+  pathName,
   title = '',
   description = '',
-  pathName,
-  className,
+  image = '',
+  mainClassName = '',
+  footerClassName = '',
+  headerClassName = '',
   skipHeader = false,
   children,
 }) => (
-  <div className={'layout'}>
-    <Meta title={title} description={description} pathName={pathName} />
-    {!skipHeader && <Header />}
-    <main className={['main', className].join(' ')}>{children}</main>
-    <Footer />
+  <div className={ css.layout }>
+    {!skipHeader && <Header className={ headerClassName} pathName={pathName} />}
+    <Meta title={title} description={description} pathName={pathName} image={image} />
+
+    <main className={[ mainClassName, css.main].join(' ')}>
+      {children}
+    </main>
+
+    <Footer className={ footerClassName} />
   </div>
 )
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-  mainClassNames: PropTypes.array,
-}
-
-Layout.defaultProps = {
-  mainClassNames: [],
-}
-
-export default Layout

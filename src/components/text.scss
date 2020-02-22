@@ -3,98 +3,129 @@
 @import './fonts.scss';
 @import './sizes.scss';
 
-html, body {
-    font-family: $primary-font;
-    font-size: 18px;
-    line-height: 29px;
-    font-weight: 200;
+:global {
+  html, body {
+      font-family: $primary-font;
+      font-size: 18px;
+      line-height: calc(1.6 * 18px);
+      font-weight: 200;
+
+      @media (max-width: 480px) {
+        font-size: 16px;
+        line-height: calc(1.8 * 16px);
+      }
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  a, a:visited {
+    text-decoration: underline;
+    color: $color-purple;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  h1, h2, h3, h4, h5 {
+      font-family: $heading-font;
+      color: $color-rebeccapurple;
+      font-weight: 700;
+      font-variant-ligatures: no-common-ligatures;
+  }
+
+  h1 {
+      font-size: $text-h1;
+      line-height: $text-h1 * 1.4;
+      margin-bottom: 3rem;
+
+      @media (max-width: 480px) {
+        line-height: $text-h1 * 1.2;
+      }
+  }
+
+  h2 {
+      font-size: $text-h2;
+      line-height: $text-h2 * 1.4;
+      margin-bottom: 1rem;
+
+      @media (max-width: 480px) {
+        line-height: $text-h2 * 1.2;
+      }
+  }
+
+  h3 {
+    font-size: $text-h3;
+    line-height: $text-h3 * 1.4;
+    margin-bottom: 1rem;
 
     @media (max-width: 480px) {
-      font-size: 16px;
-      line-height: 26px;
+      line-height: $text-h3 * 1.2;
     }
-}
-
-//
-
-p {
-  margin-bottom: 1rem;
-}
-
-h1, h2, h3, h4, h5 {
-    font-family: $primary-font;
-    color: $color-rebeccapurple;
-    font-weight: 400;
-    font-variant-ligatures: no-common-ligatures;
-}
-
-h1 {
-    font-size: $text-xxl;
-    line-height: $text-xxl * 1.3;
-    margin-bottom: 1rem;
-}
-
-h2 {
-    font-size: $text-xl;
-    line-height: $text-xl * 1.3;
-    margin-bottom: 1rem;
-}
-
-h3 {
-  font-size: $text-lg;
-  line-height: $text-lg * 1.3;
-  margin-bottom: 1rem;
-}
-
-p + h2,
-ul + h2,
-ol + h2 {
-  margin-top: 1.5rem;
-}
-
-p + h3,
-ul + h3,
-ol + h3 {
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-ul + p,
-ol + p {
-  margin-top: 1rem;
-}□
-
-h3, h4, h5 {
-    font-family: $primary-font;
-}
-
-ul:not(.unstyled) li {
-  position: relative;
-  margin-left: 1.2rem;
-
-  &:not(:last-child) {
-    margin-bottom: .5rem;
   }
 
-  &::before {
-    content: '▪︎';
-    color: $color-rebeccapurple;
-    position: absolute;
-    left: -1.2rem;
-    top: -0.05rem;
+  h4 {
+    font-size: $text-h4;
+    line-height: $text-h4 * 1.4;
+    margin-bottom: 1rem;
+
+    @media (max-width: 480px) {
+      line-height: $text-h4 * 1.2;
+    }
   }
-}
 
-ul:not(.unstyled) li ul {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  p + h2,
+  ul + h2,
+  ol + h2 {
+    margin-top: 3rem;
+  }
+
+  p + h3,
+  ul + h3,
+  ol + h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  ul + p,
+  ol + p {
+    margin-top: 1rem;
+  }□
+
+  h3, h4, h5 {
+      font-family: $heading-font
+  }
+
+  ul:not(.unstyled) li {
+    position: relative;
+    margin-left: 1.2rem;
+
+    &:not(:last-child) {
+      margin-bottom: .5rem;
+    }
+
+    &::before {
+      content: "\25AA";
+      font-size: .8rem;
+      color: $color-rebeccapurple;
+      position: absolute;
+      left: -1.2rem;
+      top: -0.05rem;
+    }
+  }
+
+  ul:not(.unstyled) li ul {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 
 
-  li::before {
-    content: '▫︎';
-    color: lighten($color-rebeccapurple, 20);
-    position: absolute;
-    left: -1.2rem;
-    top: -0.05rem;
+    li::before {
+      content: '▫︎';
+      color: lighten($color-rebeccapurple, 20);
+      position: absolute;
+      left: -1.2rem;
+      top: -0.05rem;
+    }
   }
 }

@@ -18,8 +18,7 @@ export default () => (
           , we have tons of ideas!
         </p>
 
-        <a name="workshops" />
-        <h4 className={styles.info_title}>Sponsor with Workshops!</h4>
+        <h4 className={styles.info_title} id="Workshops">Sponsor with Workshops!</h4>
 
         <p className={styles.info_text}>
           If your company has a product or a service, you can sponsor us by
