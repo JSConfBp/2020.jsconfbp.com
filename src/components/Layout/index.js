@@ -9,7 +9,7 @@ export default ({
   pathName,
   title = '',
   description = '',
-  image = '',
+  image,
   mainClassName = '',
   footerClassName = '',
   headerClassName = '',
