@@ -128,6 +128,7 @@ module.exports = {
           {
             family: 'Noto Sans JP',
             variants: ['700'],
+            text: 'Conf'
           }
         ],
       },
