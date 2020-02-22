@@ -6,6 +6,64 @@ import useHeadingDecorator from '../hooks/useHeadingDecorator'
 
 import css from './about.module.scss'
 
+const team = [
+  {
+    name: 'Szabolcs Szabolcsi-Tóth',
+    image: 'https://nec.is/nec.png',
+    twitter: '_nec',
+  },
+  {
+    name: 'Aniko Fejes',
+    image: 'https://pbs.twimg.com/profile_images/663056435790614530/2-DbMaxT_400x400.png',
+    twitter: 'hubudibu',
+  },
+  {
+    name: 'Benedek Gagyi',
+    image: 'https://pbs.twimg.com/profile_images/1039213863923855360/3skKEfX0_400x400.jpg',
+    twitter: 'BenedekGagyi',
+  },
+  {
+    name: 'Daniel Liptak',
+    image: 'https://pbs.twimg.com/profile_images/867028857441931265/HJdtCgrz_400x400.jpg',
+    twitter: 'daniliptak',
+  },
+  {
+    name: 'Gergő Nagy',
+    image: 'https://pbs.twimg.com/profile_images/477984724741148672/4aHVf43A_400x400.png',
+    twitter: '_puffancs',
+  },
+  {
+    name: 'Stefania Peter',
+    image: 'http://schatten.hu/temp/meh.png',
+    twitter: 'cat_a_flame',
+  },
+  {
+    name: 'Peter Frivalszky',
+    image: 'https://pbs.twimg.com/profile_images/897112677037867008/V2NmMOl-_400x400.jpg',
+    twitter: 'freevo',
+  },
+  {
+    name: 'Zsolt Pentz',
+    image: 'https://pbs.twimg.com/profile_images/705173503784390656/RXyWsHLA_400x400.jpg',
+    twitter: 'pentzzsolt',
+  },
+  {
+    name: 'Patricia Blesa',
+    image: 'https://avatars0.githubusercontent.com/u/15064767?s=460&v=4',
+    twitter: 'blepati',
+  },
+  {
+    name: 'Máté Nádasdi',
+    image: 'https://pbs.twimg.com/profile_images/958732112982675457/i8lskEp7_400x400.jpg',
+    twitter: 'matenadasdi',
+  },
+  {
+    name: 'Tamas Puski',
+    image: 'https://pbs.twimg.com/profile_images/775696303980474370/cncvvwch_400x400.jpg',
+    twitter: 'TPuski',
+  },
+]
+
 const [, getClassName] = useHeadingDecorator()
 
 const About = () => (
@@ -77,124 +135,18 @@ const About = () => (
     <h2 className={ getClassName({ color: 'lightorange', side: 'left'}) }>The Team</h2>
 
     <ul className={ classnames('unstyled', css.team ) }>
-      <li>
-        <a href="https://twitter.com/_nec">
-          <span>
-            <img alt="Szabolcs" src="https://nec.is/nec.png" />
-          </span>
-          <span className={ css.name }>Szabolcs
-          <br /> Szabolcsi-Tóth</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://twitter.com/hubudibu">
-          <span>
-            <img
-              alt="Aniko"
-              src="https://pbs.twimg.com/profile_images/663056435790614530/2-DbMaxT_400x400.png"
-            />
-          </span>
-          <span className={ css.name }>Aniko Fejes</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://twitter.com/BenedekGagyi">
-          <span>
-            <img
-              alt="Bence"
-              src="https://pbs.twimg.com/profile_images/1039213863923855360/3skKEfX0_400x400.jpg"
-            />
-          </span>
-          <span className={ css.name }>Benedek Gagyi</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://twitter.com/daniliptak">
-          <span>
-            <img
-              alt="Dani"
-              src="https://pbs.twimg.com/profile_images/867028857441931265/HJdtCgrz_400x400.jpg"
-            />
-          </span>
-          <span className={ css.name }>Daniel Liptak</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://twitter.com/_puffancs">
-          <span>
-            <img
-              alt="Gergő"
-              src="https://pbs.twimg.com/profile_images/477984724741148672/4aHVf43A_400x400.png"
-            />
-          </span>
-          <span className={ css.name }>Gergő Nagy</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://twitter.com/cat_a_flame">
-          <span>
-            <img alt="Stefanie" src="http://schatten.hu/temp/meh.png" />
-          </span>
-          <span className={ css.name }>Stefania Peter</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://twitter.com/freevo">
-          <span>
-            <img
-              alt="Peter"
-              src="https://pbs.twimg.com/profile_images/897112677037867008/V2NmMOl-_400x400.jpg"
-            />
-          </span>
-          <span className={ css.name }>Peter Frivalszky</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://twitter.com/pentzzsolt">
-          <span>
-            <img
-              alt="Zsolt"
-              src="https://pbs.twimg.com/profile_images/705173503784390656/RXyWsHLA_400x400.jpg"
-            />
-          </span>
-          <span className={ css.name }>Zsolt Pentz</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com/blepati">
-          <span>
-            <img
-              alt="Pati"
-              src="https://avatars0.githubusercontent.com/u/15064767?s=460&v=4"
-            />
-          </span>
-          <span className={ css.name }>Patricia Blesa</span>
-        </a>
-      </li>
-
-      <li>
-        <a href="https://twitter.com/matenadasdi">
-          <span>
-            <img
-              alt="Mate"
-              src="https://pbs.twimg.com/profile_images/958732112982675457/i8lskEp7_400x400.jpg"
-            />
-          </span>
-          <span className={ css.name }>Máté Nádasdi</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://twitter.com/TPuski">
-          <span>
-            <img
-              alt="Tamas"
-              src="https://pbs.twimg.com/profile_images/775696303980474370/cncvvwch_400x400.jpg"
-            />
-          </span>
-          <span className={ css.name }>Tamas Puski</span>
-        </a>
-      </li>
-
+      { team.map(member => (
+        <li key={ member.name }>
+          <a href={ `https://twitter.com/${member.twitter}`}>
+            <span>
+              <img alt={ member.name } src={ member.image } />
+            </span>
+            <span className={ css.name }>
+              { member.name }
+            </span>
+          </a>
+        </li>
+      ))}
     </ul>
 
   </Layout>
