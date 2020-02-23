@@ -34,12 +34,12 @@ const SocialMeta = ({
   return (
     <Helmet
       meta={[
-        { name: 'og:type', content: 'website' },
-        { name: 'og:title', content: title || siteTitle },
-        { name: 'og:description', content: description || siteDescription },
-        { name: 'og:site_name', content: siteTitle },
-        { name: 'og:url', content: href || siteUrl },
-        { name: 'og:image', content: `${siteUrl}/social/${image}` },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:title', content: title || siteTitle },
+        { property: 'og:description', content: description || siteDescription },
+        { property: 'og:site_name', content: siteTitle },
+        { property: 'og:url', content: href || siteUrl },
+        { property: 'og:image', content: `${siteUrl}/social/${image}` },
 
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:site', content: siteTitle },

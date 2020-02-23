@@ -27,7 +27,7 @@ const SiteMetadata = ({ title, description, pathName, image }) => {
       <Helmet
         defer={false}
         defaultTitle={siteTitle}
-        titleTemplate={`%s | ${title}`}
+        titleTemplate={`%s | ${siteTitle}`}
       >
         <html lang="en" />
 
