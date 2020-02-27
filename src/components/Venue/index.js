@@ -40,6 +40,10 @@ const image = data.allFile.edges[0].node.childImageSharp.fixed
 
       <blockquote>
         Akvárium Klub is more than a simple bar: it is a culture center with a wide musical repertoire from mainstream to underground. There is always a good concert and a smashing exhibition, performance, or other event happening here, in a friendly scene, situated right in the city center.
+
+        <a href="https://welovebudapest.com/en/venue/akvarium-klub-1">
+          welovebudapest.com
+        </a>
       </blockquote>
 
       <div className={ css.googleMap }>

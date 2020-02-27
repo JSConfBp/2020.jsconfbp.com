@@ -59,6 +59,11 @@
       color: $color-lightestpurple;
       font-style: italic;
       margin-bottom: 2rem;
+
+      a {
+        display: block;
+        text-align: right;
+      }
     }
   }
 
