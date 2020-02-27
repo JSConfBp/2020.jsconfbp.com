@@ -13,7 +13,7 @@
     height: 40rem;
     bottom: 100%;
     left: -20rem;
-    background: $color-purple;
+    background: $color-orange;
     --offset: calc(calc(100vw - 108rem) * 0.35);
     transform: rotate(-13deg); //translateY(-60.1%) translateX(var(--offset));
     transform-origin: 100% 100%;
@@ -49,7 +49,7 @@
 
 
   .hero {
-    background: $color-purple;
+    background: $color-darkpurple;
     position: absolute;
     height: 120%;
     width: 53%;
