@@ -24,6 +24,6 @@ export default ({
       {children}
     </main>
 
-    <Footer className={ footerClassName} />
+    <Footer className={ footerClassName } />
   </div>
 )

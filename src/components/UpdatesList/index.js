@@ -30,7 +30,7 @@ const UpdatesList = props => {
 `)
 
   return (
-  <div className={ css.updates }>
+  <section className={ css.updates }>
     <div className={ css.inner }>
 
       <h2 id="Updates">Updates</h2>
@@ -84,7 +84,7 @@ const UpdatesList = props => {
           ))}
       </ul>
     </div>
-  </div>)
+  </section>)
 }
 
 export default UpdatesList

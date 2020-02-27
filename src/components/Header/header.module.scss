@@ -20,6 +20,7 @@ $secondary-header-fontSize: (($ratio * $main-header-fontSize) - $main-header-fon
 
   min-height: 38rem;
   height: 78vh;
+  max-height: 54rem;
 
   display: flex;
 	flex-direction: column;

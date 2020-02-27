@@ -1,0 +1,92 @@
+@import '../colors.scss';
+
+.venue {
+  background-color: $color-lightpurple;
+  position: relative;
+  z-index: 11;
+
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 26rem;
+    height: 40rem;
+    bottom: 100%;
+    left: -20rem;
+    background: $color-purple;
+    --offset: calc(calc(100vw - 108rem) * 0.35);
+    transform: rotate(-13deg); //translateY(-60.1%) translateX(var(--offset));
+    transform-origin: 100% 100%;
+
+    @media screen and (max-width: 1280px) {
+      left: -23rem;
+    }
+    @media screen and (max-width: 480px) {
+      left: -24.5rem;
+    }
+  }
+
+  .inner {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 4rem 0;
+    padding-right: 32rem;
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+
+    h2, p {
+      color: $color-white;
+    }
+
+    blockquote {
+      color: $color-lightestpurple;
+      font-style: italic;
+      margin-bottom: 2rem;
+    }
+  }
+
+
+  .hero {
+    background: $color-purple;
+    position: absolute;
+    height: 120%;
+    width: 53%;
+    top: 0;
+    left: 50%;
+    overflow: hidden;
+    transform-origin: top left;
+    transform: rotate(-13deg);
+  }
+
+  .heroImage {
+    position: absolute;
+    right: 2%;
+    top: 0;
+    height: 144%;
+    opacity: .2;
+
+    transform-origin: top left;
+    transform: rotate(13deg);
+
+    .img {
+      height: 100% !important;
+      position: absolute !important;
+      top: 0;
+      right: 0;
+      z-index: 1;
+    }
+  }
+
+  .overlay {
+    z-index: 10;
+    position: absolute;
+    background: $color-purple;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: screen;
+  }
+}
