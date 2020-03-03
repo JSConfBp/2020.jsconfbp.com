@@ -89,9 +89,9 @@ export default ({ pathName }) => {
       <nav className={ css.navigation }>
         <ul className={ css.menu }>
           <li><a href="https://ti.to/jsconf-bp/jsconf-budapest-2020">Tickets</a></li>
-          <li><Link to={ "/call-for-speakers" }>Call for Speakers</Link></li>
-          <li><Link to={ "/sponsorship" }>Sponsorship</Link></li>
+          <li><Link to={ "/scholarships" }>Scholarships</Link></li>
           <li><Link to={ "/#Updates" }>Updates</Link></li>
+          <li><Link to={ "/sponsorship" }>Sponsorship</Link></li>
           {/* <li><Link to={ "/" }>Scholarship</Link></li> */}
           <li><Link to={ "/code-of-conduct" }>Code of Conduct</Link></li>
         </ul>
