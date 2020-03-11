@@ -31,9 +31,7 @@ const SocialMeta = ({
     },
   } = useStaticQuery(query)
 
-
   const canonical = `${siteUrl}${href}`
-  console.log(canonical)
 
   return (
     <Helmet
