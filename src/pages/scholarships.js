@@ -78,7 +78,7 @@ export default () => (
 
     <p>
       <strong>10% of every Sponsor package goes directly into the Scholarship Budget. </strong>
-      SSo all of our sponsors become donors to the Program. If your company is interested in participating, check out our {' '}
+      So all of our sponsors become donors to the Program. If your company is interested in participating, check out our {' '}
       <a href="/sponsoration/">Sponsorship opportunities</a>.
     </p>
 
@@ -120,9 +120,9 @@ export default () => (
     </p>
 
     <p>
-    We, the organizers, do not take part in the jury process. In the past years, we asked Green Fox Academy in Budapest to help us evaluate
-    the applications and select the awardees. To manage the scholarship budget, we turned to the Asimov Foundation in Budapest,
-    who helped the people chosen with travel arrangements if necessary. This year, we plan to cooperate with these organizations again.
+      We, the organizers, do not take part in the jury process. In the past years, we asked Green Fox Academy in Budapest to help us evaluate
+      the applications and select the awardees. To manage the scholarship budget, we turned to the Asimov Foundation in Budapest,
+      who helped the people chosen with travel arrangements if necessary. This year, we plan to cooperate with these organizations again.
     </p>
 
     <h4>Green Fox Academy</h4>
