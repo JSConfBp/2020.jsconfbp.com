@@ -70,7 +70,7 @@ export default ({ pathName }) => {
         <div className={ css.cta }>
           <a href="https://ti.to/jsconf-bp/jsconf-budapest-2020" className={ css.button }>
             Buy Tickets
-            <small>Starting from €205</small>
+            <small>Starting from €311</small>
           </a>
         </div>
 

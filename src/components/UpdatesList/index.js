@@ -39,17 +39,17 @@ const UpdatesList = props => {
         <li key={'1'} className={css.updates_list_item}>
         <h3><Link
           className={css.title}
-          to={`/call-for-speakers`}
-          >
-          Call for Speakers
+          to={`/scholarships`}
+        >
+          Scholarships
         </Link></h3>
-        <small className={css.date}>2019-12-01</small>
+        <small className={css.date}>2020-03-12</small>
         <p className={css.lead}>
-          We invite the JavaScript community to submit talks for the upcoming
-          JSConf Budapest! Our Call for Speakers open till <strong>February 29th, 2020</strong>
+          2020 will be the 5th time when we're running our Scholarship Program! As every year so far, we'll provide several free,
+          Scholarship tickets to help underrepresented groups in tech to attend the conference.
         </p>
-        <Link to={`/call-for-speakers`}>
-          Submit your talk!
+        <Link to={`/scholarships`}>
+          Apply for a Scholarship!
         </Link>
         </li>
         {data.allMdx.edges
