@@ -22,6 +22,7 @@ const UpdatesList = props => {
             date
             lead
             path
+            skip
           }
         }
       }
@@ -54,13 +55,14 @@ const UpdatesList = props => {
         </li>
         {data.allMdx.edges
           .filter(({ node }) => node.parent.sourceInstanceName === 'updates')
+          .filter(({ node }) => !node.frontmatter.skip)
           .sort((prev, next) => {
             const prevDate = new Date(prev.node.frontmatter.date)
             const nextDate = new Date(next.node.frontmatter.date)
 
-            if (prevDate > nextDate) return 1 //-1
+            if (prevDate > nextDate) return -1 //-1
 
-            if (prevDate < nextDate) return -1 //1
+            if (prevDate < nextDate) return 1 //1
 
             return 0
           })

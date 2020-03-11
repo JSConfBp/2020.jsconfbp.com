@@ -41,10 +41,10 @@ const SiteMetadata = ({ title, description, pathName, image }) => {
       </Helmet>
       <Helmet title={title} />
       <SocialMeta
-        title={title || siteTitle}
-        description={description || siteDescription}
-        image={image}
-        href={canonical}
+        title={ title || siteTitle }
+        description={ description || siteDescription }
+        image={ image }
+        href={ pathName }
       />
     </>
   )

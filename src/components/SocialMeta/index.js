@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 const SocialMeta = ({
   title,
   description,
-  href,
+  href = '',
   image = 'jsconfbp_2020_default.jpg',
 }) => {
   const query = graphql`
@@ -31,6 +31,10 @@ const SocialMeta = ({
     },
   } = useStaticQuery(query)
 
+
+  const canonical = `${siteUrl}${href}`
+  console.log(canonical)
+
   return (
     <Helmet
       meta={[
@@ -38,7 +42,7 @@ const SocialMeta = ({
         { property: 'og:title', content: title || siteTitle },
         { property: 'og:description', content: description || siteDescription },
         { property: 'og:site_name', content: siteTitle },
-        { property: 'og:url', content: href || siteUrl },
+        { property: 'og:url', content: canonical },
         { property: 'og:image', content: `${siteUrl}/social/${image}` },
 
         { name: 'twitter:card', content: 'summary_large_image' },
@@ -49,7 +53,7 @@ const SocialMeta = ({
           name: 'twitter:description',
           content: description || siteDescription,
         },
-        { name: 'twitter:url', content: href || siteUrl },
+        { name: 'twitter:url', content: canonical },
         { name: 'twitter:image', content: `${siteUrl}/social/${image}` },
       ]}
     />
