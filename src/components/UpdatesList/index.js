@@ -44,7 +44,7 @@ const UpdatesList = props => {
         >
           Scholarships
         </Link></h3>
-        <small className={css.date}>2020-03-12</small>
+        <small className={css.date}>2020-03-17</small>
         <p className={css.lead}>
           2020 will be the 5th time when we're running our Scholarship Program! As every year so far, we'll provide several free,
           Scholarship tickets to help underrepresented groups in tech to attend the conference.
