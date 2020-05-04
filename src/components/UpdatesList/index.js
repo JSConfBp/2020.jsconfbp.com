@@ -37,7 +37,7 @@ const UpdatesList = props => {
       <h2 id="Updates">Updates</h2>
 
       <ul className={classnames('unstyled', css.list)}>
-        <li key={'1'} className={css.updates_list_item}>
+        {/* <li key={'1'} className={css.updates_list_item}>
         <h3><Link
           className={css.title}
           to={`/scholarships`}
@@ -52,7 +52,7 @@ const UpdatesList = props => {
         <Link to={`/scholarships`}>
           Apply for a Scholarship!
         </Link>
-        </li>
+        </li> */}
         {data.allMdx.edges
           .filter(({ node }) => node.parent.sourceInstanceName === 'updates')
           .filter(({ node }) => !node.frontmatter.skip)

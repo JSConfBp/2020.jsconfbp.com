@@ -23,7 +23,7 @@ const CallForSpeakers = () => (
 
     <p>
       We are inviting the JavaScript community to submit talks for the upcoming
-      JSConf Budapest (September 24-25, 2020, Budapest, Hungary).
+      JSConf Budapest (September 23-24, 2021, Budapest, Hungary).
     </p>
     <p>
       This Call for Speakers closes on <strong>February 29th, 2020</strong>!

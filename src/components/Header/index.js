@@ -59,16 +59,16 @@ export default ({ pathName }) => {
         </h1>
 
         <div className={ css.date }>
-          24-25 September
+          23-24 September
           <span className={ css.year }>
-            2020
+            2021
           </span>
         </div>
       </div>
 
       <div className={ css.hero }>
         <div className={ css.cta }>
-          <a href="https://ti.to/jsconf-bp/jsconf-budapest-2020" className={ css.button }>
+          <a href="https://ti.to/jsconf-bp/jsconf-budapest-2021" className={ css.button }>
             Buy Tickets
             <small>Starting from €311</small>
           </a>
@@ -88,7 +88,7 @@ export default ({ pathName }) => {
         className={ css.triggerCheckbox } aria-hidden="true" />
       <nav className={ css.navigation }>
         <ul className={ css.menu }>
-          <li><a href="https://ti.to/jsconf-bp/jsconf-budapest-2020">Tickets</a></li>
+          <li><a href="https://ti.to/jsconf-bp/jsconf-budapest-2021">Tickets</a></li>
           <li><Link to={ "/scholarships" }>Scholarships</Link></li>
           <li><Link to={ "/#Updates" }>Updates</Link></li>
           <li><Link to={ "/sponsorship" }>Sponsorship</Link></li>
