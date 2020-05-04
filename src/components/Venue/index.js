@@ -35,7 +35,7 @@ const image = data.allFile.edges[0].node.childImageSharp.fixed
       </p>
 
       <p>
-      Literally under a pool of water, this great club was our venue in 2016 and 2019. We return in 2020!
+      Literally under a pool of water, this great club was our venue in 2016 and 2019. We return in 2021!
       </p>
 
       <blockquote>

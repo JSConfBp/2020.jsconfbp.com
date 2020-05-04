@@ -9,14 +9,14 @@ const NextYear = () => (
         <h2 className={ styles.title }>Coming up next</h2>
 
         <h3>
-          2020 September 24-25
+          2021 September 23-24
           <br />
           Ticket sales started in December, 2019!
         </h3>
 
         <div className={styles.conferences}>
           <div className={styles.jsconf}>
-            <h5>JSConf Budapest 2020</h5>
+            <h5>JSConf Budapest 2021</h5>
             <ul>
               <li>Single track</li>
               <li>500+ attendees</li>
