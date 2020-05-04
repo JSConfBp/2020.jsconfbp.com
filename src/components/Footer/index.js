@@ -49,6 +49,9 @@ export default ({ className = '' }) => (
           <li>
             <a href="https://2019.jsconfbp.com">2019</a>
           </li>
+          <li>
+            <a href="https://jsconfbp.com/updates/reschedule-to-2021">2020 😷</a>
+          </li>
         </ul>
       </nav>
     </section>
