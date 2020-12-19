@@ -150,7 +150,9 @@ const Packages = () => (
   <>
     <div className={styles.packages}>
       <div className={styles.block_inner}>
-        <h2 className={ styles.title } id="Packages">Packages</h2>
+        <h2 className={styles.title} id="Packages">
+          Packages
+        </h2>
 
         <h3>
           Help us make this event <br />a better experience for our attendees

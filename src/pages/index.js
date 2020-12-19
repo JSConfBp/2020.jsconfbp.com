@@ -5,7 +5,7 @@ import Layout from '../components/Layout'
 import css from './index.module.scss'
 
 const IndexPage = props => (
-  <Layout pathName="/" mainClassName={ css.home } footerClassName={ css.footer }>
+  <Layout pathName="/" mainClassName={css.home} footerClassName={css.footer}>
     <UpdatesList />
     <Venue />
   </Layout>

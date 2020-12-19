@@ -6,7 +6,7 @@ const Header = () => (
   <div className={styles.sponsor_header}>
     <div className={styles.block_inner}>
       <h1 className={styles.title}>
-        <Link to={ "/" }>
+        <Link to={'/'}>
           <span className={styles.jsconf} />
           JSConf Budapest 2021
           <br />

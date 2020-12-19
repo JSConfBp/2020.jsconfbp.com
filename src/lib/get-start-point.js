@@ -1,7 +1,6 @@
-const hasCenter = (str) => str.includes('center')
+const hasCenter = str => str.includes('center')
 
-export default (opts) => {
-
+export default opts => {
   const { start, grid } = opts
   const result = [0, 0]
 
@@ -14,7 +13,10 @@ export default (opts) => {
       result[1] = grid.y - 1
     }
 
-    if ((start.includes('top') || start.includes('bottom')) && hasCenter(start)) {
+    if (
+      (start.includes('top') || start.includes('bottom')) &&
+      hasCenter(start)
+    ) {
       result[0] = Math.floor(grid.x / 2)
     }
 
@@ -26,7 +28,10 @@ export default (opts) => {
       result[0] = grid.x - 1
     }
 
-    if ((start.includes('left') || start.includes('right')) && hasCenter(start)) {
+    if (
+      (start.includes('left') || start.includes('right')) &&
+      hasCenter(start)
+    ) {
       result[1] = Math.floor(grid.y / 2)
     }
 

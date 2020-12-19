@@ -6,7 +6,7 @@ const NextYear = () => (
   <>
     <div className={styles.nextyear}>
       <div className={styles.block_inner}>
-        <h2 className={ styles.title }>Coming up next</h2>
+        <h2 className={styles.title}>Coming up next</h2>
 
         <h3>
           2021 September 23-24

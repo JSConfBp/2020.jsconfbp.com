@@ -16,14 +16,17 @@ export default ({
   skipHeader = false,
   children,
 }) => (
-  <div className={ css.layout }>
-    {!skipHeader && <Header className={ headerClassName} pathName={pathName} />}
-    <Meta title={title} description={description} pathName={pathName} image={image} />
+  <div className={css.layout}>
+    {!skipHeader && <Header className={headerClassName} pathName={pathName} />}
+    <Meta
+      title={title}
+      description={description}
+      pathName={pathName}
+      image={image}
+    />
 
-    <main className={[ mainClassName, css.main].join(' ')}>
-      {children}
-    </main>
+    <main className={[mainClassName, css.main].join(' ')}>{children}</main>
 
-    <Footer className={ footerClassName } />
+    <Footer className={footerClassName} />
   </div>
 )

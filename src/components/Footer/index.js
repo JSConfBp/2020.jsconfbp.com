@@ -5,7 +5,7 @@ import Logo from '../Logo'
 import css from './footer.module.scss'
 
 export default ({ className = '' }) => (
-  <footer className={ classnames(className ,css.footer) }>
+  <footer className={classnames(className, css.footer)}>
     <section>
       <p>JSConf Budapest welcomes everybody, please be nice to each other.</p>
       <nav>
@@ -32,25 +32,30 @@ export default ({ className = '' }) => (
       </nav>
 
       <Link to={'/'}>
-        <Logo className={ css.logo } polygonClassName={ css.logoFill } />
+        <Logo className={css.logo} polygonClassName={css.logoFill} />
       </Link>
-      <small className={ css.jsconfbp }>JSConf Budapest</small>
+      <small className={css.jsconfbp}>JSConf Budapest</small>
       <nav>
-        <ul className={classnames("unstyled", css.years)}>
-        <li>
+        <ul className={classnames('unstyled', css.years)}>
+          <li>
             <a href="https://2015.jsconfbp.com">2015</a>
           </li>
           <li>
             <a href="https://2016.jsconfbp.com">2016</a>
           </li>
           <li>
-           <a href="https://2017.jsconfbp.com">2017</a>
+            <a href="https://2017.jsconfbp.com">2017</a>
           </li>
           <li>
             <a href="https://2019.jsconfbp.com">2019</a>
           </li>
           <li>
-            <a href="https://jsconfbp.com/updates/reschedule-to-2021">2020 😷</a>
+            <a href="https://jsconfbp.com/updates/reschedule-to-2021">
+              2020 😷
+            </a>
+          </li>
+          <li>
+            <a href="https://jsconfbp.com">2021</a>
           </li>
         </ul>
       </nav>

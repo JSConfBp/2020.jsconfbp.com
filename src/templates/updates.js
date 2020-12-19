@@ -12,8 +12,8 @@ import './updates.scss'
 
 const [getClassName] = useHeadingDecorator()
 
-const H2 = ({children}) => {
-  return <h2 className={ getClassName() }>{ children }</h2>
+const H2 = ({ children }) => {
+  return <h2 className={getClassName()}>{children}</h2>
 }
 
 const shortcodes = {
@@ -23,18 +23,19 @@ const shortcodes = {
 
 function UpdatesContentTemplate({ data: { mdx } }) {
   return (
-    <Layout title={mdx.frontmatter.title} pathName={ `/updates${mdx.fields.slug}` }>
+    <Layout
+      title={mdx.frontmatter.title}
+      pathName={`/updates${mdx.fields.slug}`}
+    >
       <SocialMeta
         title={mdx.frontmatter.title}
         description={mdx.frontmatter.lead}
         image={mdx.frontmatter.socialCard || 'social-card.png'}
-        href={ `/updates${mdx.fields.slug}` }
+        href={`/updates${mdx.fields.slug}`}
       />
-      <h1>{ mdx.frontmatter.title }</h1>
+      <h1>{mdx.frontmatter.title}</h1>
       <MDXProvider components={shortcodes}>
-          <MDXRenderer>
-            {mdx.body}
-          </MDXRenderer>
+        <MDXRenderer>{mdx.body}</MDXRenderer>
       </MDXProvider>
     </Layout>
   )

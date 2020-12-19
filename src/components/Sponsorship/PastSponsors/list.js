@@ -10,40 +10,25 @@ const SponsorImageLink = ({ link, image, name }) => (
   </a>
 )
 
-export default () => (<>
-    <ul
-      className={classnames(styles.sponsor_list, styles.sponsor_list_big)}
-    >
+export default () => (
+  <>
+    <ul className={classnames(styles.sponsor_list, styles.sponsor_list_big)}>
       {data.big.map(sponsor => (
-        <li
-          className={styles[`sponsor_${sponsor.level}`]}
-          key={sponsor.name}
-        >
+        <li className={styles[`sponsor_${sponsor.level}`]} key={sponsor.name}>
           <SponsorImageLink {...sponsor} />
         </li>
       ))}
     </ul>
-    <ul
-      className={classnames(
-        styles.sponsor_list,
-        styles.sponsor_list_medium
-      )}
-    >
+    <ul className={classnames(styles.sponsor_list, styles.sponsor_list_medium)}>
       {data.med.map(sponsor => (
-        <li
-          className={styles[`sponsor_${sponsor.level}`]}
-          key={sponsor.name}
-        >
+        <li className={styles[`sponsor_${sponsor.level}`]} key={sponsor.name}>
           <SponsorImageLink {...sponsor} />
         </li>
       ))}
     </ul>
     <ul className={styles.sponsor_list}>
       {data.sm.map(sponsor => (
-        <li
-          className={styles[`sponsor_${sponsor.level}`]}
-          key={sponsor.name}
-        >
+        <li className={styles[`sponsor_${sponsor.level}`]} key={sponsor.name}>
           <SponsorImageLink {...sponsor} />
         </li>
       ))}
@@ -56,4 +41,5 @@ export default () => (<>
         </li>
       ))}
     </ul>
-  </>)
+  </>
+)

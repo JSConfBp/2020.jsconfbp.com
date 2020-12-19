@@ -4,11 +4,11 @@ import settings from './settings'
 import drawTriangleAt from './draw'
 import getStartPoint from './get-start-point'
 
-const textBasedRandom = (text) => {
+const textBasedRandom = text => {
   let index = 0
   let counter = 0
 
-  return (array) => {
+  return array => {
     const rand = text.charCodeAt(index) % array.length
 
     if (counter % 4 === 0) {
@@ -22,45 +22,48 @@ const textBasedRandom = (text) => {
   }
 }
 
-export default async function (options) {
+export default async function(options) {
   const opts = Object.assign({}, settings, options, {
     random: pick,
     canvas: Object.assign({}, settings.canvas, options.canvas || {}),
-    grid: Grid.createConfig(options)
+    grid: Grid.createConfig(options),
   })
 
   if (opts.fromText) {
     opts.random = textBasedRandom(opts.fromText)
   }
 
-  if (opts.triangles && opts.fromText && (opts.fromText.length / 2) < opts.triangles) {
-    opts.triangles = Math.floor((opts.fromText.length) / 2)
+  if (
+    opts.triangles &&
+    opts.fromText &&
+    opts.fromText.length / 2 < opts.triangles
+  ) {
+    opts.triangles = Math.floor(opts.fromText.length / 2)
   }
 
   if (!opts.triangles) {
-    opts.triangles = Math.floor((opts.fromText.length) / 2)
+    opts.triangles = Math.floor(opts.fromText.length / 2)
   }
 
   const grid = Grid.createInstance(opts.grid.x, opts.grid.y, {
-    size: opts.grid.edgeDistance
+    size: opts.grid.edgeDistance,
   })
 
   if (opts.debug) {
     console.log({
-      config: opts
-    });
+      config: opts,
+    })
   }
 
   const start = getStartPoint(opts)
 
-  const notStart = (p) => (p[0] !== start[0] && p[1] !== start[1])
+  const notStart = p => p[0] !== start[0] && p[1] !== start[1]
 
-  const asyncDraw = async (previous) => {
-
+  const asyncDraw = async previous => {
     // pick a point from last drawn tringle
     // which is not filled
     let s = opts.random(
-      previous.grid.filter(k => (grid.contentOf(...k).length < 4))
+      previous.grid.filter(k => grid.contentOf(...k).length < 4)
     )
 
     // no points avail,
@@ -84,7 +87,7 @@ export default async function (options) {
         grid
           .getSurroundingPoints(...opts.random(c))
           .filter(notStart)
-          .filter(point => (point[0] !== c[0] && point[1] !== c[0]))
+          .filter(point => point[0] !== c[0] && point[1] !== c[0])
       )
 
       let c = await drawTriangleAt(...s2, opts, grid)
@@ -100,7 +103,7 @@ export default async function (options) {
       .reduce((P, ...args) => {
         const index = args[1]
         return P.then(coords => {
-          const final = (index + 1 == opts.triangles - 1);
+          const final = index + 1 == opts.triangles - 1
           result.push(coords)
 
           if (!final) {

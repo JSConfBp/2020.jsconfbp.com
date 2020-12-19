@@ -3,39 +3,64 @@ import Layout from '../components/Layout'
 import useHeadingDecorator from '../hooks/useHeadingDecorator'
 import Button from '../components/Button'
 
-const CFPButton = () => (
+import css from './cfp.module.scss'
+
+const CFPButton = ({ type }) => (
   <Button
     block={true}
     fill={true}
-    color={'purple'}
+    color={type === 'sessionize' ? 'sessionize' : 'purple'}
     href={
-      'https://docs.google.com/forms/d/e/1FAIpQLSdtRwZkaXoPcNleNCpQHswgImy9ez92yoGmPfWvbd-ZrNOt2A/viewform'
+      type === 'sessionize'
+        ? 'https://sessionize.com/jsconf-budapest-2021'
+        : 'https://docs.google.com/forms/d/e/1FAIpQLSdtRwZkaXoPcNleNCpQHswgImy9ez92yoGmPfWvbd-ZrNOt2A/viewform'
     }
   >
-    Submit your talk!
+    Submit with {type === 'sessionize' ? 'Sessionize' : 'Google Forms'}
   </Button>
 )
 const [, getClassName] = useHeadingDecorator()
 
 const CallForSpeakers = () => (
-  <Layout title="Call for Speakers" pathName="/call-for-speakers" image="cfp_page.jpg">
-    <h1>JSConf Budapest 2020 Call for Speakers</h1>
+  <Layout
+    title="Call for Speakers"
+    pathName="/call-for-speakers"
+    image="cfp_page.jpg"
+  >
+    <h1>JSConf Budapest 2021 Call for Speakers</h1>
 
     <p>
       We are inviting the JavaScript community to submit talks for the upcoming
       JSConf Budapest (September 23-24, 2021, Budapest, Hungary).
     </p>
     <p>
-      This Call for Speakers closes on <strong>February 29th, 2020</strong>!
+      This Call for Speakers closes on <strong>February 28th, 2021</strong>!
     </p>
 
-    <CFPButton />
+    <p>
+      In the feedback for our last CFP, we read that using a CFP service or site
+      is preferred for some of you. We've looked around, and found one which we
+      can use together with our CFP evaluation tools.
+    </p>
+    <p>
+      To help those who like to manage their talks in this way, we're accepting
+      CFPs not just through Google Forms, but through Sessionize as well.
+    </p>
 
-    <h2 className={ getClassName() }>Topics</h2>
+    <div className={css.cfp_buttons}>
+      <CFPButton type="googleform" />
+      <CFPButton type="sessionize" />
+    </div>
+
+    <h2 className={getClassName()}>Topics</h2>
 
     <p>We like to see anything that fits into the topics like:</p>
 
     <ul>
+      <li>
+        How did the web helped to get us through COVID. Tools, services that
+        made it easier to cope with the many aspects of a world-wide pandemic.
+      </li>
       <li>
         Cutting-edge technological advances in the world of JavaScript or
         computer science in general, if somehow applicable to JavaScript.
@@ -53,7 +78,7 @@ const CallForSpeakers = () => (
       </li>
     </ul>
 
-    <h2 className={ getClassName() }>Perks</h2>
+    <h2 className={getClassName()}>Perks</h2>
 
     <p>
       If you get selected as a speaker at JSConf Budapest, here’s what we
@@ -111,10 +136,10 @@ const CallForSpeakers = () => (
       we can usually work these things out.
     </p>
 
-    <h2 className={ getClassName() }>Guidelines</h2>
+    <h2 className={getClassName()}>Guidelines</h2>
 
     <p>
-      Submit your proposal by <strong>Febr 29th 2020, 23:59:59 CEST</strong>.
+      Submit your proposal by <strong>Febr 28th 2021, 23:59:59 CEST</strong>.
     </p>
 
     <p>All talks are in English.</p>
@@ -191,9 +216,14 @@ const CallForSpeakers = () => (
       <li>coherence and clarity of the proposal,</li>
       <li>and novelty/originality of the topic</li>
     </ul>
-    <p>in a submission.</p>
+    <p>
+      in a submission. Check out our{' '}
+      <a href="/updates/how-can-we-evaluate-600-talk-proposals/">
+        blogpost on how we manage to evaluate the CFP submissions.
+      </a>
+    </p>
 
-    <h2 className={ getClassName() }>We are here to help!</h2>
+    <h2 className={getClassName()}>We are here to help!</h2>
     <p>
       Not everybody is a natural talent on stage. Not everybody can produce
       kick-ass slide-decks. Not everybody is a live-demo-god. Not everybody
@@ -224,7 +254,10 @@ const CallForSpeakers = () => (
       Again, whatever else you might need, we’re here to help.
     </p>
 
-    <CFPButton />
+    <div className={css.cfp_buttons}>
+      <CFPButton type="googleform" />
+      <CFPButton type="sessionize" />
+    </div>
 
     <p>
       Get in touch: <strong>team@jsconfbp.com</strong> (just please don’t use

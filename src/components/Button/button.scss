@@ -17,6 +17,14 @@
 		color: $color-white !important;
 	}
 }
+@mixin hover-sessionize() {
+	&:hover, &:focus, &:active,
+	&:visited:hover, &:visited:focus, &:visited:active {
+    border-color: $color-black;
+    background-color: $color-black;
+		color: $color-white !important;
+	}
+}
 @mixin hover-orange() {
 	&:hover, &:focus, &:active,
 	&:visited:hover, &:visited:focus, &:visited:active {
@@ -101,6 +109,14 @@
 
 				@include visited-white();
 				@include hover-purple();
+      }
+      &__sessionize {
+				color: $color-white !important;
+				border-color: $color-sessionize;
+				background-color: $color-sessionize;
+
+				@include visited-white();
+				@include hover-sessionize();
 			}
 			&__yellow {
 				background-color: $color-yellow;
@@ -128,6 +144,16 @@
 
 			&:visited {
 				color: $color-rebeccapurple;
+				@include hover-purple();
+			}
+    }
+		&__sessionize {
+			border-color: $color-sessionize;
+			color: $color-sessionize;
+			@include hover-gray();
+
+			&:visited {
+				color: $color-sessionize;
 				@include hover-purple();
 			}
 		}

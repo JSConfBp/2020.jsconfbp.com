@@ -5,7 +5,9 @@ const Reach = () => (
   <>
     <div className={styles.reach}>
       <div className={styles.block_inner}>
-        <h2 className={ styles.title } id="Reach">Reach</h2>
+        <h2 className={styles.title} id="Reach">
+          Reach
+        </h2>
 
         <h3>100% relevance in the JavaScript community</h3>
 

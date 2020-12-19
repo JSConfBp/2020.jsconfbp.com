@@ -17,10 +17,10 @@ export default {
   canvas: {
     width: 1200,
     height: 1024,
-    backgroundColor: 'transparent'
+    backgroundColor: 'transparent',
   },
   grid: {
     edgeDistance: 64,
   },
-  start: [0,0]
+  start: [0, 0],
 }

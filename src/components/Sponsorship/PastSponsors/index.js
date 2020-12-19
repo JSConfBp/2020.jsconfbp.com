@@ -9,7 +9,6 @@ const PastSponsors = () => (
         <h2>Recent Sponsors </h2>
 
         <SponsorList />
-
       </div>
     </div>
   </>

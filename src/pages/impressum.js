@@ -23,15 +23,12 @@ const Impressum = () => (
       01-09-299007
     </p>
 
-    <p>
-      Management:
-    </p>
+    <p>Management:</p>
     <ul>
       <li>Szabolcs Szabolcsi-Tóth</li>
       <li>Medea Baccifava</li>
       <li>Agnes Hegedus</li>
     </ul>
-
   </Layout>
 )
 
