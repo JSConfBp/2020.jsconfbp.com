@@ -114,24 +114,15 @@ module.exports = {
       }
     }, */
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: `Titillium Web`,
-            variants: [`300`,`600`,`700`],
-          },
-          {
-            family: `Roboto`,
-            variants: [`300`,`400`,`700`],
-          },
-          {
-            family: 'Noto Sans JP',
-            variants: ['700'],
-            text: 'Conf'
-          }
+          `Titillium Web\:300,600,700`,
+          `Roboto\:300,400,700`,
+          `Noto Sans JP\:700`
         ],
-      },
-    }
+        display: 'swap'
+      }
+    },
   ],
 }
