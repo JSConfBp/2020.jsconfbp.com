@@ -13,7 +13,7 @@ const CFPButton = ({ type }) => (
     href={
       type === 'sessionize'
         ? 'https://sessionize.com/jsconf-budapest-2021'
-        : 'https://docs.google.com/forms/d/e/1FAIpQLSdtRwZkaXoPcNleNCpQHswgImy9ez92yoGmPfWvbd-ZrNOt2A/viewform'
+        : 'https://docs.google.com/forms/d/e/1FAIpQLScf_dpctz2PtQYq7TrKabxVr2v8dqAV36LfRVW78wRPtw43TQ/viewform'
     }
   >
     Submit with {type === 'sessionize' ? 'Sessionize' : 'Google Forms'}
