@@ -25,7 +25,7 @@ const CallForSpeakers = () => (
   <Layout
     title="Call for Speakers"
     pathName="/call-for-speakers"
-    image="cfp_page.jpg"
+    image="cfp_page_2021.png"
   >
     <h1>JSConf Budapest 2021 Call for Speakers</h1>
 
