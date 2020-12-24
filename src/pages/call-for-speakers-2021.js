@@ -266,6 +266,26 @@ const CallForSpeakers = () => (
       Again, whatever else you might need, we’re here to help.
     </p>
 
+    <h2 className={getClassName()}>Notes on COVID-19</h2>
+
+    <p>
+      JSConf Budapest 2021 is planned to be held as an in-person event,
+      in Budapest at the same venue we did last time in 2019. We'll do our best
+      to make this experience as safe as possible for every participant: speakers, attendees and
+      sponsors alike.
+    </p>
+    <p>
+      We're really optimistic about the vaccination that started in 2020 and
+      will continue hopefully world-wide in 2021. We really hope that by Q3 2021,
+      the situation will be manageable and visiting events like ours will be possible.
+    </p>
+    <p>
+      Don't be discouraged by this situation, feel free to submit all your talk ideas,
+      you have nothing to lose by submitting. We'll see how the situation develops in 2021,
+      and work out the details together with the authors of the selected talks.
+    </p>
+
+
     <div className={css.cfp_buttons}>
       <CFPButton type="googleform" />
       <CFPButton type="sessionize" />
