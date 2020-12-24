@@ -35,22 +35,24 @@ const UpdatesList = props => {
         <h2 id="Updates">Updates</h2>
 
         <ul className={classnames('unstyled', css.list)}>
-          {/* <li key={'1'} className={css.updates_list_item}>
-        <h3><Link
-          className={css.title}
-          to={`/scholarships`}
-        >
-          Scholarships
-        </Link></h3>
-        <small className={css.date}>2020-03-17</small>
-        <p className={css.lead}>
-          2020 will be the 5th time when we're running our Scholarship Program! As every year so far, we'll provide several free,
-          Scholarship tickets to help underrepresented groups in tech to attend the conference.
-        </p>
-        <Link to={`/scholarships`}>
-          Apply for a Scholarship!
-        </Link>
-        </li> */}
+          <li key={'1'} className={css.updates_list_item}>
+            <h3><Link
+              className={css.title}
+              to={`/call-for-speakers-2021`}
+            >
+              Call for Speakers
+            </Link></h3>
+            <small className={css.date}>2020-12-24</small>
+            <p className={css.lead}>
+            We invite everyone in the community to submit their talk to JSConf Budapest 2021.
+            No matter who you are, where you come from, if you had given talks ever before,
+            live or online events. We would LOVE to read your talk ideas!
+
+            </p>
+            <Link to={`/call-for-speakers-2021`}>
+              Submit a talk right now!
+            </Link>
+          </li>
           {data.allMdx.edges
             .filter(({ node }) => node.parent.sourceInstanceName === 'updates')
             .filter(({ node }) => !node.frontmatter.skip)
@@ -64,7 +66,7 @@ const UpdatesList = props => {
 
               return 0
             })
-            .slice(0, 3)
+            .slice(0, 2)
             .map(({ node }) => (
               <li key={node.id} className={css.updates_list_item}>
                 <h3>

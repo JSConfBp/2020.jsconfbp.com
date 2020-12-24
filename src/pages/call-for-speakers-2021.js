@@ -24,7 +24,7 @@ const [, getClassName] = useHeadingDecorator()
 const CallForSpeakers = () => (
   <Layout
     title="Call for Speakers"
-    pathName="/call-for-speakers"
+    pathName="/call-for-speakers-2021"
     image="cfp_page_2021.jpg"
   >
     <h1>JSConf Budapest 2021 Call for Speakers</h1>
@@ -52,13 +52,24 @@ const CallForSpeakers = () => (
       <CFPButton type="sessionize" />
     </div>
 
+    <p>
+      Before you submit - please make absolutely sure you do not include any personal details
+      about yourself in the abstract and the description of your talk.
+    </p>
+    <p>
+      We're aiming at the most bias-free selection process as possible, our evaluation process
+      aims to anonymize all submissions, so we ask you to help us. Omit any detail, url, company
+      name from your the title and abstracts - for such details, we provide a separate field on the CFP
+      form, which we'll check when we de-anonimize the talks at the end of the evaluation process.
+    </p>
+
     <h2 className={getClassName()}>Topics</h2>
 
     <p>We like to see anything that fits into the topics like:</p>
 
     <ul>
       <li>
-        How did the web helped to get us through COVID. Tools, services that
+        How did the web help us get through COVID. Tools, services that
         made it easier to cope with the many aspects of a world-wide pandemic.
       </li>
       <li>
@@ -142,6 +153,13 @@ const CallForSpeakers = () => (
       Submit your proposal by <strong>Febr 28th 2021, 23:59:59 CEST</strong>.
     </p>
 
+    <p>
+      We're aiming at the most bias-free selection process as possible, so we
+      ask you to help us. Omit any detail, url, company name from your the title
+      and abstracts - for such details, we provide a separate field on the CFP
+      form.
+    </p>
+
     <p>All talks are in English.</p>
 
     <p>
@@ -177,12 +195,7 @@ const CallForSpeakers = () => (
       knowledge.
     </p>
 
-    <p>
-      We're aiming at the most bias-free selection process as possible, so we
-      ask you to help us. Omit any detail, url, company name from your the title
-      and abstracts - for such details, we provide a separate field on the CFP
-      form.
-    </p>
+
 
     <h2>Selection Process</h2>
 
@@ -197,9 +210,8 @@ const CallForSpeakers = () => (
       </li>
       <li>The top-N (~90) submissions are rated again on a 3-point scale.</li>
       <li>
-        Then we de-anonymize the final shortlist so we can bias against speaker
-        details (eg. based on our budget, we might opt for a local or at least
-        closer-by speaker).
+        At the end, we de-anonymize the final shortlist so we can take speaker details
+        as a factor in the final selection.
       </li>
     </ul>
 
