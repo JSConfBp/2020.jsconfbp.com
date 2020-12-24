@@ -266,6 +266,11 @@ const CallForSpeakers = () => (
       Again, whatever else you might need, we’re here to help.
     </p>
 
+    <p>
+      Get in touch: <strong>team@jsconfbp.com</strong> (just please don’t use
+      this address to submit a proposal).
+    </p>
+
     <h2 className={getClassName()}>Notes on COVID-19</h2>
 
     <p>
@@ -291,10 +296,6 @@ const CallForSpeakers = () => (
       <CFPButton type="sessionize" />
     </div>
 
-    <p>
-      Get in touch: <strong>team@jsconfbp.com</strong> (just please don’t use
-      this address to submit a proposal).
-    </p>
   </Layout>
 )
 
