@@ -34,7 +34,7 @@ const CallForSpeakers = () => (
       JSConf Budapest (September 23-24, 2021, Budapest, Hungary).
     </p>
     <p>
-      This Call for Speakers closes on <strong>February 28th, 2021</strong>!
+      This Call for Speakers closes on <strong>March 31th, 2021</strong>!
     </p>
 
     <p>
