@@ -24,10 +24,17 @@ const [, getClassName] = useHeadingDecorator()
 const CallForSpeakers = () => (
   <Layout
     title="Call for Speakers"
+<<<<<<< HEAD:src/pages/call-for-speakers-2021.js
     pathName="/call-for-speakers-2021"
     image="cfp_page_2021.jpg"
   >
     <h1>JSConf Budapest 2021 Call for Speakers</h1>
+=======
+    pathName="/call-for-speakers"
+    image="cfp_page.jpg"
+  >
+    <h1>JSConf Budapest 2020 Call for Speakers</h1>
+>>>>>>> update deps:src/pages/call-for-speakers.js
 
     <p>
       We are inviting the JavaScript community to submit talks for the upcoming
@@ -47,6 +54,7 @@ const CallForSpeakers = () => (
       CFPs not just through Google Forms, but through Sessionize as well.
     </p>
 
+<<<<<<< HEAD:src/pages/call-for-speakers-2021.js
     <div className={css.cfp_buttons}>
       <CFPButton type="googleform" />
       <CFPButton type="sessionize" />
@@ -63,6 +71,8 @@ const CallForSpeakers = () => (
       form, which we'll check when we de-anonimize the talks at the end of the evaluation process.
     </p>
 
+=======
+>>>>>>> update deps:src/pages/call-for-speakers.js
     <h2 className={getClassName()}>Topics</h2>
 
     <p>We like to see anything that fits into the topics like:</p>
@@ -148,10 +158,13 @@ const CallForSpeakers = () => (
     </p>
 
     <h2 className={getClassName()}>Guidelines</h2>
+<<<<<<< HEAD:src/pages/call-for-speakers-2021.js
 
     <p>
       Submit your proposal by <strong>Febr 28th 2021, 23:59:59 CEST</strong>.
     </p>
+=======
+>>>>>>> update deps:src/pages/call-for-speakers.js
 
     <p>
       We're aiming at the most bias-free selection process as possible, so we
