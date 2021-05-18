@@ -28,8 +28,6 @@ const Contact = () => {
     ),
   }
 
-  console.log(images)
-
   return (
     <div className={css.contact}>
       <div className={css.block_inner}>
