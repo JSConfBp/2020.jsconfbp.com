@@ -5,7 +5,7 @@ import Header from '../Header/'
 
 import * as css from './layout.module.scss'
 
-export default ({
+const Layout = ({
   pathName,
   title = '',
   description = '',
@@ -30,3 +30,5 @@ export default ({
     <Footer className={footerClassName} />
   </div>
 )
+
+export default Layout

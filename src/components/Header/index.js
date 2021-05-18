@@ -4,7 +4,7 @@ import * as css from './header.module.scss'
 import { Link } from 'gatsby'
 import Logo from '../Logo'
 
-export default ({ pathName }) => {
+const Header = ({ pathName }) => {
   const [videoSource, setVideoSource] = useState('')
   const [autoPlay, setAutoPlay] = useState('')
   const [isHomePage, setIsHomePage] = useState(pathName === '/')
@@ -127,3 +127,5 @@ export default ({ pathName }) => {
     </header>
   )
 }
+
+export default Header

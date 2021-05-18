@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import * as css from './contact.module.scss'
 
-export default () => {
+const Contact = () => {
   const data = useStaticQuery(graphql`
     query TeamQuery {
       allFile(filter: { sourceInstanceName: { eq: "team-pics" } }) {
@@ -72,3 +72,5 @@ export default () => {
     </div>
   )
 }
+
+export default Contact

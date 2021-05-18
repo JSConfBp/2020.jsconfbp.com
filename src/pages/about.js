@@ -72,87 +72,87 @@ const team = [
   },
 ]
 
-export default () => {
+const About = () => {
   const [, getClassName] = useHeadingDecorator()
   return (
-  <Layout title="About us" pathName="/about">
-    <h1 className={getClassName({ color: 'purple', side: 'left' })}>
-      SZIA! ПРИВІТ! CZEŚĆ! SALUT! ЋАО! AHOJ! DOBRÝ DEN! ΓΕΙΆ ΣΟΥ! HOI! BUNĂ!
-      ЗДРАВЕЙТЕ! ПРИВЕТ! HELLO!
-    </h1>
+    <Layout title="About us" pathName="/about">
+      <h1 className={getClassName({ color: 'purple', side: 'left' })}>
+        SZIA! ПРИВІТ! CZEŚĆ! SALUT! ЋАО! AHOJ! DOBRÝ DEN! ΓΕΙΆ ΣΟΥ! HOI! BUNĂ!
+        ЗДРАВЕЙТЕ! ПРИВЕТ! HELLO!
+      </h1>
 
-    <p>
-      We aim to be the JSConf of the region around Eastern-Middle Europe, an
-      area so diverse in culture, people and views. A strictly nonprofit,
-      open-sourced and community driven conference for the community of
-      JavaScript, with the purpose to build and educate about new technologies,
-      ideas and culture.
-    </p>
+      <p>
+        We aim to be the JSConf of the region around Eastern-Middle Europe, an
+        area so diverse in culture, people and views. A strictly nonprofit,
+        open-sourced and community driven conference for the community of
+        JavaScript, with the purpose to build and educate about new
+        technologies, ideas and culture.
+      </p>
 
-    <Youtube src="oWmPuKDiRV4" title="JSConf Budapest 2019 Mood video" />
+      <Youtube src="oWmPuKDiRV4" title="JSConf Budapest 2019 Mood video" />
 
-    <Youtube src="mJoS_pLbiWc" title="JSConf Budapest 2016 Mood video" />
+      <Youtube src="mJoS_pLbiWc" title="JSConf Budapest 2016 Mood video" />
 
-    <h2 className={getClassName({ color: 'orange', side: 'right' })}>
-      JSConf Budapest so far
-    </h2>
+      <h2 className={getClassName({ color: 'orange', side: 'right' })}>
+        JSConf Budapest so far
+      </h2>
 
-    <p>Check out our earlier events!</p>
+      <p>Check out our earlier events!</p>
 
-    <h3>2019</h3>
+      <h3>2019</h3>
 
-    <p>
-      <a href="https://2019.jsconfbp.com">Site & Speakers</a>,<br />
-      <a href="https://www.youtube.com/watch?v=OkovPZ1mVBI&list=PL37ZVnwpeshEMCvdYDdZ09Sy-toTftWu0">
-        Videos of 2019
-      </a>
-    </p>
+      <p>
+        <a href="https://2019.jsconfbp.com">Site & Speakers</a>,<br />
+        <a href="https://www.youtube.com/watch?v=OkovPZ1mVBI&list=PL37ZVnwpeshEMCvdYDdZ09Sy-toTftWu0">
+          Videos of 2019
+        </a>
+      </p>
 
-    <h3>2017</h3>
+      <h3>2017</h3>
 
-    <p>
-      <a href="http://2017.jsconfbp.com">Site & Speakers</a>,<br />
-      <a href="https://www.youtube.com/watch?v=aHVdJ0QT5rM&list=PL37ZVnwpeshH9ztZfHqvQhF1_Zm4VcCTD">
-        Videos of 2017
-      </a>
-    </p>
+      <p>
+        <a href="http://2017.jsconfbp.com">Site & Speakers</a>,<br />
+        <a href="https://www.youtube.com/watch?v=aHVdJ0QT5rM&list=PL37ZVnwpeshH9ztZfHqvQhF1_Zm4VcCTD">
+          Videos of 2017
+        </a>
+      </p>
 
-    <h3>2016</h3>
+      <h3>2016</h3>
 
-    <p>
-      <a href="http://2016.jsconfbp.com">Site & Speakers</a>,<br />
-      <a href="https://www.youtube.com/watch?v=CL8_nlqTcw0&list=PL37ZVnwpeshE6PbF5GB4hvtU3A4HqMfxf">
-        Videos of 2016
-      </a>
-    </p>
+      <p>
+        <a href="http://2016.jsconfbp.com">Site & Speakers</a>,<br />
+        <a href="https://www.youtube.com/watch?v=CL8_nlqTcw0&list=PL37ZVnwpeshE6PbF5GB4hvtU3A4HqMfxf">
+          Videos of 2016
+        </a>
+      </p>
 
-    <h3>2015</h3>
+      <h3>2015</h3>
 
-    <p>
-      <a href="http://2015.jsconfbp.com">Site & Speakers</a>,<br />
-      <a href="https://www.youtube.com/watch?v=1zj7M1LnJV4&list=PLFZ5NyC0xHDaaTy6tY9p0C0jd_rRRl5Zm">
-        Videos of 2015
-      </a>
-    </p>
+      <p>
+        <a href="http://2015.jsconfbp.com">Site & Speakers</a>,<br />
+        <a href="https://www.youtube.com/watch?v=1zj7M1LnJV4&list=PLFZ5NyC0xHDaaTy6tY9p0C0jd_rRRl5Zm">
+          Videos of 2015
+        </a>
+      </p>
 
-    <h2 className={getClassName({ color: 'lightorange', side: 'left' })}>
-      The Team
-    </h2>
+      <h2 className={getClassName({ color: 'lightorange', side: 'left' })}>
+        The Team
+      </h2>
 
-    <ul className={classnames('unstyled', css.team)}>
-      {team.map((member) => (
-        <li key={member.name}>
-          <a href={`https://twitter.com/${member.twitter}`}>
-            <span>
-              <img alt={member.name} src={member.image} />
-            </span>
-            <span className={css.name}>{member.name}</span>
-          </a>
-        </li>
-      ))}
-    </ul>
-  </Layout>
-)
-      }
+      <ul className={classnames('unstyled', css.team)}>
+        {team.map((member) => (
+          <li key={member.name}>
+            <a href={`https://twitter.com/${member.twitter}`}>
+              <span>
+                <img alt={member.name} src={member.image} />
+              </span>
+              <span className={css.name}>{member.name}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </Layout>
+  )
+}
 
-
+export default About

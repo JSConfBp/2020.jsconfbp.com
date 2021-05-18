@@ -1,4 +1,4 @@
-export default {
+const SponsorData = {
   big: [
     {
       name: 'Mozilla',
@@ -113,3 +113,5 @@ export default {
     },
   ],
 }
+
+export default SponsorData

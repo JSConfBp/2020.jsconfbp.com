@@ -10,7 +10,6 @@ import SocialMeta from '../components/SocialMeta/index'
 
 import './updates.scss'
 
-
 const H2 = ({ children }) => {
   const [getClassName] = useHeadingDecorator()
   return <h2 className={getClassName()}>{children}</h2>
@@ -22,7 +21,6 @@ const shortcodes = {
 }
 
 function UpdatesContentTemplate({ data: { mdx } }) {
-
   return (
     <Layout
       title={mdx.frontmatter.title}

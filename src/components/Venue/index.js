@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import * as css from './venue.module.scss'
 
-export default (props) => {
+const Venue = (props) => {
   const data = useStaticQuery(graphql`
     query {
       allFile(
@@ -54,7 +54,7 @@ export default (props) => {
           </a>
         </blockquote>
 
-        <div className={css.googleMap}>
+        <div>
           <iframe
             title="Venue area map"
             style={{ pointerEvents: 'none' }}
@@ -80,3 +80,5 @@ export default (props) => {
     </section>
   )
 }
+
+export default Venue

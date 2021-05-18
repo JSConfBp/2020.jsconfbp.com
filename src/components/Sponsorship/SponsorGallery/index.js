@@ -21,7 +21,7 @@ const Image = ({ image, link }) => (
   </a>
 )
 
-export default () => {
+const SponsorGallery = () => {
   const data = useStaticQuery(graphql`
     query SponsorGalleryQuery {
       allFile(filter: { sourceInstanceName: { eq: "sponsor-gallery" } }) {
@@ -58,3 +58,5 @@ export default () => {
     </div>
   )
 }
+
+export default SponsorGallery

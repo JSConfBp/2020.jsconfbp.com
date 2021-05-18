@@ -6,11 +6,11 @@ import * as css from './pastsponsors.module.scss'
 
 const SponsorImageLink = ({ link, image, name }) => (
   <a href={link} title={name}>
-    <SponsorImage className={css.image} image={image} title={name} />
+    <SponsorImage image={image} title={name} />
   </a>
 )
 
-export default () => (
+const SponsorList = () => (
   <>
     <ul className={classnames(css.sponsor_list, css.sponsor_list_big)}>
       {data.big.map((sponsor) => (
@@ -43,3 +43,5 @@ export default () => (
     </ul>
   </>
 )
+
+export default SponsorList

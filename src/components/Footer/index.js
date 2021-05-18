@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import Logo from '../Logo'
 import * as css from './footer.module.scss'
 
-export default ({ className = '' }) => (
+const Footer = ({ className = '' }) => (
   <footer className={classnames(className, css.footer)}>
     <section>
       <p>JSConf Budapest welcomes everybody, please be nice to each other.</p>
@@ -32,7 +32,7 @@ export default ({ className = '' }) => (
       </nav>
 
       <Link to={'/'}>
-        <Logo className={css.logo} polygonClassName={css.logoFill} />
+        <Logo className={css.logo} />
       </Link>
       <small className={css.jsconfbp}>JSConf Budapest</small>
       <nav>
@@ -51,7 +51,10 @@ export default ({ className = '' }) => (
           </li>
           <li>
             <a href="https://jsconfbp.com/updates/reschedule-to-2021">
-              2020 😷
+              2020{' '}
+              <span role="img" aria-label="Covid masked emoji">
+                😷
+              </span>
             </a>
           </li>
           <li>
@@ -62,3 +65,5 @@ export default ({ className = '' }) => (
     </section>
   </footer>
 )
+
+export default Footer

@@ -2,9 +2,10 @@ import React from 'react'
 import classnames from 'classnames'
 import * as css from './youtube.module.scss'
 
-export default ({ src, className = '' }) => (
+const Youtube = ({ src, title = '', className = '' }) => (
   <div className={classnames(css.embed, className)}>
     <iframe
+      title={`Embed video ${title}`}
       src={`https://www.youtube.com/embed/${src}`}
       frameborder="0"
       gesture="media"
@@ -14,3 +15,5 @@ export default ({ src, className = '' }) => (
     ></iframe>
   </div>
 )
+
+export default Youtube

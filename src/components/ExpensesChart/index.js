@@ -3,7 +3,7 @@ import React from 'react'
 import { PieChart } from 'react-chartkick'
 import 'chart.js'
 
-export default () => {
+const ExpensesChart = () => {
   return (
     <PieChart
       legend={'bottom'}
@@ -23,3 +23,5 @@ export default () => {
     />
   )
 }
+
+export default ExpensesChart

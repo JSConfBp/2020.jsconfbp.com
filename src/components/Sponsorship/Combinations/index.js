@@ -2,7 +2,7 @@ import React from 'react'
 import classnames from 'classnames'
 import * as css from './combinations.module.scss'
 
-export default () => {
+const Combinations = () => {
   return (
     <div className={css.combinations}>
       <div className={css.block_inner}>
@@ -53,3 +53,5 @@ export default () => {
     </div>
   )
 }
+
+export default Combinations

@@ -1,7 +1,7 @@
 import React from 'react'
 import * as css from './packageinfo.module.scss'
 
-export default () => (
+const PackageInfo = () => (
   <>
     <div className={css.packages}>
       <div className={css.block_inner}>
@@ -48,3 +48,5 @@ export default () => (
     </div>
   </>
 )
+
+export default PackageInfo

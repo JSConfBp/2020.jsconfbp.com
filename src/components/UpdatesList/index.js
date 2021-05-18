@@ -37,12 +37,10 @@ const UpdatesList = (props) => {
         <ul className={classnames('unstyled', css.list)}>
           <li key={'1'} className={css.updates_list_item}>
             <h3>
-              <Link className={css.title} to={`/call-for-speakers-2021`}>
-                Call for Speakers
-              </Link>
+              <Link to={`/call-for-speakers-2021`}>Call for Speakers</Link>
             </h3>
             <small className={css.date}>2020-12-24</small>
-            <p className={css.lead}>
+            <p>
               We invite everyone in the community to submit their talk to JSConf
               Budapest 2021. No matter who you are, where you come from, if you
               had given talks ever before, live or online events. We would LOVE
@@ -68,14 +66,13 @@ const UpdatesList = (props) => {
               <li key={node.id} className={css.updates_list_item}>
                 <h3>
                   <Link
-                    className={css.title}
                     to={`/${node.parent.sourceInstanceName}/${node.parent.name}`}
                   >
                     {node.frontmatter.title}
                   </Link>
                 </h3>
                 <small className={css.date}>{node.frontmatter.date}</small>
-                <p className={css.lead}>{node.frontmatter.lead}</p>
+                <p>{node.frontmatter.lead}</p>
                 <Link
                   to={`/${node.parent.sourceInstanceName}/${node.parent.name}`}
                 >

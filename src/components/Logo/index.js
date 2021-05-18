@@ -2,7 +2,7 @@ import React from 'react'
 import classnames from 'classnames'
 import * as css from './logo.module.scss'
 
-export default ({ className, polygonClassName }) => (
+const Logo = ({ className, polygonClassName }) => (
   <div className={classnames(css.wrap, className)}>
     <svg
       version="1.1"
@@ -174,3 +174,5 @@ export default ({ className, polygonClassName }) => (
     </svg>
   </div>
 )
+
+export default Logo

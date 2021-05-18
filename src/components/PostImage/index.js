@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import * as css from './image.module.scss'
 
-export default ({ src, className = '', align = 'full', alt = '' }) => (
+const PostImage = ({ src, className = '', align = 'full', alt = '' }) => (
   <StaticQuery
     query={graphql`
       query postImageQuery {
@@ -52,3 +52,5 @@ export default ({ src, className = '', align = 'full', alt = '' }) => (
     }}
   />
 )
+
+export default PostImage
