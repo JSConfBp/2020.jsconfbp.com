@@ -2,9 +2,9 @@ import React from 'react'
 import Layout from '../components/Layout'
 import useHeadingDecorator from '../hooks/useHeadingDecorator'
 
-const [, getClassName] = useHeadingDecorator()
-
-const CodeOfConduct = () => (
+export default () => {
+  const [, getClassName] = useHeadingDecorator()
+  return (
   <Layout
     title="Code of Conduct"
     pathName="/code-of-conduct"
@@ -172,5 +172,4 @@ const CodeOfConduct = () => (
     </p>
   </Layout>
 )
-
-export default CodeOfConduct
+}

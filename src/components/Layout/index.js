@@ -3,7 +3,7 @@ import Meta from '../Meta'
 import Footer from '../Footer/'
 import Header from '../Header/'
 
-import css from './layout.module.scss'
+import * as css from './layout.module.scss'
 
 export default ({
   pathName,

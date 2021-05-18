@@ -3,7 +3,7 @@ import Layout from '../components/Layout'
 import useHeadingDecorator from '../hooks/useHeadingDecorator'
 import Button from '../components/Button'
 
-import css from './scholarship.module.scss'
+import * as css from './scholarship.module.scss'
 
 const ApplyButton = () => (
   <Button
@@ -18,9 +18,10 @@ const ApplyButton = () => (
     Apply for a Scholarship now!
   </Button>
 )
-const [, getClassName] = useHeadingDecorator()
 
-export default () => (
+export default () => {
+  const [, getClassName] = useHeadingDecorator()
+  return (
   <Layout
     title="Scholarships"
     pathName="/scholarships"
@@ -190,4 +191,4 @@ export default () => (
       </a>
     </p>
   </Layout>
-)
+)}

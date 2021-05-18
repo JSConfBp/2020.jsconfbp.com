@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './venuemap.module.scss'
+import * as css from './venuemap.module.scss'
 
 const VenueMap = () => (
   <svg
@@ -7,7 +7,7 @@ const VenueMap = () => (
     viewBox="0 0 430 428.2"
     width="430"
     height="428.2"
-    className={styles.venue_map}
+    className={css.venue_map}
   >
     <g>
       <path

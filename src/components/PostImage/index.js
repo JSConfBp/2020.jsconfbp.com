@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import css from './image.module.scss'
+import * as css from './image.module.scss'
 
 export default ({ src, className = '', align = 'full', alt = '' }) => (
   <StaticQuery
@@ -25,7 +25,7 @@ export default ({ src, className = '', align = 'full', alt = '' }) => (
         }
       }
     `}
-    render={data => {
+    render={(data) => {
       const classNames = [css.image]
       classNames.push(css[`image__pull_${align}`])
 

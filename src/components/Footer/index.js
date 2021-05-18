@@ -2,7 +2,7 @@ import React from 'react'
 import classnames from 'classnames'
 import { Link } from 'gatsby'
 import Logo from '../Logo'
-import css from './footer.module.scss'
+import * as css from './footer.module.scss'
 
 export default ({ className = '' }) => (
   <footer className={classnames(className, css.footer)}>

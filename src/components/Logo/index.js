@@ -1,6 +1,6 @@
 import React from 'react'
 import classnames from 'classnames'
-import css from './logo.module.scss'
+import * as css from './logo.module.scss'
 
 export default ({ className, polygonClassName }) => (
   <div className={classnames(css.wrap, className)}>

@@ -3,7 +3,7 @@ import Grid from './grid'
 export const getThirdPoint = (s2, grid, s1) => {
   const points = grid
     .getSurroundingPoints(...s2)
-    .filter(point => filterThirdPoint(point, s1, s2, grid))
+    .filter((point) => filterThirdPoint(point, s1, s2, grid))
 
   if (points.length === 0) throw 'No point avail'
 

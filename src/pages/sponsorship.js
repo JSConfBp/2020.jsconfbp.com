@@ -16,11 +16,11 @@ import Perks from '../components/Sponsorship/Perks'
 import Contact from '../components/Sponsorship/Contact'
 import Impressum from '../components/Sponsorship/Impressum'
 
-import styles from './sponsorship.module.scss'
+import * as css from './sponsorship.module.scss'
 
 const IndexPage = () => (
   <>
-    <SponsorationLayout className={styles.sponsoration}>
+    <SponsorationLayout className={css.sponsoration}>
       <SocialMeta image="social_card_sponsorship.jpg" />
       <Header />
       <PastSummary />

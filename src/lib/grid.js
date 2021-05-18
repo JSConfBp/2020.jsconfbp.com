@@ -71,7 +71,7 @@ export default class Grid {
     for (const entry of entries) {
       if (
         entry.value.length > 0 &&
-        entry.value.find(e => e[2] === x && e[3] === y)
+        entry.value.find((e) => e[2] === x && e[3] === y)
       ) {
         results.push([entry.x, entry.y])
       }
@@ -147,8 +147,8 @@ export default class Grid {
     }
 
     const points = result
-      .filter(coords => this.contentOf(...coords).length < 4)
-      .filter(coords => {
+      .filter((coords) => this.contentOf(...coords).length < 4)
+      .filter((coords) => {
         const [x1, y1] = [x, y]
         const [x2, y2] = coords
 
@@ -179,8 +179,8 @@ export default class Grid {
     const to2 = this.findPointingTo(xH2, yH2)
 
     return (
-      !!to1.find(a => a[0] === xH2 && a[1] === yH2) ||
-      !!to2.find(a => a[0] === xH1 && a[1] === yH1)
+      !!to1.find((a) => a[0] === xH2 && a[1] === yH2) ||
+      !!to2.find((a) => a[0] === xH1 && a[1] === yH1)
     )
   }
 
@@ -192,7 +192,7 @@ export default class Grid {
     // collect groups affiliated with s1
     const ids = a1
       .filter(
-        item =>
+        (item) =>
           (item[2] === s2[0] && item[3] === s2[1]) ||
           (item[2] === s3[0] && item[3] === s3[1])
       )
@@ -208,8 +208,8 @@ export default class Grid {
     // collect points for found groups
     const triangles = Object.keys(ids).reduce((obj, id) => {
       const p = [...a2, ...a3]
-        .filter(item => item[0] === id)
-        .map(item => [item[2], item[3]])
+        .filter((item) => item[0] === id)
+        .map((item) => [item[2], item[3]])
 
       obj[id] = [...obj[id], ...p]
       return obj

@@ -3,11 +3,11 @@ import classnames from 'classnames'
 
 const colors = ['purple', 'orange', 'lightpurple', 'lightorange']
 
-const pickColor = count => {
+const pickColor = (count) => {
   return colors[count % colors.length]
 }
 
-const pickSide = count => {
+const pickSide = (count) => {
   return count % 2 > 0 ? 'right' : 'left'
 }
 

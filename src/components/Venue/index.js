@@ -1,9 +1,9 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import css from './venue.module.scss'
+import * as css from './venue.module.scss'
 
-export default props => {
+export default (props) => {
   const data = useStaticQuery(graphql`
     query {
       allFile(

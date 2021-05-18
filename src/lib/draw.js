@@ -8,12 +8,12 @@ const toPolygonPoints = (...corners) =>
   }, [])
 
 export default (x, y, options, grid) => {
-  const pickColor = colors => {
+  const pickColor = (colors) => {
     //return options.random(shuffleArray(colors))
     return options.random(colors)
   }
 
-  return new Promise(async resolve => {
+  return new Promise(async (resolve) => {
     const [s1, s2, s3] = triangle.from(x, y, options, grid)
 
     const s1c = grid.coordsOf(...s1)

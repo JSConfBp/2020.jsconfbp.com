@@ -1,12 +1,12 @@
 import React from 'react'
 
-import styles from './nextyear.module.scss'
+import * as css from './nextyear.module.scss'
 
 const NextYear = () => (
   <>
-    <div className={styles.nextyear}>
-      <div className={styles.block_inner}>
-        <h2 className={styles.title}>Coming up next</h2>
+    <div className={css.nextyear}>
+      <div className={css.block_inner}>
+        <h2 className={css.title}>Coming up next</h2>
 
         <h3>
           2021 September 23-24
@@ -14,8 +14,8 @@ const NextYear = () => (
           Ticket sales started in December, 2019!
         </h3>
 
-        <div className={styles.conferences}>
-          <div className={styles.jsconf}>
+        <div className={css.conferences}>
+          <div className={css.jsconf}>
             <h5>JSConf Budapest 2021</h5>
             <ul>
               <li>Single track</li>
@@ -26,7 +26,7 @@ const NextYear = () => (
           </div>
         </div>
 
-        <div className={styles.venue}>
+        <div className={css.venue}>
           <h2>Venue</h2>
 
           <h5>TBD</h5>

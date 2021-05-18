@@ -1,11 +1,11 @@
 import React from 'react'
 
-import styles from './impressum.module.scss'
+import * as css from './impressum.module.scss'
 
 const Impressum = () => (
-  <div className={styles.impressum}>
-    <div className={styles.block_inner}>
-      <h3 className={styles.title}>Impressum</h3>
+  <div className={css.impressum}>
+    <div className={css.block_inner}>
+      <h3 className={css.title}>Impressum</h3>
 
       <p>
         JSConf Budapest and CSSConf Budapest is organized by a team from the

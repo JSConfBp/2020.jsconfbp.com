@@ -1,6 +1,6 @@
 import React from 'react'
 import classnames from 'classnames'
-import css from './combinations.module.scss'
+import * as css from './combinations.module.scss'
 
 export default () => {
   return (
@@ -16,7 +16,7 @@ export default () => {
 
         <div className={css.example}>
           <ul className={classnames(css.input, 'unstyled')}>
-            <li className={css.package}>
+            <li className={css.offer}>
               Gold package <span>€7,000</span>
             </li>
             <li>

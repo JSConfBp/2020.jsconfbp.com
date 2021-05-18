@@ -10,9 +10,9 @@ import SocialMeta from '../components/SocialMeta/index'
 
 import './updates.scss'
 
-const [getClassName] = useHeadingDecorator()
 
 const H2 = ({ children }) => {
+  const [getClassName] = useHeadingDecorator()
   return <h2 className={getClassName()}>{children}</h2>
 }
 
@@ -22,6 +22,7 @@ const shortcodes = {
 }
 
 function UpdatesContentTemplate({ data: { mdx } }) {
+
   return (
     <Layout
       title={mdx.frontmatter.title}
@@ -44,7 +45,7 @@ function UpdatesContentTemplate({ data: { mdx } }) {
 export default UpdatesContentTemplate
 
 export const pageQuery = graphql`
-  query($id: String!) {
+  query ($id: String!) {
     mdx(id: { eq: $id }) {
       parent {
         ... on File {

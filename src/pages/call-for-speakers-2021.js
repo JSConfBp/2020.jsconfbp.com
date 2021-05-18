@@ -3,7 +3,7 @@ import Layout from '../components/Layout'
 import useHeadingDecorator from '../hooks/useHeadingDecorator'
 import Button from '../components/Button'
 
-import css from './cfp.module.scss'
+import * as css from './cfp.module.scss'
 
 const CFPButton = ({ type }) => (
   <Button
@@ -19,22 +19,17 @@ const CFPButton = ({ type }) => (
     Submit with {type === 'sessionize' ? 'Sessionize' : 'Google Forms'}
   </Button>
 )
-const [, getClassName] = useHeadingDecorator()
 
-const CallForSpeakers = () => (
+
+export default () => {
+  const [, getClassName] = useHeadingDecorator()
+  return (
   <Layout
     title="Call for Speakers"
-<<<<<<< HEAD:src/pages/call-for-speakers-2021.js
     pathName="/call-for-speakers-2021"
     image="cfp_page_2021.jpg"
   >
     <h1>JSConf Budapest 2021 Call for Speakers</h1>
-=======
-    pathName="/call-for-speakers"
-    image="cfp_page.jpg"
-  >
-    <h1>JSConf Budapest 2020 Call for Speakers</h1>
->>>>>>> update deps:src/pages/call-for-speakers.js
 
     <p>
       We are inviting the JavaScript community to submit talks for the upcoming
@@ -54,33 +49,33 @@ const CallForSpeakers = () => (
       CFPs not just through Google Forms, but through Sessionize as well.
     </p>
 
-<<<<<<< HEAD:src/pages/call-for-speakers-2021.js
     <div className={css.cfp_buttons}>
       <CFPButton type="googleform" />
       <CFPButton type="sessionize" />
     </div>
 
     <p>
-      Before you submit - please make absolutely sure you do not include any personal details
-      about yourself in the abstract and the description of your talk.
+      Before you submit - please make absolutely sure you do not include any
+      personal details about yourself in the abstract and the description of
+      your talk.
     </p>
     <p>
-      We're aiming at the most bias-free selection process as possible, our evaluation process
-      aims to anonymize all submissions, so we ask you to help us. Omit any detail, url, company
-      name from your the title and abstracts - for such details, we provide a separate field on the CFP
-      form, which we'll check when we de-anonimize the talks at the end of the evaluation process.
+      We're aiming at the most bias-free selection process as possible, our
+      evaluation process aims to anonymize all submissions, so we ask you to
+      help us. Omit any detail, url, company name from your the title and
+      abstracts - for such details, we provide a separate field on the CFP form,
+      which we'll check when we de-anonimize the talks at the end of the
+      evaluation process.
     </p>
 
-=======
->>>>>>> update deps:src/pages/call-for-speakers.js
     <h2 className={getClassName()}>Topics</h2>
 
     <p>We like to see anything that fits into the topics like:</p>
 
     <ul>
       <li>
-        How did the web help us get through COVID. Tools, services that
-        made it easier to cope with the many aspects of a world-wide pandemic.
+        How did the web help us get through COVID. Tools, services that made it
+        easier to cope with the many aspects of a world-wide pandemic.
       </li>
       <li>
         Cutting-edge technological advances in the world of JavaScript or
@@ -158,13 +153,10 @@ const CallForSpeakers = () => (
     </p>
 
     <h2 className={getClassName()}>Guidelines</h2>
-<<<<<<< HEAD:src/pages/call-for-speakers-2021.js
 
     <p>
       Submit your proposal by <strong>Febr 28th 2021, 23:59:59 CEST</strong>.
     </p>
-=======
->>>>>>> update deps:src/pages/call-for-speakers.js
 
     <p>
       We're aiming at the most bias-free selection process as possible, so we
@@ -208,8 +200,6 @@ const CallForSpeakers = () => (
       knowledge.
     </p>
 
-
-
     <h2>Selection Process</h2>
 
     <p>Here’s how we pick our talks:</p>
@@ -223,8 +213,8 @@ const CallForSpeakers = () => (
       </li>
       <li>The top-N (~90) submissions are rated again on a 3-point scale.</li>
       <li>
-        At the end, we de-anonymize the final shortlist so we can take speaker details
-        as a factor in the final selection.
+        At the end, we de-anonymize the final shortlist so we can take speaker
+        details as a factor in the final selection.
       </li>
     </ul>
 
@@ -287,29 +277,28 @@ const CallForSpeakers = () => (
     <h2 className={getClassName()}>Notes on COVID-19</h2>
 
     <p>
-      JSConf Budapest 2021 is planned to be held as an in-person event,
-      in Budapest at the same venue we did last time in 2019. We'll do our best
-      to make this experience as safe as possible for every participant: speakers, attendees and
-      sponsors alike.
+      JSConf Budapest 2021 is planned to be held as an in-person event, in
+      Budapest at the same venue we did last time in 2019. We'll do our best to
+      make this experience as safe as possible for every participant: speakers,
+      attendees and sponsors alike.
     </p>
     <p>
       We're really optimistic about the vaccination that started in 2020 and
-      will continue hopefully world-wide in 2021. We really hope that by Q3 2021,
-      the situation will be manageable and visiting events like ours will be possible.
+      will continue hopefully world-wide in 2021. We really hope that by Q3
+      2021, the situation will be manageable and visiting events like ours will
+      be possible.
     </p>
     <p>
-      Don't be discouraged by this situation, feel free to submit all your talk ideas,
-      you have nothing to lose by submitting. We'll see how the situation develops in 2021,
-      and work out the details together with the authors of the selected talks.
+      Don't be discouraged by this situation, feel free to submit all your talk
+      ideas, you have nothing to lose by submitting. We'll see how the situation
+      develops in 2021, and work out the details together with the authors of
+      the selected talks.
     </p>
-
 
     <div className={css.cfp_buttons}>
       <CFPButton type="googleform" />
       <CFPButton type="sessionize" />
     </div>
-
   </Layout>
 )
-
-export default CallForSpeakers
+      }

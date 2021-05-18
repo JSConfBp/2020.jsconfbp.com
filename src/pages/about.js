@@ -4,7 +4,7 @@ import Layout from '../components/Layout'
 import Youtube from '../components/Youtube'
 import useHeadingDecorator from '../hooks/useHeadingDecorator'
 
-import css from './about.module.scss'
+import * as css from './about.module.scss'
 
 const team = [
   {
@@ -72,9 +72,9 @@ const team = [
   },
 ]
 
-const [, getClassName] = useHeadingDecorator()
-
-const About = () => (
+export default () => {
+  const [, getClassName] = useHeadingDecorator()
+  return (
   <Layout title="About us" pathName="/about">
     <h1 className={getClassName({ color: 'purple', side: 'left' })}>
       SZIA! ПРИВІТ! CZEŚĆ! SALUT! ЋАО! AHOJ! DOBRÝ DEN! ΓΕΙΆ ΣΟΥ! HOI! BUNĂ!
@@ -140,7 +140,7 @@ const About = () => (
     </h2>
 
     <ul className={classnames('unstyled', css.team)}>
-      {team.map(member => (
+      {team.map((member) => (
         <li key={member.name}>
           <a href={`https://twitter.com/${member.twitter}`}>
             <span>
@@ -153,5 +153,6 @@ const About = () => (
     </ul>
   </Layout>
 )
+      }
 
-export default About
+

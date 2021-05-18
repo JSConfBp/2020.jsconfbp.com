@@ -1,9 +1,9 @@
 import React from 'react'
 import classnames from 'classnames'
 import { useStaticQuery, graphql, Link } from 'gatsby'
-import css from './updateslist.module.scss'
+import * as css from './updateslist.module.scss'
 
-const UpdatesList = props => {
+const UpdatesList = (props) => {
   const data = useStaticQuery(graphql`
     query IndexUpdates {
       allMdx {
@@ -36,22 +36,19 @@ const UpdatesList = props => {
 
         <ul className={classnames('unstyled', css.list)}>
           <li key={'1'} className={css.updates_list_item}>
-            <h3><Link
-              className={css.title}
-              to={`/call-for-speakers-2021`}
-            >
-              Call for Speakers
-            </Link></h3>
+            <h3>
+              <Link className={css.title} to={`/call-for-speakers-2021`}>
+                Call for Speakers
+              </Link>
+            </h3>
             <small className={css.date}>2020-12-24</small>
             <p className={css.lead}>
-            We invite everyone in the community to submit their talk to JSConf Budapest 2021.
-            No matter who you are, where you come from, if you had given talks ever before,
-            live or online events. We would LOVE to read your talk ideas!
-
+              We invite everyone in the community to submit their talk to JSConf
+              Budapest 2021. No matter who you are, where you come from, if you
+              had given talks ever before, live or online events. We would LOVE
+              to read your talk ideas!
             </p>
-            <Link to={`/call-for-speakers-2021`}>
-              Submit a talk right now!
-            </Link>
+            <Link to={`/call-for-speakers-2021`}>Submit a talk right now!</Link>
           </li>
           {data.allMdx.edges
             .filter(({ node }) => node.parent.sourceInstanceName === 'updates')

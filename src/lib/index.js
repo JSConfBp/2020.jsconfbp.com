@@ -4,11 +4,11 @@ import settings from './settings'
 import drawTriangleAt from './draw'
 import getStartPoint from './get-start-point'
 
-const textBasedRandom = text => {
+const textBasedRandom = (text) => {
   let index = 0
   let counter = 0
 
-  return array => {
+  return (array) => {
     const rand = text.charCodeAt(index) % array.length
 
     if (counter % 4 === 0) {
@@ -22,7 +22,7 @@ const textBasedRandom = text => {
   }
 }
 
-export default async function(options) {
+export default async function (options) {
   const opts = Object.assign({}, settings, options, {
     random: pick,
     canvas: Object.assign({}, settings.canvas, options.canvas || {}),
@@ -57,13 +57,13 @@ export default async function(options) {
 
   const start = getStartPoint(opts)
 
-  const notStart = p => p[0] !== start[0] && p[1] !== start[1]
+  const notStart = (p) => p[0] !== start[0] && p[1] !== start[1]
 
-  const asyncDraw = async previous => {
+  const asyncDraw = async (previous) => {
     // pick a point from last drawn tringle
     // which is not filled
     let s = opts.random(
-      previous.grid.filter(k => grid.contentOf(...k).length < 4)
+      previous.grid.filter((k) => grid.contentOf(...k).length < 4)
     )
 
     // no points avail,
@@ -87,7 +87,7 @@ export default async function(options) {
         grid
           .getSurroundingPoints(...opts.random(c))
           .filter(notStart)
-          .filter(point => point[0] !== c[0] && point[1] !== c[0])
+          .filter((point) => point[0] !== c[0] && point[1] !== c[0])
       )
 
       let c = await drawTriangleAt(...s2, opts, grid)
@@ -102,7 +102,7 @@ export default async function(options) {
       .fill(0)
       .reduce((P, ...args) => {
         const index = args[1]
-        return P.then(coords => {
+        return P.then((coords) => {
           const final = index + 1 == opts.triangles - 1
           result.push(coords)
 
@@ -110,7 +110,7 @@ export default async function(options) {
             return asyncDraw(coords)
           }
 
-          return asyncDraw(coords).then(c => {
+          return asyncDraw(coords).then((c) => {
             result.push(c)
             return result
           })

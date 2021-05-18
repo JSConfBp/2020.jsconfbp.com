@@ -1,6 +1,6 @@
-const hasCenter = str => str.includes('center')
+const hasCenter = (str) => str.includes('center')
 
-export default opts => {
+export default (opts) => {
   const { start, grid } = opts
   const result = [0, 0]
 

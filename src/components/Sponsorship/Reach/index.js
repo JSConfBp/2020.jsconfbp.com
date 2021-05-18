@@ -1,40 +1,40 @@
 import React from 'react'
+import * as css from './reach.module.scss'
 
-import styles from './reach.module.scss'
 const Reach = () => (
   <>
-    <div className={styles.reach}>
-      <div className={styles.block_inner}>
-        <h2 className={styles.title} id="Reach">
+    <div className={css.reach}>
+      <div className={css.block_inner}>
+        <h2 className={css.title} id="Reach">
           Reach
         </h2>
 
         <h3>100% relevance in the JavaScript community</h3>
 
-        <div className={styles.numbers}>
-          <div className={styles.twitter} title="Twitter">
+        <div className={css.numbers}>
+          <div className={css.twitter} title="Twitter">
             <h4>
-              <span className={styles.followers}>2.1k</span>
+              <span className={css.followers}>2.1k</span>
               Followers
             </h4>
           </div>
 
-          <div className={styles.youtube} title="Youtube">
+          <div className={css.youtube} title="Youtube">
             <h4>
-              <span className={styles.subscribers}>142k</span>
+              <span className={css.subscribers}>142k</span>
               Subscribers
             </h4>
           </div>
 
-          <div className={styles.facebook} title="Facebook">
+          <div className={css.facebook} title="Facebook">
             <h4>
-              <span className={styles.reached}>34k</span>
+              <span className={css.reached}>34k</span>
               People Reached
             </h4>
           </div>
         </div>
 
-        <p className={styles.notes}>
+        <p className={css.notes}>
           Our videos were watched over <strong>242,000 times</strong> on
           YouTube. <br />
           Viewers spend more than <strong>1,742,000 minutes</strong> watching

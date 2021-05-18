@@ -1,7 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import styles from './contact.module.scss'
+import * as css from './contact.module.scss'
 
 export default () => {
   const data = useStaticQuery(graphql`
@@ -20,10 +20,10 @@ export default () => {
     }
   `)
   const images = {
-    nec: data.allFile.edges.find(edge =>
+    nec: data.allFile.edges.find((edge) =>
       edge.node.childImageSharp.fluid.src.includes('nec')
     ),
-    dani: data.allFile.edges.find(edge =>
+    dani: data.allFile.edges.find((edge) =>
       edge.node.childImageSharp.fluid.src.includes('daniel')
     ),
   }
@@ -31,8 +31,8 @@ export default () => {
   console.log(images)
 
   return (
-    <div className={styles.contact}>
-      <div className={styles.block_inner}>
+    <div className={css.contact}>
+      <div className={css.block_inner}>
         <h2>Let's talk</h2>
 
         <h3>
@@ -40,9 +40,9 @@ export default () => {
           our events awesome.
         </h3>
 
-        <div className={styles.contacts}>
-          <div className={styles.team_member}>
-            <div className={styles.photo}>
+        <div className={css.contacts}>
+          <div className={css.team_member}>
+            <div className={css.photo}>
               <Img
                 fluid={images.nec.node.childImageSharp.fluid}
                 alt="Szabolcs"
@@ -51,8 +51,8 @@ export default () => {
             Szabolcs Szabolcsi-Toth
           </div>
 
-          <div className={styles.team_member}>
-            <div className={styles.photo}>
+          <div className={css.team_member}>
+            <div className={css.photo}>
               <Img
                 fluid={images.dani.node.childImageSharp.fluid}
                 alt="Daniel"
@@ -64,7 +64,7 @@ export default () => {
 
         <a
           href="mailto:team@jsconfbp.com?subject=Sponsorship"
-          className={styles.button}
+          className={css.button}
         >
           Contact Us
         </a>

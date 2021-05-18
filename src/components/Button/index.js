@@ -49,7 +49,7 @@ export default class Button extends React.Component {
       button = (
         <button
           className={className}
-          onClick={e => onClick(e)}
+          onClick={(e) => onClick(e)}
           disabled={disabled}
         >
           {children}

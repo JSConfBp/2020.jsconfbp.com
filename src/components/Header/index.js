@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import classnames from 'classnames'
-import css from './header.module.scss'
+import * as css from './header.module.scss'
 import { Link } from 'gatsby'
 import Logo from '../Logo'
 

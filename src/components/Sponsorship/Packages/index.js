@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from './packages.module.scss'
+import * as css from './packages.module.scss'
 
 const contents = [
   {
@@ -90,7 +90,7 @@ const Value = ({ field, value }) => {
   )
 }
 
-const Price = props => (
+const Price = (props) => (
   <>
     {typeof props.value === 'string' ? (
       <>{props.value}</>
@@ -101,26 +101,26 @@ const Price = props => (
 )
 
 const PackageTable = () => (
-  <div className={styles.packages_table}>
-    {packages.map(pkg => (
+  <div className={css.packages_table}>
+    {packages.map((pkg) => (
       <>
         <h4
-          className={styles[`package_${pkg.name.toLowerCase()}_name`]}
+          className={css[`package_${pkg.name.toLowerCase()}_name`]}
           key={`package_${pkg.name.toLowerCase()}_name`}
         >
           {pkg.name}
         </h4>
         <h5
-          className={styles[`package_${pkg.name.toLowerCase()}_price`]}
+          className={css[`package_${pkg.name.toLowerCase()}_price`]}
           key={`package_${pkg.name.toLowerCase()}_price`}
         >
           <Price value={pkg.price} />
         </h5>
-        {contents.map(cont => (
+        {contents.map((cont) => (
           <>
             <span
               className={
-                styles[`package_${pkg.name.toLowerCase()}_${cont.field}_label`]
+                css[`package_${pkg.name.toLowerCase()}_${cont.field}_label`]
               }
               key={`package_${pkg.name.toLowerCase()}_${cont.field}_label`}
             >
@@ -128,9 +128,9 @@ const PackageTable = () => (
             </span>
             <strong
               className={[
-                styles[`package_${pkg.name.toLowerCase()}_${cont.field}_value`],
+                css[`package_${pkg.name.toLowerCase()}_${cont.field}_value`],
                 pkg.content[cont.field]
-                  ? styles[
+                  ? css[
                       `package_${pkg.name.toLowerCase()}_${cont.field}_included`
                     ]
                   : '',
@@ -148,9 +148,9 @@ const PackageTable = () => (
 
 const Packages = () => (
   <>
-    <div className={styles.packages}>
-      <div className={styles.block_inner}>
-        <h2 className={styles.title} id="Packages">
+    <div className={css.packages}>
+      <div className={css.block_inner}>
+        <h2 className={css.title} id="Packages">
           Packages
         </h2>
 

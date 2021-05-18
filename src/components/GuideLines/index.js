@@ -1,6 +1,6 @@
 import React from 'react'
 
-import css from './guideline.module.scss'
+import * as css from './guideline.module.scss'
 
 export default () => (
   <div className={css.guides}>

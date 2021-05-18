@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from './attendees.module.scss'
+import * as styles from './attendees.module.scss'
 
 const PastSummary = () => (
   <>

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-import styles from './layout.module.scss'
+import * as css from './layout.module.scss'
 
 const SponsorationLayout = ({ className, contentBg = false, children }) => (
   <StaticQuery
@@ -18,7 +18,7 @@ const SponsorationLayout = ({ className, contentBg = false, children }) => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <main className={className}>
         <Helmet
           title={`Sponsorship | ${data.site.siteMetadata.title}`}
@@ -34,7 +34,7 @@ const SponsorationLayout = ({ className, contentBg = false, children }) => (
         </Helmet>
 
         <section
-          className={[styles.inner, contentBg ? styles.content : ''].join(' ')}
+          className={[css.inner, contentBg ? css.content : ''].join(' ')}
         >
           {children}
         </section>

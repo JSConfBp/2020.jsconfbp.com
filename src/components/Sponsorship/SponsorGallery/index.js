@@ -1,7 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import css from './sponsorgallery.module.scss'
+import * as css from './sponsorgallery.module.scss'
 
 // const random = (min, max) => Math.floor(Math.random() * max) + min
 const images = [
@@ -41,7 +41,7 @@ export default () => {
   return (
     <div className={css.gallery}>
       {[...images[0], ...images[1]].map((img, i) => {
-        const imgData = data.allFile.edges.find(edge => {
+        const imgData = data.allFile.edges.find((edge) => {
           const image = edge.node.childImageSharp.fluid
           return image.src.includes(img)
         })

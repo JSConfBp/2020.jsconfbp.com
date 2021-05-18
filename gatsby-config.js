@@ -113,8 +113,8 @@ module.exports = {
           }
       }
     }, */
-    {
-      resolve: `gatsby-plugin-google-fonts`,
+   /*  {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
           `Titillium Web\:300,600,700`,
@@ -123,6 +123,6 @@ module.exports = {
         ],
         display: 'swap'
       }
-    },
+    }, */
   ],
 }
