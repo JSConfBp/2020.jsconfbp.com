@@ -1,8 +1,8 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
-const SponsorImage = ({ image, className = '' }) => (
+const SponsorImage = ({ image, alt, className = '' }) => (
   <StaticQuery
     query={graphql`
       query sponsorImgQuery {
@@ -12,9 +12,7 @@ const SponsorImage = ({ image, className = '' }) => (
           edges {
             node {
               childImageSharp {
-                fluid(maxWidth: 800) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+                gatsbyImageData(width: 800, layout: CONSTRAINED)
               }
             }
           }
@@ -24,13 +22,19 @@ const SponsorImage = ({ image, className = '' }) => (
     render={(data) => {
       return data.source.edges
         .filter(({ node }) => {
-          const { src } = node.childImageSharp.fluid
+          const {
+            images: {
+              fallback: { src },
+            },
+          } = node.childImageSharp.gatsbyImageData
+
           return src.includes(image)
         })
         .map(({ node }, i) => (
-          <Img
+          <GatsbyImage
+            alt={alt}
+            image={node.childImageSharp.gatsbyImageData}
             className={className}
-            fluid={node.childImageSharp.fluid}
             key={image}
           />
         ))

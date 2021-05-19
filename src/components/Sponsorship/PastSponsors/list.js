@@ -6,7 +6,7 @@ import * as css from './pastsponsors.module.scss'
 
 const SponsorImageLink = ({ link, image, name }) => (
   <a href={link} title={name}>
-    <SponsorImage image={image} title={name} />
+    <SponsorImage image={image} alt={name} />
   </a>
 )
 

@@ -1,11 +1,11 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import * as css from './venue.module.scss'
 
 const Venue = (props) => {
   const data = useStaticQuery(graphql`
-    query {
+    {
       allFile(
         filter: {
           sourceInstanceName: { eq: "images" }
@@ -15,9 +15,7 @@ const Venue = (props) => {
         edges {
           node {
             childImageSharp {
-              fixed(width: 1024) {
-                ...GatsbyImageSharpFixed_withWebp
-              }
+              gatsbyImageData(width: 1024, layout: FIXED)
             }
           }
         }
@@ -25,7 +23,7 @@ const Venue = (props) => {
     }
   `)
 
-  const image = data.allFile.edges[0].node.childImageSharp.fixed
+  const image = data.allFile.edges[0].node.childImageSharp.gatsbyImageData
 
   return (
     <section className={css.venue}>
@@ -68,9 +66,9 @@ const Venue = (props) => {
 
         <div className={css.hero}>
           <div className={css.heroImage}>
-            <Img
+            <GatsbyImage
+              image={image}
               className={css.img}
-              fixed={image}
               alt="Gatsby Docs are awesome"
             />
           </div>

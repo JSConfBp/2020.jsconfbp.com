@@ -1,6 +1,6 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import * as css from './image.module.scss'
 
 const PostImage = ({ src, className = '', align = 'full', alt = '' }) => (
@@ -16,9 +16,7 @@ const PostImage = ({ src, className = '', align = 'full', alt = '' }) => (
               dir
               publicURL
               childImageSharp {
-                fluid(maxWidth: 920) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+                gatsbyImageData(width: 920, layout: CONSTRAINED)
               }
             }
           }
@@ -37,9 +35,9 @@ const PostImage = ({ src, className = '', align = 'full', alt = '' }) => (
         .map(({ node }, i) => (
           <span className={classNames.join(' ')} key={`${src}-${i}`}>
             {node.childImageSharp && (
-              <Img
+              <GatsbyImage
+                image={node.childImageSharp.gatsbyImageData}
                 className={css.image}
-                fluid={node.childImageSharp.fluid}
                 alt={alt}
               />
             )}

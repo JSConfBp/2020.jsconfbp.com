@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import * as css from './contact.module.scss'
 
 const Contact = () => {
@@ -10,9 +10,7 @@ const Contact = () => {
         edges {
           node {
             childImageSharp {
-              fluid(maxWidth: 800) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
+              gatsbyImageData(width: 800, layout: CONSTRAINED)
             }
           }
         }
@@ -20,12 +18,24 @@ const Contact = () => {
     }
   `)
   const images = {
-    nec: data.allFile.edges.find((edge) =>
-      edge.node.childImageSharp.fluid.src.includes('nec')
-    ),
-    dani: data.allFile.edges.find((edge) =>
-      edge.node.childImageSharp.fluid.src.includes('daniel')
-    ),
+    nec: data.allFile.edges.find((edge) => {
+      const {
+        images: {
+          fallback: { src },
+        },
+      } = edge.node.childImageSharp.gatsbyImageData
+
+      return src.includes('nec')
+    }),
+    dani: data.allFile.edges.find((edge) => {
+      const {
+        images: {
+          fallback: { src },
+        },
+      } = edge.node.childImageSharp.gatsbyImageData
+
+      return src.includes('daniel')
+    }),
   }
 
   return (
@@ -41,8 +51,8 @@ const Contact = () => {
         <div className={css.contacts}>
           <div className={css.team_member}>
             <div className={css.photo}>
-              <Img
-                fluid={images.nec.node.childImageSharp.fluid}
+              <GatsbyImage
+                image={images.nec.node.childImageSharp.gatsbyImageData}
                 alt="Szabolcs"
               />
             </div>
@@ -51,8 +61,8 @@ const Contact = () => {
 
           <div className={css.team_member}>
             <div className={css.photo}>
-              <Img
-                fluid={images.dani.node.childImageSharp.fluid}
+              <GatsbyImage
+                image={images.dani.node.childImageSharp.gatsbyImageData}
                 alt="Daniel"
               />
             </div>
