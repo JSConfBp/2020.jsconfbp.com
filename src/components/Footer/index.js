@@ -58,7 +58,15 @@ const Footer = ({ className = '' }) => (
             </a>
           </li>
           <li>
-            <a href="https://jsconfbp.com">2021</a>
+            <a href="https://jsconfbp.com/updates/postpone-to-2022">
+              2021{' '}
+              <span role="img" aria-label="Vaccine emoji">
+                💉
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://jsconfbp.com">2022</a>
           </li>
         </ul>
       </nav>

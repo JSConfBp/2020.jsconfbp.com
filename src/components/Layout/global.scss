@@ -1,0 +1,83 @@
+
+
+@charset 'utf-8';
+@import '../reset.scss';
+@import '../colors.scss';
+@import '../fonts.scss';
+@import '../text.scss';
+@import '../sizes.scss';
+
+:global {
+  .decorated {
+    position: relative;
+
+    &-left::before,
+    &-right::before {
+      position: absolute;
+      content: '';
+      width: 26rem;
+      height: 50vw;
+      bottom: 3rem;
+    }
+
+    &-purple::before {
+      background: $color-purple;
+    }
+    &-orange::before {
+      background: $color-orange;
+    }
+    &-lightpurple::before {
+      background: $color-lightpurple;
+    }
+    &-lightorange::before {
+      background: $color-lightorange;
+    }
+
+    &-right::before {
+      // --offset: calc( calc(calc(100vw - 21rem) / -2));
+      --offset: calc(0);
+      transform: rotate(-13deg) translateY(129%) translateX(var(--offset));
+      right: 0;
+      height: 35vw;
+
+
+      @media screen and (max-width: 2560px) {
+        --offset: calc(37vw);
+        height: 38vw;
+      }
+
+      @media screen and (max-width: 1680px) {
+        --offset: calc(35vw);
+        height: 43vw;
+      }
+
+      @media screen and (max-width: 1160px) {
+        --offset: calc(40vw);
+        height: 43vw;
+      }
+
+      @media screen and (max-width: 960px) {
+        display: none;
+      }
+    }
+
+
+    &-left::before {
+      // --offset: calc( calc(calc(100vw - 21rem) / -2));
+      --offset: calc(-47vw);
+      transform: rotate(-13deg) translateX(var(--offset));
+      left: 0;
+
+      @media screen and (max-width: 1220px) {
+        --offset: calc(-53vw);
+      }
+      @media screen and (max-width: 1080px) {
+        --offset: calc(-56vw);
+      }
+
+      @media screen and (max-width: 960px) {
+        display: none;
+      }
+    }
+  }
+}

@@ -6,7 +6,7 @@ const SocialMeta = ({
   title,
   description,
   href = '',
-  image = 'jsconfbp_2020_default.jpg',
+  image = 'jsconfbp_2022.jpg',
 }) => {
   const query = graphql`
     query SiteSocialMetaQuery {

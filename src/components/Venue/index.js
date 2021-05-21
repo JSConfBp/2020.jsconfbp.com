@@ -38,7 +38,7 @@ const Venue = (props) => {
 
         <p>
           Literally under a pool of water, this great club was our venue in 2016
-          and 2019. We return in 2021!
+          and 2019. We return in 2022!
         </p>
 
         <blockquote>

@@ -10,17 +10,17 @@ import SocialMeta from '../components/SocialMeta/index'
 
 import './updates.scss'
 
-const H2 = ({ children }) => {
-  const [getClassName] = useHeadingDecorator()
-  return <h2 className={getClassName()}>{children}</h2>
-}
-
-const shortcodes = {
-  PostImage,
-  h2: H2,
-}
-
 function UpdatesContentTemplate({ data: { mdx } }) {
+  const [getClassName] = useHeadingDecorator()
+  const H2 = ({ children }) => {
+    return <h2 className={getClassName()}>{children}</h2>
+  }
+
+  const shortcodes = {
+    PostImage,
+    h2: H2,
+  }
+
   return (
     <Layout
       title={mdx.frontmatter.title}

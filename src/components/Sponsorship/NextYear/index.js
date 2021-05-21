@@ -9,14 +9,14 @@ const NextYear = () => (
         <h2 className={css.title}>Coming up next</h2>
 
         <h3>
-          2021 September 23-24
+          2022 June 2-3
           <br />
           Ticket sales started in December, 2019!
         </h3>
 
         <div className={css.conferences}>
           <div className={css.jsconf}>
-            <h5>JSConf Budapest 2021</h5>
+            <h5>JSConf Budapest 2022</h5>
             <ul>
               <li>Single track</li>
               <li>500+ attendees</li>

@@ -66,15 +66,15 @@ const Header = ({ pathName }) => {
           </h1>
 
           <div className={css.date}>
-            23-24 September
-            <span className={css.year}>2021</span>
+            2-3 June
+            <span className={css.year}>2022</span>
           </div>
         </div>
 
         <div className={css.hero}>
           <div className={css.cta}>
             <a
-              href="https://ti.to/jsconf-bp/jsconf-budapest-2021"
+              href="https://ti.to/jsconf-bp/jsconf-budapest-2022"
               className={css.button}
             >
               Buy Tickets
@@ -99,7 +99,7 @@ const Header = ({ pathName }) => {
         <nav className={css.navigation}>
           <ul className={css.menu}>
             <li>
-              <a href="https://ti.to/jsconf-bp/jsconf-budapest-2021">Tickets</a>
+              <a href="https://ti.to/jsconf-bp/jsconf-budapest-2022">Tickets</a>
             </li>
             <li>
               <Link to={'/scholarships'}>Scholarships</Link>
