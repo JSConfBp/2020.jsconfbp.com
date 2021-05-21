@@ -8,7 +8,7 @@ const Header = () => (
       <h1 className={css.title}>
         <Link to={'/'}>
           <span className={css.jsconf} />
-          JSConf Budapest 2021
+          JSConf Budapest 2022
           <br />
           Sponsorship
         </Link>

@@ -2,7 +2,7 @@ import React from 'react'
 import Meta from '../Meta'
 import Footer from '../Footer/'
 import Header from '../Header/'
-
+import './global.scss'
 import * as css from './layout.module.scss'
 
 const Layout = ({
