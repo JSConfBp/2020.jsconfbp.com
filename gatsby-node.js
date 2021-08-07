@@ -39,7 +39,6 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors
     }
 
-    // Create blog posts pages.
     result.data.allMdx.edges.forEach(({ node }) => {
       const { sourceInstanceName } = node.parent
       const slug = node.fields.slug

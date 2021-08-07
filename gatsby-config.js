@@ -27,6 +27,24 @@ module.exports = {
       }
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "speakers",
+        path: `${__dirname}/speakers`,
+        ignore: [
+          `**/*.jpg`,
+          `**/*.svg`,
+          `**/*.gif`,
+          `**/*.jpeg`,
+          `**/*.webp`,
+          `**/*.png`,
+          `**/*.js`,
+          `**/*.mp4`,
+          `**/*.m4v`,
+        ],
+      }
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'postimages',
@@ -106,24 +124,5 @@ module.exports = {
         trackingId: "UA-58489830-1",
       },
     },
-    /* {
-      resolve: 'gatsby-plugin-react-svg',
-      options: {
-          rule: {
-            include: `${__dirname}/src/images`,
-          }
-      }
-    }, */
-   /*  {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          `Titillium Web\:300,600,700`,
-          `Roboto\:300,400,700`,
-          `Noto Sans JP\:700`
-        ],
-        display: 'swap'
-      }
-    }, */
   ],
 }
