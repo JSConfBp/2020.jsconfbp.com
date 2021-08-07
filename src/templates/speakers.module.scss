@@ -1,0 +1,38 @@
+@import '../components/colors.scss';
+
+.speaker_page {
+  h1 {
+    color: $color-orange;
+  }
+  .abstract_bio p + p {
+    font-weight: 600;
+  }
+}
+
+.speaker_page {
+  display: grid;
+  grid-column-gap: 4rem;
+  grid-template-columns: 16rem auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "details name"
+    "details title"
+    "details body";
+
+
+  h2 {
+    grid-area: name;
+  }
+
+  h1 {
+    grid-area: title;
+  }
+
+  .details {
+    grid-area: details;
+  }
+
+  .abstract_bio {
+    grid-area: body;
+  }
+}

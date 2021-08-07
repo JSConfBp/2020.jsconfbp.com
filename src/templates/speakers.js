@@ -7,8 +7,9 @@ import useHeadingDecorator from '../hooks/useHeadingDecorator'
 import PostImage from '../components/PostImage'
 import Layout from '../components/Layout'
 import SocialMeta from '../components/SocialMeta/index'
+import SpeakerImage from '../components/SpeakerImage/index'
 
-import './speakers.scss'
+import * as css from './speakers.module.scss'
 
 function SpeakerContentTemplate({ data: { mdx } }) {
   const [getClassName] = useHeadingDecorator()
@@ -43,12 +44,14 @@ function SpeakerContentTemplate({ data: { mdx } }) {
         href={`/updates${mdx.fields.slug}`}
       />
 
-      <article className="speaker_page">
+      <article className={css.speaker_page}>
 
         <h2>{ name }</h2>
         <h1>{ title }</h1>
 
-        <div className="details">
+        <div className={css.details}>
+          <SpeakerImage src={image} />
+
           <ul>
             <li>{ image }</li>
             <li>{ twitter }</li>
@@ -59,7 +62,7 @@ function SpeakerContentTemplate({ data: { mdx } }) {
 
         </div>
 
-        <section className="abstract_bio">
+        <section className={css.abstract_bio}>
           <MDXProvider components={shortcodes}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
           </MDXProvider>

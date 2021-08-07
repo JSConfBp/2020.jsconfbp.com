@@ -58,6 +58,19 @@ module.exports = {
       }
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'speakerimages',
+        path: `${__dirname}/speakers`,
+        ignore: [
+          `**/*.mdx`,
+          `**/*.js`,
+          `**/*.mp4`,
+          `**/*.m4v`,
+        ],
+      }
+    },
+    {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: ['.mdx', '.md'],

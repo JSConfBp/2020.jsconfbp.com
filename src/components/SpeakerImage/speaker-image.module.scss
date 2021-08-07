@@ -1,0 +1,28 @@
+@import '../colors.scss';
+@import '../fonts.scss';
+
+.speaker_image {
+
+  width: 16rem;
+  height: 16rem;
+  position: relative;
+  transform: translateX(-2rem);
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+
+  background-color: $color-lightorange;
+
+  @media (max-width: 480px) {
+    margin-bottom: 1rem;
+  }
+
+
+    .image {
+      position: absolute;
+      width: 16rem;
+      height: 16rem;
+      transform: rotate(-6deg);
+      transform-origin: top left;
+    }
+
+}
