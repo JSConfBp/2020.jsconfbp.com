@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { PieChart } from 'react-chartkick'
-import 'chart.js'
+import 'chartkick/chart.js'
 
 const ExpensesChart = () => {
   return (
