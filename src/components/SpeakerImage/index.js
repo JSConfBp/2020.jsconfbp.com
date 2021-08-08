@@ -7,7 +7,9 @@ const SpeakerImage = ({ src, className = '', alt = '' }) => (
   <StaticQuery
     query={graphql`
       query speakerImageQuery {
-        source: allFile(filter: { sourceInstanceName: { eq: "speakerimages" } }) {
+        source: allFile(
+          filter: { sourceInstanceName: { eq: "speakerimages" } }
+        ) {
           edges {
             node {
               extension
@@ -32,12 +34,16 @@ const SpeakerImage = ({ src, className = '', alt = '' }) => (
               {node.childImageSharp && (
                 <GatsbyImage
                   image={node.childImageSharp.gatsbyImageData}
-                  className={css.image}
+                  className={css.image_data}
                   alt={alt}
                 />
               )}
               {!node.childImageSharp && (
-                <img className={css.image} src={node.publicURL} alt={alt} />
+                <img
+                  className={css.image_data}
+                  src={node.publicURL}
+                  alt={alt}
+                />
               )}
             </div>
           </div>

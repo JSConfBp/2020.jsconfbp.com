@@ -16,13 +16,19 @@
     margin-bottom: 1rem;
   }
 
+  .image {
+    position: absolute;
+    width: 16rem;
+    height: 16rem;
+    transform: rotate(-13deg);
+    transform-origin: top left;
+    overflow: hidden;
 
-    .image {
-      position: absolute;
-      width: 16rem;
-      height: 16rem;
-      transform: rotate(-6deg);
-      transform-origin: top left;
+    .image_data {
+
+      transform: scale(1.2) rotate(13deg);
+      transform-origin: center;
     }
+  }
 
 }
