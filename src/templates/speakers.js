@@ -47,6 +47,11 @@ function SpeakerContentTemplate({ data: { mdx } }) {
         <h2>{name}</h2>
         <h1>{title}</h1>
 
+        <section className={css.abstract_bio}>
+          <MDXProvider components={shortcodes}>
+            <MDXRenderer>{mdx.body}</MDXRenderer>
+          </MDXProvider>
+        </section>
         <div className={css.details}>
           <SpeakerImage src={image} />
 
@@ -88,12 +93,6 @@ function SpeakerContentTemplate({ data: { mdx } }) {
             )}
           </ul>
         </div>
-
-        <section className={css.abstract_bio}>
-          <MDXProvider components={shortcodes}>
-            <MDXRenderer>{mdx.body}</MDXRenderer>
-          </MDXProvider>
-        </section>
       </article>
     </Layout>
   )
