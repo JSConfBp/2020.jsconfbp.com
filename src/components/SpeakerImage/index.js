@@ -1,9 +1,10 @@
 import React from 'react'
+import classnames from 'classnames'
 import { StaticQuery, graphql } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import * as css from './speaker-image.module.scss'
 
-const SpeakerImage = ({ src, className = '', alt = '' }) => (
+const SpeakerImage = ({ src, variant = 'orange', alt = '' }) => (
   <StaticQuery
     query={graphql`
       query speakerImageQuery {
@@ -29,7 +30,7 @@ const SpeakerImage = ({ src, className = '', alt = '' }) => (
       return data.source.edges
         .filter(({ node }) => node?.relativePath.includes(src))
         .map(({ node }, i) => (
-          <div className={css.speaker_image} key={`${src}-${i}`}>
+          <div className={classnames(css.speaker_image, css[variant])} key={`${src}-${i}`}>
             <div className={css.image}>
               {node.childImageSharp && (
                 <GatsbyImage

@@ -19,7 +19,12 @@
   margin-top: 3rem;
   margin-bottom: 2rem;
 
-  background-color: $color-lightorange;
+  &.orange {
+    background-color: $color-lightorange;
+  }
+  &.purple {
+    background-color: $color-lightpurple;
+  }
 
   @media (max-width: 480px) {
     margin-bottom: 1rem;
