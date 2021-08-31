@@ -81,9 +81,19 @@
   grid-gap: 1.5rem;
   grid-template-columns: 1fr;
 
+  @media (max-width: 480px) {
+    grid-gap: 4rem;
+    margin-bottom: 6rem;
+  }
+
   li {
     width: 60%;
+
+    @media (max-width: 480px) {
+      width: auto;
+    }
   }
+
   li:nth-child(n) {
     justify-self: start;
   }
