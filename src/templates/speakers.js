@@ -34,7 +34,7 @@ function SpeakerContentTemplate({ data: { mdx } }) {
     <Layout title={title} pathName={`/updates${mdx.fields.slug}`}>
       <SocialMeta
         title={title}
-        description={name}
+        description={`Presentation by ${name}`}
         image={socialCard || 'social-card.png'}
         href={`/updates${mdx.fields.slug}`}
       />
