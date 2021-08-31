@@ -33,8 +33,9 @@
   .image {
     position: absolute;
     top: 0;
-    width: 16rem;
-    height: 16rem;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 
 
     @media (max-width: 480px) {
@@ -42,14 +43,30 @@
       height: 100%;
     }
 
-    transform: rotate(-13deg);
-    transform-origin: top left;
-    overflow: hidden;
+    &.up {
+      //
+      transform: rotate(-13deg);
+      transform-origin: top left;
 
-    .image_data {
-      transform: scale(1.2) rotate(13deg);
-      transform-origin: center;
+      .image_data {
+        transform: scale(1.2) rotate(13deg);
+        transform-origin: center;
+      }
     }
+
+    &.down {
+      transform: rotate(-13deg);
+      transform-origin: bottom right;
+
+      .image_data {
+        transform: scale(1.2) rotate(13deg);
+        transform-origin: center;
+      }
+    }
+
+   // }
+
+
   }
 
 }

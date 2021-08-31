@@ -29,6 +29,7 @@
     "change-case": "^4.1.2",
     "chart.js": "^3.4.1",
     "classnames": "^2.3.1",
+    "csv-parse": "^4.16.0",
     "gatsby": "^3.9.1",
     "gatsby-image": "^3.9.0",
     "gatsby-plugin-feed": "^3.9.0",

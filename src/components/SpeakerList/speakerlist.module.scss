@@ -3,13 +3,13 @@
 @import '../fonts.scss';
 @import '../sizes.scss';
 
-.updates {
-  z-index: 1;
-  background: $color-lightestpurple;
+.speakers {
+  z-index: 10;
+
   position: relative;
   width: 100%;
   padding: 4rem 0;
-  margin-top: 0rem;
+  margin-top: -3rem;
   padding: 4rem 2rem 6rem;
   //padding-bottom: 6rem; // until we don't have venue content on home
 
@@ -25,6 +25,26 @@
     --offset: calc(calc(100vw - 108rem) * 0.35);
     transform: rotate(-13deg); //translateY(-60.1%) translateX(var(--offset));
     transform-origin: top left;
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 26rem;
+    height: 40rem;
+    top: 0%;
+    left: -20rem;
+    background: $color-purple;
+    --offset: calc(calc(100vw - 108rem) * 0.35);
+    transform: rotate(-13deg); //translateY(-60.1%) translateX(var(--offset));
+    transform-origin: 100% 100%;
+
+    @media screen and (max-width: 1280px) {
+      left: -23rem;
+    }
+    @media screen and (max-width: 480px) {
+      left: -24.5rem;
+    }
   }
 
   @media (max-width: 1280px) {
@@ -49,59 +69,28 @@
 .inner {
   max-width: 60rem;
   margin: 0 auto;
-
-  h2 {
-    margin-bottom: 3rem;
-  }
-
-  @media screen and (max-width: 480px) {
-    padding: 0;
-  }
 }
 
 .list {
-  padding-top: 2rem;
-  font-weight: 200;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 2rem;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 6rem;
 
-  @media screen and (max-width: 960px) {
-    grid-template-columns: 1fr;
-    padding-bottom: 2rem;
-  }
+
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: 1fr;
 
   li {
-    position: relative;
-    padding: 0;
-    list-style-type: none;
-    display: inline-block;
-
-    a {
-      color: $color-purple;
-    }
-
-    h3 {
-      font-weight: 600;
-      margin-bottom: 2rem;
-    }
-    h3 a {
-      text-decoration: none;
-    }
+    width: 60%;
+  }
+  li:nth-child(n) {
+    justify-self: start;
   }
 
-  .date {
-    position: absolute;
-    font-size: $text-small;
-    top: -2rem;
-    color: $color-orange;
-    font-style: italic;
+  li:nth-child(2n+2) {
+    justify-self: end;
   }
 }
 
-.updates_list {
-    &_item:not(:last-child) {
-        margin-bottom: $size-lg;
-        padding-bottom: $size-lg;
-    }
-}
+

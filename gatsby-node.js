@@ -41,7 +41,7 @@ exports.createPages = ({ graphql, actions }) => {
 
     result.data.allMdx.edges.forEach(({ node }) => {
       const { sourceInstanceName } = node.parent
-      const slug = node.fields.slug
+      const slug = node.fields.slug.replace(/^\/(\d*_)/, '/')
 
       createPage({
         path: `/${sourceInstanceName}${slug}`,

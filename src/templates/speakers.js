@@ -12,14 +12,12 @@ import SpeakerImage from '../components/SpeakerImage/index'
 import * as css from './speakers.module.scss'
 
 function SpeakerContentTemplate({ data: { mdx } }) {
-  const [, getClassName] = useHeadingDecorator();
+  const [, getClassName] = useHeadingDecorator()
 
   const {
     name,
     title,
-    picture: {
-      relativePath: picture
-    },
+    picture: { relativePath: picture },
     twitter,
     github,
     web,
@@ -28,7 +26,8 @@ function SpeakerContentTemplate({ data: { mdx } }) {
     socialCard,
   } = mdx.frontmatter
 
-  const variantHash = name.split('').reduce((i, letter) => i+ letter.charCodeAt(0), 0) % 2
+  const variantHash =
+    name.split('').reduce((i, letter) => i + letter.charCodeAt(0), 0) % 2
   const variant = variantHash > 0 ? 'purple' : 'orange'
 
   return (
@@ -42,7 +41,11 @@ function SpeakerContentTemplate({ data: { mdx } }) {
 
       <article className={css.speaker_page}>
         <h2>{name}</h2>
-        <h1 className={getClassName({ color: `light${variant}`, side: 'right' })}>{title}</h1>
+        <h1
+          className={getClassName({ color: `light${variant}`, side: 'right' })}
+        >
+          {title}
+        </h1>
 
         <section className={css.abstract_bio}>
           <MDXProvider>
@@ -50,7 +53,7 @@ function SpeakerContentTemplate({ data: { mdx } }) {
           </MDXProvider>
         </section>
         <div className={css.details}>
-          <SpeakerImage src={picture} variant={variant} />
+          <SpeakerImage src={picture} color={variant} turn={'up'} />
 
           <ul className={classnames(css.metadata, 'unstyled')}>
             {location && (
@@ -68,7 +71,7 @@ function SpeakerContentTemplate({ data: { mdx } }) {
             )}
             {github && (
               <li>
-                <a href={`https://twitter.com/${twitter}`}>
+                <a href={`https://github.com/${github}`}>
                   <GithubIcon />
                   {github}
                 </a>

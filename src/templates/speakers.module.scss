@@ -10,7 +10,7 @@
   h2 {
     font-size: $text-h3;
   }
-  .abstract_bio p + p {
+  .abstract_bio p:last-child {
     font-weight: 600;
   }
 
