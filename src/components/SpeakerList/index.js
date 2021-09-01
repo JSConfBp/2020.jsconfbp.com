@@ -64,7 +64,7 @@ export const SpeakerList = () => {
               if (index === 2) {
                 classname = getClassName({ side: 'right' })
               }
-              
+
               if (index === 9) {
                 classname = getClassName({ side: 'left' })
               }
