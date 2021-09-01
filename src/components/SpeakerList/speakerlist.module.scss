@@ -13,54 +13,7 @@
   padding: 4rem 2rem 6rem;
   //padding-bottom: 6rem; // until we don't have venue content on home
 
-  &::after {
-    position: absolute;
-    z-index: 2;
-    content: '';
-    width: 26rem;
-    height: 40rem;
-    top: 0;
-    right: -20rem;
-    background: $color-lightorange;
-    --offset: calc(calc(100vw - 108rem) * 0.35);
-    transform: rotate(-13deg); //translateY(-60.1%) translateX(var(--offset));
-    transform-origin: top left;
-  }
-
-  &::before {
-    position: absolute;
-    content: '';
-    width: 26rem;
-    height: 40rem;
-    top: 0%;
-    left: -20rem;
-    background: $color-purple;
-    --offset: calc(calc(100vw - 108rem) * 0.35);
-    transform: rotate(-13deg); //translateY(-60.1%) translateX(var(--offset));
-    transform-origin: 100% 100%;
-
-    @media screen and (max-width: 1280px) {
-      left: -23rem;
-    }
-    @media screen and (max-width: 480px) {
-      left: -24.5rem;
-    }
-  }
-
-  @media (max-width: 1280px) {
-    &::after {
-      right: -22rem;
-    }
-    &::before {
-      width: 30vw;
-    }
-  }
-
   @media (max-width: 480px) {
-    &::after,
-    &::before {
-      display: none;
-    }
     margin-top: -7rem;
     padding: 8rem 1.5rem 6rem;
   }
@@ -69,6 +22,7 @@
 .inner {
   max-width: 60rem;
   margin: 0 auto;
+  position: relative;
 }
 
 .list {
@@ -88,6 +42,7 @@
 
   li {
     width: 60%;
+    position: relative;
 
     @media (max-width: 480px) {
       width: auto;
@@ -104,3 +59,23 @@
 }
 
 
+.deco_1 {
+
+  position: absolute;
+  width: 100%;
+  height: 0;
+  left: 0;
+  top: 30%;
+
+}
+
+
+.deco_2 {
+
+  position: absolute;
+  width: 100%;
+  height: 0;
+  left: 0;
+  top: 67%;
+
+}

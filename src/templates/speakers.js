@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { MDXProvider } from '@mdx-js/react'
 
-import useHeadingDecorator from '../hooks/useHeadingDecorator'
+import { useHeadingDecorator } from '../hooks/useHeadingDecorator'
 import Layout from '../components/Layout'
 import SocialMeta from '../components/SocialMeta/index'
 import SpeakerImage from '../components/SpeakerImage/index'

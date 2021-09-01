@@ -4,13 +4,16 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import * as css from './speaker-image.module.scss'
 
-const SpeakerImage = ({ src, alt = '', color = 'orange', turn = 'up', className = '' }) => {
-
+const SpeakerImage = ({
+  src,
+  alt = '',
+  color = 'orange',
+  turn = 'up',
+  className = '',
+}) => {
   const data = useStaticQuery(graphql`
     query speakerImageQuery {
-      source: allFile(
-        filter: { sourceInstanceName: { eq: "speakerimages" } }
-      ) {
+      source: allFile(filter: { sourceInstanceName: { eq: "speakerimages" } }) {
         edges {
           node {
             extension
@@ -31,10 +34,10 @@ const SpeakerImage = ({ src, alt = '', color = 'orange', turn = 'up', className 
     .filter(({ node }) => node?.relativePath.includes(src))
     .map(({ node }, i) => (
       <div
-        className={ classnames(css.speaker_image, css[color], className) }
+        className={classnames(css.speaker_image, css[color], className)}
         key={`${src}-${i}`}
       >
-        <div className={ classnames(css[turn], css.image) }>
+        <div className={classnames(css[turn], css.image)}>
           {node.childImageSharp && (
             <GatsbyImage
               image={node.childImageSharp.gatsbyImageData}
@@ -43,15 +46,11 @@ const SpeakerImage = ({ src, alt = '', color = 'orange', turn = 'up', className 
             />
           )}
           {!node.childImageSharp && (
-            <img
-              className={css.image_data}
-              src={node.publicURL}
-              alt={alt}
-            />
+            <img className={css.image_data} src={node.publicURL} alt={alt} />
           )}
         </div>
       </div>
-  ))
+    ))
 }
 
 export default SpeakerImage

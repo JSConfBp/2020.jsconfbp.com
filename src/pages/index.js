@@ -1,6 +1,6 @@
 import React from 'react'
 import UpdatesList from '../components/UpdatesList'
-import {SpeakerList} from '../components/SpeakerList'
+import { SpeakerList } from '../components/SpeakerList'
 import Venue from '../components/Venue'
 import Layout from '../components/Layout'
 import * as css from './index.module.scss'
