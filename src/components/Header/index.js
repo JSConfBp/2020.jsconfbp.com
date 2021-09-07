@@ -99,6 +99,9 @@ const Header = ({ pathName }) => {
         <nav className={css.navigation}>
           <ul className={css.menu}>
             <li>
+              <Link to={'/#Speakers'}>Speakers</Link>
+            </li>
+            <li>
               <a href="https://ti.to/jsconf-bp/jsconf-budapest-2022">Tickets</a>
             </li>
             <li>

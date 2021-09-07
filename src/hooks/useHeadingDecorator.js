@@ -11,37 +11,33 @@ const pickSide = (count) => {
   return count % 2 > 0 ? 'right' : 'left'
 }
 
-export default () => {
+export const useHeadingDecorator = () => {
   const headings = React.createContext({ h2: 0, count: 0 })
+  const h = useContext(headings)
 
-  return [
-    () => {
-      let className = ''
-      const h = useContext(headings)
+  const setClassName = ({ color, side } = {}) =>
+    classnames(
+      `decorated`,
+      `decorated-${side || pickSide(h.count)}`,
+      `decorated-${color || pickColor(h.count)}`
+    )
 
-      if (h.h2 % 2 === 0) {
-        className = classnames(
-          `decorated`,
-          `decorated-${pickSide(h.count)}`,
-          `decorated-${pickColor(h.count)}`
-        )
-        h.count += 1
-      }
+  function setDefaultClasses() {
+    let className = ''
 
-      h.h2 += 1
-
-      return className
-    },
-    ({ color, side } = {}) => {
-      let className = ''
-      const h = useContext(headings)
-      className = classnames(
-        `decorated`,
-        `decorated-${side || pickSide(h.count)}`,
-        `decorated-${color || pickColor(h.count)}`
-      )
+    if (h.h2 % 2 === 0) {
+      className = setClassName()
       h.count += 1
-      return className
-    },
-  ]
+    }
+    h.h2 += 1
+    return className
+  }
+
+  function setClasses({ color, side } = {}) {
+    const className = setClassName({ color, side })
+    h.count += 1
+    return className
+  }
+
+  return [setDefaultClasses, setClasses]
 }

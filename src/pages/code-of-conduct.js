@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import useHeadingDecorator from '../hooks/useHeadingDecorator'
+import { useHeadingDecorator } from '../hooks/useHeadingDecorator'
 
 const CodeOfConduct = () => {
   const [, getClassName] = useHeadingDecorator()

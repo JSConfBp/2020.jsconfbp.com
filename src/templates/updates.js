@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { MDXProvider } from '@mdx-js/react'
 
-import useHeadingDecorator from '../hooks/useHeadingDecorator'
+import { useHeadingDecorator } from '../hooks/useHeadingDecorator'
 import PostImage from '../components/PostImage'
 import Layout from '../components/Layout'
 import SocialMeta from '../components/SocialMeta/index'

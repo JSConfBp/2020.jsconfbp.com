@@ -1,0 +1,81 @@
+@import '../breakpoints.scss';
+@import '../colors.scss';
+@import '../fonts.scss';
+@import '../sizes.scss';
+
+.speakers {
+  z-index: 10;
+
+  position: relative;
+  width: 100%;
+  padding: 4rem 0;
+  margin-top: -3rem;
+  padding: 4rem 2rem 6rem;
+  //padding-bottom: 6rem; // until we don't have venue content on home
+
+  @media (max-width: 480px) {
+    margin-top: -7rem;
+    padding: 8rem 1.5rem 6rem;
+  }
+}
+
+.inner {
+  max-width: 60rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.list {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 6rem;
+
+
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: 1fr;
+
+  @media (max-width: 480px) {
+    grid-gap: 4rem;
+    margin-bottom: 6rem;
+  }
+
+  li {
+    width: 60%;
+    position: relative;
+
+    @media (max-width: 480px) {
+      width: 87vw;
+    }
+  }
+
+  li:nth-child(n) {
+    justify-self: start;
+  }
+
+  li:nth-child(2n+2) {
+    justify-self: end;
+  }
+}
+
+
+.deco_1 {
+
+  position: absolute;
+  width: 100%;
+  height: 0;
+  left: 0;
+  top: 30%;
+
+}
+
+
+.deco_2 {
+
+  position: absolute;
+  width: 100%;
+  height: 0;
+  left: 0;
+  top: 67%;
+
+}
