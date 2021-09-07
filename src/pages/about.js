@@ -2,7 +2,7 @@ import React from 'react'
 import classnames from 'classnames'
 import Layout from '../components/Layout'
 import Youtube from '../components/Youtube'
-import useHeadingDecorator from '../hooks/useHeadingDecorator'
+import { useHeadingDecorator } from '../hooks/useHeadingDecorator'
 
 import * as css from './about.module.scss'
 

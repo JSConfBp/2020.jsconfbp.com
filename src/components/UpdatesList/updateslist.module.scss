@@ -9,7 +9,7 @@
   position: relative;
   width: 100%;
   padding: 4rem 0;
-  margin-top: -3rem;
+  margin-top: 0rem;
   padding: 4rem 2rem 6rem;
   //padding-bottom: 6rem; // until we don't have venue content on home
 
@@ -25,17 +25,6 @@
     --offset: calc(calc(100vw - 108rem) * 0.35);
     transform: rotate(-13deg); //translateY(-60.1%) translateX(var(--offset));
     transform-origin: top left;
-  }
-
-  &::before { // until we don't have venue content on home
-    position: absolute;
-    z-index: 1;
-    content: '';
-    width: 43vw;
-    height: 13vw;
-    top: -13vw;
-    right: 0rem;
-    background: $color-lightestpurple;
   }
 
   @media (max-width: 1280px) {
