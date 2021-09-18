@@ -25,18 +25,20 @@ function SpeakerContentTemplate({ data: { mdx } }) {
     location,
     socialCard,
   } = mdx.frontmatter
+  
+  const slug = mdx.fields.slug.replace(/^\/(\d*_)/, '/')
 
   const variantHash =
     name.split('').reduce((i, letter) => i + letter.charCodeAt(0), 0) % 2
   const variant = variantHash > 0 ? 'purple' : 'orange'
 
   return (
-    <Layout title={title} pathName={`/updates${mdx.fields.slug}`}>
+    <Layout title={title} pathName={`/speakers${slug}`}>
       <SocialMeta
         title={title}
         description={`Presentation by ${name}`}
         image={socialCard || 'social-card.png'}
-        href={`/updates${mdx.fields.slug}`}
+        href={`/speakers${slug}`}
       />
 
       <article className={css.speaker_page}>
