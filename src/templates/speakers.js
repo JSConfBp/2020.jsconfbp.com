@@ -19,13 +19,14 @@ function SpeakerContentTemplate({ data: { mdx } }) {
     title,
     picture: { relativePath: picture },
     twitter,
+    twitter2,
     github,
     web,
     company,
     location,
     socialCard,
   } = mdx.frontmatter
-  
+
   const slug = mdx.fields.slug.replace(/^\/(\d*_)/, '/')
 
   const variantHash =
@@ -68,6 +69,13 @@ function SpeakerContentTemplate({ data: { mdx } }) {
               <li>
                 <a href={`https://twitter.com/${twitter}`}>
                   <TwitterIcon />@{twitter}
+                </a>
+              </li>
+            )}
+            {twitter2 && (
+              <li>
+                <a href={`https://twitter.com/${twitter2}`}>
+                  <TwitterIcon />@{twitter2}
                 </a>
               </li>
             )}
@@ -212,6 +220,7 @@ export const pageQuery = graphql`
           relativePath
         }
         twitter
+        twitter2
         github
         web
         company
