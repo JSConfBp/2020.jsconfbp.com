@@ -3,11 +3,9 @@ import * as css from './reach.module.scss'
 
 const Reach = () => (
   <>
-    <div className={css.reach}  id="Reach">
+    <div className={css.reach} id="Reach">
       <div className={css.block_inner}>
-        <h2 className={css.title}>
-          Reach
-        </h2>
+        <h2 className={css.title}>Reach</h2>
 
         <h3>100% relevance in the JavaScript community</h3>
 

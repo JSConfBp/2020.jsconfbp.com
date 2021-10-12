@@ -95,7 +95,9 @@ const Price = (props) => (
     {typeof props.value === 'string' ? (
       <>{props.value}</>
     ) : (
-      <a href={props.value.href} class={css.packages_button}>{props.value.text}</a>
+      <a href={props.value.href} class={css.packages_button}>
+        {props.value.text}
+      </a>
     )}
   </>
 )
@@ -148,11 +150,9 @@ const PackageTable = () => (
 
 const Packages = () => (
   <>
-    <div className={css.packages}  id="Packages">
+    <div className={css.packages} id="Packages">
       <div className={css.block_inner}>
-        <h2 className={css.title}>
-          Packages
-        </h2>
+        <h2 className={css.title}>Packages</h2>
 
         <h3>
           Help us make this event <br />a better experience for our attendees
@@ -161,7 +161,8 @@ const Packages = () => (
         <PackageTable />
 
         <p>
-          There's more! Using <a href="#Perks">perks</a>, you can <a href="#Customize">customize your package</a>!
+          There's more! Using <a href="#Perks">perks</a>, you can{' '}
+          <a href="#Customize">customize your package</a>!
         </p>
       </div>
     </div>

@@ -8,13 +8,17 @@ const NextYear = () => (
       <div className={css.block_inner}>
         <h2 className={css.title}>Coming up next</h2>
 
-        <h3>
-          2022 June 2-3
-        </h3>
+        <h3>2022 June 2-3</h3>
 
         <div className={css.conferences}>
           <div className={css.jsconf}>
-            <h5>JSConf<br />Budapest<br />2022</h5>
+            <h5>
+              JSConf
+              <br />
+              Budapest
+              <br />
+              2022
+            </h5>
             <ul>
               <li>Single track</li>
               <li>500+ attendees</li>
@@ -29,8 +33,10 @@ const NextYear = () => (
 
           <h4>Akvarium Klub Budapest</h4>
 
-          <p>Center of the city, 580 square meters of exhibition space, literally under a pool</p>
-
+          <p>
+            Center of the city, 580 square meters of exhibition space, literally
+            under a pool
+          </p>
         </div>
       </div>
     </div>

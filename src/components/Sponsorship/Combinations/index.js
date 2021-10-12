@@ -9,8 +9,8 @@ const Combinations = () => {
         <h4 className={css.info_title}>Create your package</h4>
 
         <p className={css.info_text}>
-          Combine any base package with perks, and <strong>create your very own
-          Sponsorship Package!</strong> <br />
+          Combine any base package with perks, and{' '}
+          <strong>create your very own Sponsorship Package!</strong> <br />
           For example:
         </p>
 

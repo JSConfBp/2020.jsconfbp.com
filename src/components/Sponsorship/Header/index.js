@@ -6,10 +6,10 @@ const Header = () => (
   <div className={css.sponsor_header}>
     <div className={css.block_inner}>
       <h1 className={css.title}>
-          <span className={css.jsconf} />
-          JSConf Budapest 2022
-          <br />
-          Sponsorship
+        <span className={css.jsconf} />
+        JSConf Budapest 2022
+        <br />
+        Sponsorship
       </h1>
 
       <nav className={css.nav}>
