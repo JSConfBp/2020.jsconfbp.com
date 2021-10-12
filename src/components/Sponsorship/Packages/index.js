@@ -95,7 +95,7 @@ const Price = (props) => (
     {typeof props.value === 'string' ? (
       <>{props.value}</>
     ) : (
-      <a href={props.value.href}>{props.value.text}</a>
+      <a href={props.value.href} class={css.packages_button}>{props.value.text}</a>
     )}
   </>
 )
@@ -148,9 +148,9 @@ const PackageTable = () => (
 
 const Packages = () => (
   <>
-    <div className={css.packages}>
+    <div className={css.packages}  id="Packages">
       <div className={css.block_inner}>
-        <h2 className={css.title} id="Packages">
+        <h2 className={css.title}>
           Packages
         </h2>
 
@@ -159,6 +159,10 @@ const Packages = () => (
         </h3>
 
         <PackageTable />
+
+        <p>
+          There's more! Using <a href="#Perks">perks</a>, you can <a href="#Customize">customize your package</a>!
+        </p>
       </div>
     </div>
   </>

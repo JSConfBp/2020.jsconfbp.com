@@ -4,13 +4,13 @@ import * as css from './combinations.module.scss'
 
 const Combinations = () => {
   return (
-    <div className={css.combinations}>
+    <div className={css.combinations} id="Customize">
       <div className={css.block_inner}>
         <h4 className={css.info_title}>Create your package</h4>
 
         <p className={css.info_text}>
-          Combine any base package with perks, and create your very own
-          Sponsorship Package! <br />
+          Combine any base package with perks, and <strong>create your very own
+          Sponsorship Package!</strong> <br />
           For example:
         </p>
 

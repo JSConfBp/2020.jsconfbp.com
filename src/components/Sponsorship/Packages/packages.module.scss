@@ -76,6 +76,26 @@
         }
     }
 
+    .packages_button {
+      background: $color-orange;
+      border-radius: 3px;
+      width: calc(100% + 10px);
+      transform: translateX(-5px);
+      height: 2rem;
+      display: inline-block;
+      line-height: 2rem;
+
+
+      font-size: 1rem;
+      color: $color-white;
+      text-decoration:none;
+
+      &:hover, &:active {
+        background: $color-purple;
+      }
+    }
+
+
     @mixin package_name {
         padding: .5rem 0;
         font-family: $base-font;
@@ -95,17 +115,10 @@
         color: $color-red;
         font-family: $base-font;
         font-size: 1.6rem;
-        font-weight: 200;
+        font-weight: 400;
         min-height: 4rem;
         line-height: 4rem;
 
-        a, a:visited {
-            color: $color-red;
-
-            &:hover, &:active {
-                text-decoration: none;
-            }
-        }
     }
 
     @mixin package_content {
@@ -164,6 +177,7 @@
         padding: {
             left: 4rem;
             right: 4rem;
+            bottom: 4rem;
         }
 
         display: grid;

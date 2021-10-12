@@ -14,7 +14,7 @@ const images = [
 const Image = ({ image, link, alt }) => (
   <a
     href={link}
-    style={{ '--aspectRatio': image.aspectRatio }}
+    style={{ '--aspectRatio': (image.width / image.height) }}
     className={css.gallery_item}
   >
     <GatsbyImage alt={alt} image={image} key={image} />

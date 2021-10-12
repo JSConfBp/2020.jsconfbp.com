@@ -96,9 +96,9 @@ const PerkList = () => (
 const Perks = () => (
   <>
     <MuiThemeProvider theme={theme}>
-      <div className={css.perks}>
+      <div className={css.perks} id="Perks">
         <div className={css.block_inner}>
-          <h2 className={css.title} id="Perks">
+          <h2 className={css.title}>
             Perks
           </h2>
 

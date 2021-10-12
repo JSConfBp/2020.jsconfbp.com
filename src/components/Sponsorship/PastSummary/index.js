@@ -7,7 +7,7 @@ const PastSummary = () => (
     <div className={css.past_summary}>
       <div className={css.block_inner}>
         <h2 className={css.title}>Our past years were awesome!</h2>
-        <h3>Here’s what happened so far in 4 years:</h3>
+        <h3>Here’s what happened so far in our past 4 events:</h3>
 
         <div className={css.big_summary}>
           <div className={css.col_speakers}>

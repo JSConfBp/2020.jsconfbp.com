@@ -5,14 +5,14 @@
 
 .title {
   font-size: 2rem;
-  line-height: calc(2rem * 1.45);
+  line-height: calc(2rem * 1.8);
 	text-align: center;
 	font-family: $heading-font;
-	padding-top: 8rem;
+
+  padding-top: 18rem;
 	font-weight: bold;
 
 	@media screen and (max-width: 48rem) {
-		padding-top: 14rem;
 	}
 }
 
@@ -21,8 +21,8 @@
 	@extend %block;
 	@extend %block_end;
 
+  padding-top: 0rem;
 	@media screen and (max-width: 48rem) {
-		padding-top: 0rem;
 	}
 }
 
@@ -63,14 +63,14 @@
 		}
 
 		padding: 0 1rem;
-		font-weight: 200;
+		font-weight: 400;
 
 		a, a:visited {
-            color: $color-purple;
-
-            &:hover, &:active {
-                text-decoration: none;
-            }
-        }
+      color: $color-purple;
+      font-size: 1.1rem;
+      &:hover, &:active {
+        text-decoration: none;
+      }
+    }
 	}
 }

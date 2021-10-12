@@ -6,16 +6,20 @@ const Header = () => (
   <div className={css.sponsor_header}>
     <div className={css.block_inner}>
       <h1 className={css.title}>
-        <Link to={'/'}>
           <span className={css.jsconf} />
           JSConf Budapest 2022
           <br />
           Sponsorship
-        </Link>
       </h1>
 
       <nav className={css.nav}>
         <ul className={css.nav_list}>
+          <li className={css.nav_item}>
+            <a href="#Attendees">Attendees</a>
+          </li>
+          <li className={css.nav_item}>
+            <a href="#Reach">Reach</a>
+          </li>
           <li className={css.nav_item}>
             <a href="#Packages">Packages</a>
           </li>
@@ -26,7 +30,7 @@ const Header = () => (
             <a href="#Workshops">Workshops</a>
           </li>
           <li className={css.nav_item}>
-            <a href="#Reach">Our Reach</a>
+            <a href="#Scholarships">Scholarship support</a>
           </li>
         </ul>
       </nav>

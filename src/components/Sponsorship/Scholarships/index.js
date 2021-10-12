@@ -3,7 +3,7 @@ import * as css from './scholarships.module.scss'
 
 const Scholarships = () => (
   <>
-    <div className={css.scholarship}>
+    <div className={css.scholarship} id="Scholarships">
       <div className={css.block_inner}>
         <h4 className={css.scholarship_title}>10 % to Scholarships</h4>
 

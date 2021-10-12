@@ -4,7 +4,7 @@ import * as styles from './attendees.module.scss'
 
 const PastSummary = () => (
   <>
-    <div className={styles.attendees}>
+    <div className={styles.attendees} id="Attendees">
       <div className={styles.block_inner}>
         <h3>Our attendees</h3>
 
