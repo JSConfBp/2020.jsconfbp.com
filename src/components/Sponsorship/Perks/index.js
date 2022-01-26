@@ -24,6 +24,12 @@ const customStyles = {
 
 const perk_list = [
   {
+    name: 'captioning',
+    label: 'Live captioning',
+    info: 'Live captioning for all talks to significantly imnprove accessibility for our attendees',
+    price: '€5,000',
+  },
+  {
     name: 'coffee',
     label: 'Specialty Coffee',
     info: 'High quality coffee by Espresso Embassy Budapest, branded with your company',
