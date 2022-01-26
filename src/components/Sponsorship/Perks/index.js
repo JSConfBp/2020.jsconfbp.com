@@ -26,7 +26,7 @@ const perk_list = [
   {
     name: 'captioning',
     label: 'Live captioning',
-    info: 'Live captioning for all talks to significantly imnprove accessibility for our attendees',
+    info: 'Live captioning for all talks to significantly improve accessibility for our attendees',
     price: '€5,000',
   },
   {
