@@ -12,6 +12,13 @@ const Header = () => (
         Sponsorship
       </h1>
 
+      <p className={css.intro}>
+        Our common goal with every Sponsor is to make the experience even better
+        for Attendees at the conference. We believe that Sponsor booths and
+        activities could be part of the whole event, the hallway track, and even
+        afterparties.
+      </p>
+
       <nav className={css.nav}>
         <ul className={css.nav_list}>
           <li className={css.nav_item}>

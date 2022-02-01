@@ -6,8 +6,8 @@
   @extend %block;
   @extend %block_end;
 
-  @media screen and (max-width: 767px) {
-      padding-bottom: 0rem;
+  @media screen and (max-width: 48rem) {
+    padding-bottom: 3rem;
   }
 
   background-color: $gray-200;
