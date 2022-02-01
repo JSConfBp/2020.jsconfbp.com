@@ -12,13 +12,7 @@ const NextYear = () => (
 
         <div className={css.conferences}>
           <div className={css.jsconf}>
-            <h5>
-              JSConf
-              <br />
-              Budapest
-              <br />
-              2022
-            </h5>
+            <h5>JSConf Budapest 2022</h5>
             <ul>
               <li>Single track</li>
               <li>500+ attendees</li>
