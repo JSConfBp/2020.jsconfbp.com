@@ -39,7 +39,9 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors
     }
 
-    result.data.allMdx.edges.forEach(({ node }) => {
+    result.data.allMdx.edges
+    .filter(({ node }) => node.parent.sourceInstanceName !== 'mc')
+    .forEach(({ node }) => {
       const { sourceInstanceName } = node.parent
       const slug = node.fields.slug.replace(/^\/(\d*_)/, '/')
 

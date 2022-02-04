@@ -4,8 +4,8 @@ import PersonImage from '../PersonImage'
 
 const SpeakerImage = ({ src, ...props }) => {
   const data = useStaticQuery(graphql`
-    query speakerImageQuery {
-      source: allFile(filter: { sourceInstanceName: { eq: "speakerimages" } }) {
+    query mcImageQuery {
+      source: allFile(filter: { sourceInstanceName: { eq: "mcimages" } }) {
         edges {
           node {
             extension

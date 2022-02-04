@@ -45,6 +45,24 @@ module.exports = {
       }
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "mc",
+        path: `${__dirname}/mc`,
+        ignore: [
+          `**/*.jpg`,
+          `**/*.svg`,
+          `**/*.gif`,
+          `**/*.jpeg`,
+          `**/*.webp`,
+          `**/*.png`,
+          `**/*.js`,
+          `**/*.mp4`,
+          `**/*.m4v`,
+        ],
+      }
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'postimages',
@@ -62,6 +80,19 @@ module.exports = {
       options: {
         name: 'speakerimages',
         path: `${__dirname}/speakers`,
+        ignore: [
+          `**/*.mdx`,
+          `**/*.js`,
+          `**/*.mp4`,
+          `**/*.m4v`,
+        ],
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'mcimages',
+        path: `${__dirname}/mc`,
         ignore: [
           `**/*.mdx`,
           `**/*.js`,

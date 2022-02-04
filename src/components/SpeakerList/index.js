@@ -4,6 +4,8 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { SpeakerListItem } from '../SpeakerListItem'
 import * as css from './speakerlist.module.scss'
 import { useHeadingDecorator } from '../../hooks/useHeadingDecorator'
+import SpeakerImage from '../SpeakerImage'
+import McImage from '../McImage'
 
 export const SpeakerList = () => {
   const data = useStaticQuery(graphql`
@@ -21,6 +23,7 @@ export const SpeakerList = () => {
             frontmatter {
               name
               title
+              twitter
               picture {
                 relativePath
               }
@@ -88,8 +91,32 @@ export const SpeakerList = () => {
                     name={node.frontmatter.name}
                     title={node.frontmatter.title}
                     url={url}
-                    picture={node.frontmatter?.picture?.relativePath}
-                  />
+                  >
+                    <SpeakerImage
+                      src={node.frontmatter?.picture?.relativePath}
+                    />
+                  </SpeakerListItem>
+                </li>
+              )
+            })}
+
+          {data.allMdx.edges
+            .filter(({ node }) => node.parent.sourceInstanceName === 'mc')
+            .map(({ node }, i) => {
+              return (
+                <li
+                  key={node.id}
+                  className={classnames(css['center'], css['mc'])}
+                >
+                  <SpeakerListItem
+                    index={i + 1}
+                    isCenter={true}
+                    name={node.frontmatter.title}
+                    title={node.frontmatter.name}
+                    url={`https://twitter.com/${node.frontmatter.twitter}`}
+                  >
+                    <McImage src={node.frontmatter?.picture?.relativePath} />
+                  </SpeakerListItem>
                 </li>
               )
             })}

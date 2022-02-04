@@ -13,8 +13,6 @@
   .abstract_bio p:last-child {
     font-weight: 600;
   }
-
-
 }
 
 .speaker_page {
@@ -34,6 +32,19 @@
 
   h1 {
     grid-area: title;
+  }
+
+  .image {
+    width: 16rem;
+    height: 16rem;
+    transform: translateX(-2rem);
+
+    @media (max-width: 480px) {
+      transform: none;
+      width: 74vw;
+      padding-top: 74vw;
+    }
+
   }
 
   .details {

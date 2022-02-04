@@ -2,18 +2,10 @@
 @import '../fonts.scss';
 
 .speaker_image {
-
-  width: 16rem;
-  height: 16rem;
   position: relative;
-  transform: translateX(-2rem);
-
 
   @media (max-width: 480px) {
-    transform: none;
-    width: 74vw;
     height: 0;
-    padding-top: 74vw;
   }
 
   margin-top: 3rem;
@@ -24,6 +16,12 @@
   }
   &.purple {
     background-color: $color-lightpurple;
+  }
+
+  &.center {
+    transform: rotate(13deg);
+    transform-origin: center center;
+    justify-self: center;
   }
 
   @media (max-width: 480px) {
@@ -44,7 +42,6 @@
     }
 
     &.up {
-      //
       transform: rotate(-13deg);
       transform-origin: top left;
 
@@ -64,9 +61,14 @@
       }
     }
 
-   // }
+    &.center {
+      transform: rotate(-26deg);
+      transform-origin: center;
 
-
+      .image_data {
+        transform: scale(1.2) rotate(13deg);
+        transform-origin: center;
+      }
+    }
   }
-
 }
