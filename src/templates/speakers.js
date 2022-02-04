@@ -56,7 +56,12 @@ function SpeakerContentTemplate({ data: { mdx } }) {
           </MDXProvider>
         </section>
         <div className={css.details}>
-          <SpeakerImage src={picture} color={variant} turn={'up'} />
+          <SpeakerImage
+            src={picture}
+            color={variant}
+            turn={'up'}
+            className={css.image}
+          />
 
           <ul className={classnames(css.metadata, 'unstyled')}>
             {location && (
