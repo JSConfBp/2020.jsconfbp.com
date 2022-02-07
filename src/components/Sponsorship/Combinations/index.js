@@ -32,7 +32,9 @@ const Combinations = () => {
 
           <div className={css.result}>
             <p>
-              This equals a <strong>Platinum package</strong> with Live Captioning for all the talks on stage, and Specialty Coffee branded for your company!
+              This equals a <strong>Platinum package</strong> with Live
+              Captioning for all the talks on stage, and Specialty Coffee
+              branded for your company!
             </p>
           </div>
         </div>
@@ -44,8 +46,8 @@ const Combinations = () => {
         </p>
         <p className={css.info_text}>
           For example a Gold level contribution and a{' '}
-          <a href="#perks">Live Captioning & Specialty Coffee perk</a> together can
-          raise your contribution over the Platinum package level, <br />
+          <a href="#perks">Live Captioning & Specialty Coffee perk</a> together
+          can raise your contribution over the Platinum package level, <br />
           so you'll receive the <strong>Platinum</strong> package itself!
         </p>
       </div>
