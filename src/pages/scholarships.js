@@ -28,11 +28,11 @@ const Scholarship = () => {
       image="scholarship_page.jpg"
     >
       <h1 className={getClassName({ color: 'lightpurple', side: 'left' })}>
-        Scholarships for JSConf Budapest 2020
+        Scholarships for JSConf Budapest 2022
       </h1>
 
       <p>
-        2020 will be the 5th time when we're running our Scholarship Program! As
+        2022 will be the 5th time when we're running our Scholarship Program! As
         every year so far, we'll provide several free, Scholarship tickets to
         help underrepresented groups in tech to attend the conference.
       </p>
