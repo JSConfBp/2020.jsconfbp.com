@@ -1,16 +1,23 @@
 import React from 'react'
 import Layout from '../components/Layout'
 
-const Impressum = () => (
+const Covid = () => (
   <Layout
-    title="Hungarian COVID-19 travel rules and crossing the border"
+    title="Hungarian COVID-19 travel guidelines and crossing the border"
     pathName="/covid"
-  >
-    <h1>Hungarian COVID-19 travel rules and crossing the border</h1>
+    image="covid-guidelines.png"
+    >
+    <h1>Hungarian COVID-19 travel guidelines and crossing the border</h1>
+    <p>
+      Last updated at: <strong>February 26, 2022.</strong>
+    </p>
+    <p>
+      <em>Please note that these guidelines are subject to constant change. We do our best to
+      update this page as quickly as possible as new measures take effect.</em>
+    </p>
     <h2 id="important-information-before-you-proceed">
       Important information before you proceed
     </h2>
-
     <p>
       Please take note that from May 1 on, according to Hungarian law,{' '}
       <strong>
@@ -377,4 +384,4 @@ const Impressum = () => (
   </Layout>
 )
 
-export default Impressum
+export default Covid
