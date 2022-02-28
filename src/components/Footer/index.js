@@ -14,7 +14,7 @@ const Footer = ({ className = '' }) => (
             <Link to={'/about'}>About Us</Link>
           </li>
           <li>
-            <Link to={'/covid'}>COVID-19 Rules</Link>
+            <Link to={'/covid'}>COVID-19 Guidelines</Link>
           </li>
           <li>
             <Link to={'/code-of-conduct'}>Code of Conduct</Link>
