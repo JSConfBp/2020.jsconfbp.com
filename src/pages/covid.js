@@ -6,14 +6,17 @@ const Covid = () => (
     title="Hungarian COVID-19 travel guidelines and crossing the border"
     pathName="/covid"
     image="covid-guidelines.png"
-    >
+  >
     <h1>Hungarian COVID-19 travel guidelines and crossing the border</h1>
     <p>
       Last updated at: <strong>February 26, 2022.</strong>
     </p>
     <p>
-      <em>Please note that these guidelines are subject to constant change. We do our best to
-      update this page as quickly as possible as new measures take effect.</em>
+      <em>
+        Please note that these guidelines are subject to constant change. We do
+        our best to update this page as quickly as possible as new measures take
+        effect.
+      </em>
     </p>
     <h2 id="important-information-before-you-proceed">
       Important information before you proceed
@@ -383,6 +386,5 @@ const Covid = () => (
     </p>
   </Layout>
 )
-
 
 export default Covid

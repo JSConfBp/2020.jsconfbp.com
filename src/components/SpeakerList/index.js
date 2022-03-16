@@ -7,7 +7,7 @@ import { useHeadingDecorator } from '../../hooks/useHeadingDecorator'
 import SpeakerImage from '../SpeakerImage'
 import McImage from '../McImage'
 
-export const SpeakerList = () => {
+const SpeakerList = () => {
   const data = useStaticQuery(graphql`
     query IndexSpeakers {
       allMdx {
@@ -125,3 +125,5 @@ export const SpeakerList = () => {
     </section>
   )
 }
+
+export default SpeakerList
