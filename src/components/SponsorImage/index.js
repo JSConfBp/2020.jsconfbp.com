@@ -2,10 +2,6 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
-const SponsorSVG = ({ path }) => {
-  return <div>{path}</div>
-}
-
 const SponsorImage = ({ image, alt, href, className = '' }) => (
   <StaticQuery
     query={graphql`
@@ -18,7 +14,11 @@ const SponsorImage = ({ image, alt, href, className = '' }) => (
               extension
               relativePath
               childImageSharp {
-                gatsbyImageData(width: 800, layout: CONSTRAINED, placeholder: BLURRED)
+                gatsbyImageData(
+                  width: 800
+                  layout: CONSTRAINED
+                  placeholder: BLURRED
+                )
               }
             }
           }
