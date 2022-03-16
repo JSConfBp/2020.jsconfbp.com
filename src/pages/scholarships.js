@@ -60,9 +60,7 @@ const Scholarship = () => {
         receive a Scholarship.
       </p>
 
-      <p>
-        The application period is closed on April 24th, Sunday midnight.
-      </p>
+      <p>The application period is closed on April 24th, Sunday midnight.</p>
 
       <ApplyButton />
 

@@ -2,7 +2,11 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
-const SponsorImage = ({ image, alt, className = '' }) => (
+const SponsorSVG = ({ path }) => {
+  return <div>{path}</div>
+}
+
+const SponsorImage = ({ image, alt, href, className = '' }) => (
   <StaticQuery
     query={graphql`
       query sponsorImgQuery {
@@ -11,34 +15,41 @@ const SponsorImage = ({ image, alt, className = '' }) => (
         ) {
           edges {
             node {
+              extension
+              relativePath
               childImageSharp {
-                gatsbyImageData(width: 800, layout: CONSTRAINED)
+                gatsbyImageData(width: 800, layout: CONSTRAINED, placeholder: BLURRED)
               }
             }
           }
         }
       }
     `}
-    render={(data) => {
-      return data.source.edges
+    render={(data) =>
+      data.source.edges
         .filter(({ node }) => {
           const {
             images: {
               fallback: { src },
             },
           } = node.childImageSharp.gatsbyImageData
-
           return src.includes(image)
         })
-        .map(({ node }, i) => (
-          <GatsbyImage
-            alt={alt}
-            image={node.childImageSharp.gatsbyImageData}
-            className={className}
-            key={image}
-          />
-        ))
-    }}
+        .map(({ node }, i) => {
+          return (
+            <a href={href}>
+              <GatsbyImage
+                as="span"
+                alt={alt}
+                image={node.childImageSharp.gatsbyImageData}
+                className={className}
+                key={image}
+                placeholder="blurred"
+              />
+            </a>
+          )
+        })
+    }
   />
 )
 export default SponsorImage

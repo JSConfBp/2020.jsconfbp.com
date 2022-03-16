@@ -1,0 +1,142 @@
+@import '../breakpoints.scss';
+@import '../colors.scss';
+@import '../fonts.scss';
+@import '../sizes.scss';
+
+.sponsors {
+  z-index: 10;
+
+  position: relative;
+  width: 100%;
+  padding: 4rem 0;
+  margin-top: -3rem;
+  padding: 4rem 2rem 6rem;
+  //padding-bottom: 6rem; // until we don't have venue content on home
+
+  @media (max-width: 480px) {
+    margin-top: -7rem;
+    padding: 8rem 1.5rem 12rem;
+  }
+
+
+  &::after {
+    position: absolute;
+    z-index: 2;
+    content: '';
+    width: 26rem;
+    height: 80rem;
+    top: 0;
+    right: 0;
+    background: $color-purple;
+    transform-origin: top left;
+
+
+    --offset-y: 10%;
+    @media (max-width: 480px) {
+      --offset-x: calc( -33vw + 110%);
+      --offset-y: 16%;
+    }
+    @media (min-width: 30rem) {
+      --offset-x: calc( -33vw + 120%);
+    }
+    @media (min-width: 40rem) {
+      --offset-x: calc( -29vw + 133%);
+    }
+    @media (min-width: 70rem) {
+      --offset-x: calc( -24vw + 146%);
+    }
+    @media (min-width: 100rem) {
+      --offset-x: calc( -27vw + 195%);
+    }
+    @media (min-width: 140rem) {
+      --offset-x: calc( -33vw + 240%);
+    }
+
+    transform: rotate(-13deg) translateY(var(--offset-y)) translateX(var(--offset-x));
+  }
+
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 40rem;
+    height: 90vw;
+    top: 0rem;
+    background: $color-orange;
+    left: 0;
+
+    --offset-y: -94%;
+
+    @media (max-width: 480px) {
+      --offset-x: calc( 33vw - 110%);
+      --offset-y: -76%;
+    }
+
+    @media (min-width: 30rem) {
+      --offset-x: calc( 33vw - 110%);
+    }
+    @media (min-width: 100rem) {
+      --offset-x: calc( 33vw - 126%);
+    }
+    @media (min-width: 140rem) {
+      --offset-x: calc( 33vw - 140%);
+    }
+
+    transform: rotate(-13deg) translateY(var(--offset-y)) translateX(var(--offset-x));
+  }
+}
+
+.inner {
+  max-width: 60rem;
+  margin: 0 auto;
+  position: relative;
+
+  h2 {
+    text-align: center;
+    color: $color-orange;
+  }
+}
+
+.sponsor_list {
+  list-style-type: none;
+  margin: 6rem 0 0;
+  padding: 0 8vw 0;
+
+  li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+  }
+}
+
+.platinum {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 4rem;
+  li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+.gold {
+  display: grid;
+  grid-gap: 4rem;
+  grid-template-columns: 1fr 1fr;
+
+  @media (max-width: 40rem) {
+    grid-template-columns: .7fr;
+    justify-content: center;
+    grid-gap: 2rem;
+  }
+
+  li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
