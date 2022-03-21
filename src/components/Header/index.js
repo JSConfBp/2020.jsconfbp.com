@@ -108,7 +108,7 @@ const Header = ({ pathName }) => {
               <Link to={'/scholarships'}>Scholarships</Link>
             </li>
             <li>
-              <Link to={'/#Updates'}>Updates</Link>
+              <Link to={'/workshops'}>Workshops</Link>
             </li>
             <li>
               <Link to={'/sponsorship'}>Sponsorship</Link>
