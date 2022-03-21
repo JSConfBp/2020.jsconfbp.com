@@ -17,14 +17,14 @@
   grid-column-gap: 4rem;
 	min-height: 0;
 
-    @media screen and (max-width: $breakpoint-lg) {
-			grid-gap: 0rem;
-			grid-template-columns: 1fr;
-			grid-template-areas:
-				"title"
-				"meta"
-				"content";
-    }
+  @media screen and (max-width: $breakpoint-lg) {
+    grid-gap: 0rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "meta"
+      "content";
+  }
 
 	.main_content {
 		grid-area: content;
@@ -37,6 +37,21 @@
 	.workshop_meta {
 		grid-area: meta;
 
+    @media screen and (max-width: 480px) {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "links"
+        "logo";
+    }
+
+    .company_logo {
+      grid-area: logo;
+      @media screen and (max-width: 480px) {
+        margin-bottom: 3rem;
+			}
+    }
+
 		.subtitle {
 			font-family: $primary-font;
 			color: $color-black;
@@ -45,23 +60,26 @@
 		}
 
 		.links {
+      grid-area: links;
 			margin: 0;
 			margin-bottom: $size-xxl;
+      margin-top:  $size-xxl;
 
-			@media screen and (max-width: $breakpoint-lg) {
+			@media screen and (max-width: 480px) {
+        margin-top: 0;
+			}
 
-			}
-			@media  screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
-				margin-left: 2rem
-			}
 			li {
 				list-style-type: none;
 				margin: 0;
-				margin-bottom: .5rem;
+				margin-bottom: 1rem;
 				position: relative;
 
         &.register {
           padding-bottom: 3rem;
+          @media screen and (max-width: 480px) {
+            padding-bottom: 0rem;
+          }
         }
 
         .register_button {
@@ -75,7 +93,6 @@
 		.mentor_list li {
 			list-style-type: none;
 			margin-left: 1rem;
-
 		}
 
 		.ticket_button {
