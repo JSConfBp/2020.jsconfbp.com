@@ -63,6 +63,24 @@ module.exports = {
       }
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "workshops",
+        path: `${__dirname}/workshops`,
+        ignore: [
+          `**/*.jpg`,
+          `**/*.svg`,
+          `**/*.gif`,
+          `**/*.jpeg`,
+          `**/*.webp`,
+          `**/*.png`,
+          `**/*.js`,
+          `**/*.mp4`,
+          `**/*.m4v`,
+        ],
+      }
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'postimages',
