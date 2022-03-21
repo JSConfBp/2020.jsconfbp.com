@@ -1,0 +1,94 @@
+@import '../components/mixins.scss';
+@import '../components/breakpoints.scss';
+@import '../components/colors.scss';
+@import '../components/fonts.scss';
+@import '../components/sizes.scss';
+
+.workshop_page {
+	display: grid;
+	grid-template-columns: 1.1fr 1.1fr .8fr;
+	grid-template-rows: auto;
+	grid-template-areas:
+	  "title title meta"
+	  "content content meta"
+	  "content content meta";
+
+	grid-row-gap: 3rem;
+  grid-column-gap: 4rem;
+	min-height: 0;
+
+    @media screen and (max-width: $breakpoint-lg) {
+			grid-gap: 0rem;
+			grid-template-columns: 1fr;
+			grid-template-areas:
+				"title"
+				"meta"
+				"content";
+    }
+
+	.main_content {
+		grid-area: content;
+	}
+
+	.workshop_title {
+		grid-area: title;
+	}
+
+	.workshop_meta {
+		grid-area: meta;
+
+		.subtitle {
+			font-family: $primary-font;
+			color: $color-black;
+			margin: 0;
+			margin-bottom: .5rem;
+		}
+
+		.links {
+			margin: 0;
+			margin-bottom: $size-xxl;
+
+			@media screen and (max-width: $breakpoint-lg) {
+
+			}
+			@media  screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+				margin-left: 2rem
+			}
+			li {
+				list-style-type: none;
+				margin: 0;
+				margin-bottom: .5rem;
+				position: relative;
+
+        &.register {
+          padding-bottom: 3rem;
+        }
+
+        .register_button {
+          margin: 0;
+          width: 100%;
+          text-align: center;
+        }
+			}
+		}
+
+		.mentor_list li {
+			list-style-type: none;
+			margin-left: 1rem;
+
+		}
+
+		.ticket_button {
+			margin: 0;
+		}
+	}
+
+	hr {
+		margin: 2rem 0;
+		height: 0px;
+		border: none;
+		border-bottom: 1px solid lighten($color-black, 80%);
+	}
+
+
+}

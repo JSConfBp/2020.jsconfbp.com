@@ -147,6 +147,16 @@
 				@include hover-purple();
 			}
     }
+    &__lightpurple {
+			border-color: $color-lightpurple;
+			color: $color-lightpurple;
+			@include hover-gray();
+
+			&:visited {
+				color: $color-rebeccapurple;
+				@include hover-purple();
+			}
+    }
 		&__sessionize {
 			border-color: $color-sessionize;
 			color: $color-sessionize;
@@ -174,6 +184,7 @@
 		background: $gray-400;
 		border-color: transparent;
 		cursor: default;
+    color: $color-white !important;
 
 		&:hover, &:focus {
 			background: $gray-400;
