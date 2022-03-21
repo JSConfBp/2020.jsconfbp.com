@@ -24,9 +24,21 @@
 	grid-template-rows: auto;
 	grid-template-areas:
 	  "title title title date"
-	  "description description . date"
+	  "description description . seats"
 	  "description description . register"
 	  "link link . register";
+
+
+  @media screen and (max-width: 480px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "title title"
+      "date seats"
+      "register register"
+      "description description"
+      "description description"
+      "link link";
+  }
 }
 
 
@@ -40,6 +52,10 @@
       text-decoration: underline;
     }
 	}
+
+  @media screen and (max-width: 480px) {
+    margin-bottom: 3rem;
+  }
 }
 
 .workshop_date {
@@ -48,6 +64,14 @@
 	flex-direction: column;
   position: relative;
   font-family: $heading-font;
+
+  @media screen and (max-width: 480px) {
+    margin-bottom: 1rem;
+
+    display: inline-block;
+    text-align: center;
+
+  }
 
   &::after {
     content: '';
@@ -59,6 +83,10 @@
     left: 50%;
     position: absolute;
     z-index: -1;
+
+    @media screen and (max-width: 480px) {
+      display: none;
+    }
   }
 
 	&_month {
@@ -67,6 +95,13 @@
 		text-transform: uppercase;
     font-weight: 700;
     color: $color-black;
+
+    @media screen and (max-width: 480px) {
+      text-align: left;
+      display: inline-block;
+      font-weight: bold;
+      font-size: 1.45rem;
+    }
 	}
 
 	&_day {
@@ -82,18 +117,60 @@
 			font-size: 1rem;
 			vertical-align: super;
 		}
+
+    @media screen and (max-width: 480px) {
+      text-align: left;
+      padding: 0;
+      text-indent: 0;
+      font-weight: bold;
+      font-size: 1.45rem;
+      transform: none;
+      padding-left: .3rem;
+      display: inline;
+    }
 	}
 
 	&_year {
 		font-size: 1rem;
 	}
 
-	&_time {
-		padding-top: .4rem;
-		font-size: 1.3rem;
-		text-align: center;
-	}
+  &_label {
+    display: none;
+
+    @media screen and (max-width: 480px) {
+      display: block;
+      text-transform: uppercase;
+      font-size: 1rem;
+    }
+  }
 }
+
+
+.seats {
+  grid-area: seats;
+
+	font-size: 1rem;
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 1.4rem;
+
+	&_count {
+		display: block;
+		font-weight: bold;
+    font-size: 1.45rem;
+
+    @media screen and (max-width: 480px) {
+      padding-top: 0.8rem;
+    }
+	}
+
+  @media screen and (max-width: 480px) {
+    padding-top: 0.17rem;
+    margin-bottom: 1rem;
+
+  }
+}
+
 
 .workshop_lead {
 	grid-area: description;
@@ -108,22 +185,17 @@
 	padding-top: $size-md;
 }
 
+.register_button {
+  width: 100%;
+  text-align: center;
+
+  @media screen and (max-width: 480px) {
+    margin-bottom: 1rem;
+  }
+}
+
 .workshop_link {
 	grid-area: link;
 	display: flex;
 	align-items: flex-end;
-}
-
-.seats {
-	padding-top: 2.4rem;
-	font-size: 1rem;
-	text-align: center;
-	text-transform: uppercase;
-	line-height: 1.4rem;
-
-	&_count {
-		display: block;
-		font-weight: bold;
-    font-size: 1.45rem;
-	}
 }

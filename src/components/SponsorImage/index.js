@@ -37,13 +37,11 @@ const SponsorImage = ({ image, alt, href, className = '' }) => (
         })
         .map(({ node }, i) => {
           return (
-            <a href={href}>
+            <a href={href} key={image ?? 'sponsor-image'} className={className}>
               <GatsbyImage
                 as="span"
                 alt={alt}
                 image={node.childImageSharp.gatsbyImageData}
-                className={className}
-                key={image}
                 placeholder="blurred"
               />
             </a>

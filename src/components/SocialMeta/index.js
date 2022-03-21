@@ -36,9 +36,14 @@ const SocialMeta = ({
   return (
     <Helmet
       meta={[
+        {
+          name: 'description',
+          content: description ?? siteDescription,
+        },
+
         { property: 'og:type', content: 'website' },
-        { property: 'og:title', content: title || siteTitle },
-        { property: 'og:description', content: description || siteDescription },
+        { property: 'og:title', content: title ?? siteTitle },
+        { property: 'og:description', content: description ?? siteDescription },
         { property: 'og:site_name', content: siteTitle },
         { property: 'og:url', content: canonical },
         { property: 'og:image', content: `${siteUrl}/social/${image}` },
@@ -46,10 +51,10 @@ const SocialMeta = ({
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:site', content: siteTitle },
         { name: 'twitter:creator', content: twitter },
-        { name: 'twitter:title', content: title || siteTitle },
+        { name: 'twitter:title', content: title ?? siteTitle },
         {
           name: 'twitter:description',
-          content: description || siteDescription,
+          content: description ?? siteDescription,
         },
         { name: 'twitter:url', content: canonical },
         { name: 'twitter:image', content: `${siteUrl}/social/${image}` },

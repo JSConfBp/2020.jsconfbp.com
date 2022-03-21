@@ -25,6 +25,7 @@ const RegisterButton = ({ id, disabled }) => (
     fill={!disabled}
     color={'orange'}
     disabled={disabled}
+    className={css.register_button}
     href={`https://workshop-registration.herokuapp.com/${id}`}
   >
     {disabled ? 'Opens Soon' : 'Register Now'}
@@ -92,21 +93,16 @@ const WorkshopList = () => {
             </h3>
 
             <span className={css.workshop_date}>
+              <span className={css.workshop_date_label}>Workshop date:</span>
               <span className={css.workshop_date_month}>June</span>
               <span className={css.workshop_date_day}>
                 1<sup>st</sup>
               </span>
-              {/*
-            <span className={styles.workshop_date_time}>
-              {node.frontmatter.start} - {node.frontmatter.end}
             </span>
-            */}
-
-              <span className={css.seats}>
-                Available Seats
-                <span className={css.seats_count}>
-                  {countSeats(node.frontmatter.workshop_id)}
-                </span>
+            <span className={css.seats}>
+              Available Seats:
+              <span className={css.seats_count}>
+                {countSeats(node.frontmatter.workshop_id)}
               </span>
             </span>
 

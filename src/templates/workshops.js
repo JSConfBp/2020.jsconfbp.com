@@ -8,6 +8,7 @@ import Layout from '../components/Layout/index'
 import SocialMeta from '../components/SocialMeta/index'
 import classNames from 'classnames'
 import Button from '../components/Button'
+import SponsorImage from '../components/SponsorImage'
 
 // import styles from '../pages/simpletext.module.scss'
 import * as css from './workshops.module.scss'
@@ -72,6 +73,7 @@ function SpeakersContentTemplate({ data: { mdx } }) {
     end,
     company,
     company_url,
+    company_logo,
     disabled,
     mentors,
   } = mdx.frontmatter
@@ -80,7 +82,7 @@ function SpeakersContentTemplate({ data: { mdx } }) {
     <Layout title={title} pathName={`/workshops/${mdx.fields.slug}`}>
       <SocialMeta
         title={title}
-        description={short_description}
+        description={`Free workshop: ${short_description}`}
         image={socialCard}
       />
       <div className={css.workshop_page}>
@@ -90,19 +92,50 @@ function SpeakersContentTemplate({ data: { mdx } }) {
           <MDXProvider components={shortcodes}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
           </MDXProvider>
+
           <hr />
+
+          <p>
+            <strong>
+              This workshop is FREE for every ticket holder of JSConf Budapest
+              2022.
+            </strong>
+          </p>
+          <p>
+            The workshops have limited seats, so be sure to{' '}
+            <a href="https://ti.to/jsconf-bp/jsconf-budapest-2022">
+              get your ticket
+            </a>{' '}
+            before they fill up! We'll open them slowly, so everyone has a
+            chance to pick a workshop they like.
+          </p>
+          <p>
+            You will be able to register to a workshop using the ID on your
+            ticket. If will be possible to switch the workshop you've picked
+            later, if there is a free seat available on another workshop.
+          </p>
         </div>
 
         <div className={css.workshop_meta}>
-          <h4 className={css.subtitle}>
-            Workshop{' '}
-            {company && (
-              <>
-                by <Link url={company_url} text={company} />
-              </>
-            )}
-          </h4>
+          {company && (
+            <SponsorImage
+              className={css.company_logo}
+              image={company_logo}
+              alt={`Workshop by ${company}`}
+              href={company_url}
+            />
+          )}
+
           <ul className={classNames('unstyled', css.links)}>
+            <li>
+              {' '}
+              Workshop{' '}
+              {company && (
+                <>
+                  by <Link url={company_url} text={company} />
+                </>
+              )}
+            </li>
             <li>Available seats: {countSeats(workshop_id)}</li>
             <li className={css.register}>
               <RegisterButton id={workshop_id} disabled={disabled} />
@@ -110,8 +143,8 @@ function SpeakersContentTemplate({ data: { mdx } }) {
             <li>
               Mentors:
               <ul className={css.mentor_list}>
-                {mentors.map((mentor) => (
-                  <li>
+                {mentors.map((mentor, i) => (
+                  <li key={`mentor-${i}`}>
                     {mentor.twitter ? (
                       <Link
                         url={`https://twitter.com/${mentor.twitter}`}
@@ -125,7 +158,8 @@ function SpeakersContentTemplate({ data: { mdx } }) {
               </ul>
             </li>
             <li>
-              June 1st, 2022 <br />
+              <strong>June 1st, 2022</strong>
+              <br />
               {start} - {end}
             </li>
             <li>
@@ -162,6 +196,8 @@ export const pageQuery = graphql`
         github
         company
         company_url
+        company_logo
+        short_description
         socialCard
         workshop_id
         location
