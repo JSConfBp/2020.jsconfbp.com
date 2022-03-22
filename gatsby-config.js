@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     siteUrl: 'https://jsconfbp.com',
     title: 'JSConf Budapest 2022',
-    description: 'JSConf Budapest 2022, June 2-3, Budapest, Hungary. Tickets from €205, including free workshops, inclusive catering and barista coffee!',
+    description: 'JSConf Budapest 2022, June 2-3, Budapest, Hungary. Tickets from €311, including free workshops, inclusive catering and barista coffee!',
     keywords: 'jsconf, javascript, jsconfbp, conference, budapest, jsconf budapest, diversity, inclusivity, community',
     twitter: '@jsconfbp'
   },
