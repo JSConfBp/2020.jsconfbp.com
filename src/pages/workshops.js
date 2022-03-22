@@ -9,7 +9,7 @@ const Workshops = () => {
     <Layout
       title="Workshops"
       pathName="/workshops"
-      image="social_card_workshops.jpg"
+      image="social_workshops.png"
     >
       <h1 className={getClassName({ color: 'purple', side: 'right' })}>
         Workshops
