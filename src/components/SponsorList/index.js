@@ -33,6 +33,20 @@ const SponsorList = () => {
               href="https://newrelic.com/"
             />
           </li>
+          <li>
+            <SponsorImage
+              image="stately.png"
+              alt="JSConf Budapest 2022 is sponsored by Stately"
+              href="https://stately.ai/"
+            />
+          </li>
+          <li>
+            <SponsorImage
+              image="exadel.png"
+              alt="JSConf Budapest 2022 is sponsored by Exadel"
+              href="https://exadel.com/"
+            />
+          </li>
         </ul>
       </div>
     </section>

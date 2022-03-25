@@ -14,8 +14,8 @@ const filterWorkshops = ({ node }) =>
 const sortWorkshops = (prev, next) => {
   const prevOrder = +prev.node.frontmatter.order
   const nextOrder = +next.node.frontmatter.order
-  if (prevOrder < nextOrder) return 1
-  if (prevOrder > nextOrder) return -1
+  if (prevOrder < nextOrder) return -1
+  if (prevOrder > nextOrder) return 1
   return 0
 }
 
