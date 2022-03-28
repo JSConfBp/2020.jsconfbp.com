@@ -48,6 +48,15 @@ const SponsorList = () => {
             />
           </li>
         </ul>
+        <ul className={classnames(css.sponsor_list, css.silver, 'unstyled')}>
+          <li>
+              <SponsorImage
+                image="Logo-ThisDot-Labs-sm.png"
+                alt="JSConf Budapest 2022 is sponsored by This Dot Labs"
+                href="https://www.thisdot.co/"
+              />
+          </li>
+        </ul>
       </div>
     </section>
   )
