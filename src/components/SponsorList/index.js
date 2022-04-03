@@ -53,7 +53,7 @@ const SponsorList = () => {
             <SponsorImage
               image="Logo-ThisDot-Labs-sm.png"
               alt="JSConf Budapest 2022 is sponsored by This Dot Labs"
-              href="https://www.thisdot.co/"
+              href="https://thisdot.co/jobs"
             />
           </li>
         </ul>
