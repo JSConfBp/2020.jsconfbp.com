@@ -54,6 +54,13 @@ const SponsorList = () => {
               href="https://hasura.com/"
             />
           </li>
+          <li>
+            <SponsorImage
+              image="supercharge.png"
+              alt="JSConf Budapest 2022 is sponsored by Supercharge"
+              href="https://supercharge.io/"
+            />
+          </li>
         </ul>
         <ul className={classnames(css.sponsor_list, css.silver, 'unstyled')}>
           <li>
