@@ -33,7 +33,7 @@ const RegisterButton = ({ id, disabled }) => (
     color={'orange'}
     disabled={disabled}
     className={css.register_button}
-    href={`https://workshop-registration.herokuapp.com/${id}`}
+    href={`https://workshop-registration.herokuapp.com/?selected=${id}`}
   >
     {disabled ? 'Opens Soon' : 'Register Now'}
   </Button>
@@ -138,7 +138,7 @@ function SpeakersContentTemplate({ data: { mdx } }) {
             </li>
             <li>Available seats: {countSeats(workshop_id)}</li>
             <li className={css.register}>
-              <RegisterButton id={workshop_id} disabled={disabled} />
+              <RegisterButton id={workshop_id} />
             </li>
             <li>
               Mentors:

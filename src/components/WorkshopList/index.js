@@ -26,7 +26,7 @@ const RegisterButton = ({ id, disabled }) => (
     color={'orange'}
     disabled={disabled}
     className={css.register_button}
-    href={`https://workshop-registration.herokuapp.com/${id}`}
+    href={`https://workshop-registration.herokuapp.com/?selected=${id}`}
   >
     {disabled ? 'Opens Soon' : 'Register Now'}
   </Button>
@@ -117,10 +117,7 @@ const WorkshopList = () => {
               Read more
             </Link>
             <div className={css.workshop_register}>
-              <RegisterButton
-                id={node.frontmatter.workshop_id}
-                disabled={node.frontmatter.disabled}
-              />
+              <RegisterButton id={node.frontmatter.workshop_id} />
             </div>
           </li>
         ))}
