@@ -70,6 +70,13 @@ const SponsorList = () => {
               href="https://thisdot.co/jobs"
             />
           </li>
+          <li>
+            <SponsorImage
+              image="twilio-logo.png"
+              alt="JSConf Budapest 2022 is sponsored by Twilio"
+              href="https://www.twilio.com/company/jobs"
+            />
+          </li>
         </ul>
       </div>
     </section>
