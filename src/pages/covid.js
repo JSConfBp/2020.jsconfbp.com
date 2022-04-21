@@ -11,30 +11,34 @@ const Covid = () => (
     <p>
       Last updated at: <strong>April 9, 2022.</strong>
     </p>
-    <p><em>
-      Our government is constantly monitoring the COVID-19 pandemic situation
-      and legislation around travel is constantly changing.{' '}
-      <strong>We will keep this page up-to-date</strong> as best we can do to
-      keep you informed on travel rules. This way you can always make sure you
-      have everything you need to know before you decide to buy your ticket for{' '}
-      <strong>JSConf Budapest 2022.</strong>
-    </em></p>
-
-    <h2>Currently, there are no restrictions on entering the country and entering the premises of JSConf Budapest 2022.</h2>
-
     <p>
-      This page has been updated accordingly. As per the latest regulations (in effect since March 7),
-      the same travel rules apply as before the pandemic.
+      <em>
+        Our government is constantly monitoring the COVID-19 pandemic situation
+        and legislation around travel is constantly changing.{' '}
+        <strong>We will keep this page up-to-date</strong> as best we can do to
+        keep you informed on travel rules. This way you can always make sure you
+        have everything you need to know before you decide to buy your ticket
+        for <strong>JSConf Budapest 2022.</strong>
+      </em>
     </p>
 
+    <h2>
+      Currently, there are no restrictions on entering the country and entering
+      the premises of JSConf Budapest 2022.
+    </h2>
+
     <p>
-      There are no special rules for entering JSConf Budapest 2022 either.
+      This page has been updated accordingly. As per the latest regulations (in
+      effect since March 7), the same travel rules apply as before the pandemic.
     </p>
+
+    <p>There are no special rules for entering JSConf Budapest 2022 either.</p>
 
     <p>
       There is a possibility that some EU countries apply stronger restrictions.
-      If you plan to travel to Hungary via a different EU country, you should make
-      sure you check the EU travel rules. We suggest getting an EU COVID-19 certificate.
+      If you plan to travel to Hungary via a different EU country, you should
+      make sure you check the EU travel rules. We suggest getting an EU COVID-19
+      certificate.
     </p>
     <p>
       <strong>
@@ -49,10 +53,12 @@ const Covid = () => (
     <p></p>
     <ul>
       <li>
-        <strong>Can I go to a concert in Budapest?</strong> Yes. No restrictions apply.
+        <strong>Can I go to a concert in Budapest?</strong> Yes. No restrictions
+        apply.
       </li>
       <li>
-        <strong>Can I go to a restaurant in Budapest?</strong> Yes. No restrictions apply.
+        <strong>Can I go to a restaurant in Budapest?</strong> Yes. No
+        restrictions apply.
       </li>
       <li>
         <strong>Can I go to a bar in Budapest?</strong> We&rsquo;d recommend
@@ -61,8 +67,9 @@ const Covid = () => (
       <li>
         <strong>
           Can I enter JSConf Budapest 2022 without being vaccinated?
-        </strong> According to Hungarian rules, yes, you can.{' '}
-        However, we strongly recommend getting a negative PCR test before doing so.
+        </strong>{' '}
+        According to Hungarian rules, yes, you can. However, we strongly
+        recommend getting a negative PCR test before doing so.
       </li>
     </ul>
     <h2 id="further-reading-official-sources">
