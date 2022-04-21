@@ -19,7 +19,6 @@ function SpeakerContentTemplate({ data: { mdx } }) {
     title,
     picture: { relativePath: picture },
     twitter,
-    twitter2,
     github,
     web,
     company,
@@ -74,13 +73,6 @@ function SpeakerContentTemplate({ data: { mdx } }) {
               <li>
                 <a href={`https://twitter.com/${twitter}`}>
                   <TwitterIcon />@{twitter}
-                </a>
-              </li>
-            )}
-            {twitter2 && (
-              <li>
-                <a href={`https://twitter.com/${twitter2}`}>
-                  <TwitterIcon />@{twitter2}
                 </a>
               </li>
             )}
@@ -225,7 +217,6 @@ export const pageQuery = graphql`
           relativePath
         }
         twitter
-        twitter2
         github
         web
         company
