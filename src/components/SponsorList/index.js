@@ -17,6 +17,13 @@ const SponsorList = () => {
               href="https://www.wrike.com/vn/"
             />
           </li>
+          <li>
+            <SponsorImage
+              image="genesys.png"
+              alt="JSConf Budapest 2022 is sponsored by Genesys"
+              href="https://www.genesys.com/company/careers"
+            />
+          </li>
         </ul>
         <ul className={classnames(css.sponsor_list, css.gold, 'unstyled')}>
           <li>
