@@ -35,6 +35,13 @@ const SponsorList = () => {
           </li>
           <li>
             <SponsorImage
+              image="abbyy.png"
+              alt="JSConf Budapest 2022 is sponsored by ABBYY"
+              href="https://www.abbyy.com/company/careers/open-positions/"
+            />
+          </li>
+          <li>
+            <SponsorImage
               image="new_relic_logo.png"
               alt="JSConf Budapest 2022 is sponsored by New Relic"
               href="https://newrelic.com/"
