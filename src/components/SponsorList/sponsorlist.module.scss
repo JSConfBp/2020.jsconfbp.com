@@ -138,6 +138,10 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+
+    &:last-child:nth-child(odd) {
+      transform: translateX(calc(50% + 2rem));
+    }
   }
 }
 
