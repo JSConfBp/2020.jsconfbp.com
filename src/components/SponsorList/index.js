@@ -49,6 +49,13 @@ const SponsorList = () => {
           </li>
           <li>
             <SponsorImage
+              image="auth0.png"
+              alt="JSConf Budapest 2022 is sponsored by Auth0"
+              href="https://a0.to/jsconfbp"
+            />
+          </li>
+          <li>
+            <SponsorImage
               image="new_relic_logo.png"
               alt="JSConf Budapest 2022 is sponsored by New Relic"
               href="https://newrelic.com/"
