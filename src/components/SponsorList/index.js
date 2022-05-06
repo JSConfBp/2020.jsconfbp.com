@@ -100,6 +100,13 @@ const SponsorList = () => {
           </li>
           <li>
             <SponsorImage
+              image="hotjar.png"
+              alt="JSConf Budapest 2022 is sponsored by Hotjar"
+              href="https://careers.hotjar.com/"
+            />
+          </li>
+          <li>
+            <SponsorImage
               image="this-dot.png"
               alt="JSConf Budapest 2022 is sponsored by This Dot Labs"
               href="https://thisdot.co/jobs"
