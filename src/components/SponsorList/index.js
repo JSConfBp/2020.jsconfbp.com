@@ -24,6 +24,14 @@ const SponsorList = () => {
               href="https://www.genesys.com/company/careers"
             />
           </li>
+
+          <li>
+            <SponsorImage
+              image="oracle.png"
+              alt="JSConf Budapest 2022 is sponsored by Oracle"
+              href="https://www.oracle.com/corporate/careers/"
+            />
+          </li>
         </ul>
         <ul className={classnames(css.sponsor_list, css.gold, 'unstyled')}>
           <li>
