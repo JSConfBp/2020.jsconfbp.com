@@ -63,7 +63,7 @@
       }
 
       @media (min-width: 1160px) and (max-width: 1680px) {
-        --offset: calc(32vw);
+        --offset: calc(37vw);
         height: 43vw;
       }
 
@@ -85,7 +85,7 @@
     &-left::before {
       // --offset: calc( calc(calc(100vw - 21rem) / -2));
 
-      --offset: calc(-45vw);
+      --offset: calc(-46vw);
 
       @media (min-width: 1080px) and (max-width: 1220px) {
         --offset: calc(-53vw);
