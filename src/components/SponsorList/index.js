@@ -99,7 +99,7 @@ const SponsorList = () => {
           </li>
         </ul>
         <ul className={classnames(css.sponsor_list, css.silver, 'unstyled')}>
-        <li>
+          <li>
             <SponsorImage
               image="talon-one.png"
               alt="JSConf Budapest 2022 is sponsored by Talon.one"
