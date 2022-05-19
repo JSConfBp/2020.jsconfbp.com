@@ -47,7 +47,7 @@
 
     display: grid;
     grid-template-columns: .2fr 1fr;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: auto auto;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 
