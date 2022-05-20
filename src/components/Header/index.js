@@ -72,8 +72,6 @@ const Header = ({ pathName }) => {
         </div>
 
         <div className={css.hero}>
-
-
           <div className={css.mask}>
             <div className={css.content}>
               <DecorVideo source={videoSource} autoPlay={autoPlay} />
