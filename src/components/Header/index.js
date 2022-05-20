@@ -72,15 +72,7 @@ const Header = ({ pathName }) => {
         </div>
 
         <div className={css.hero}>
-          <div className={css.cta}>
-            <a
-              href="https://ti.to/jsconf-bp/jsconf-budapest-2022"
-              className={css.button}
-            >
-              Buy Tickets
-              <small>Starting from €311</small>
-            </a>
-          </div>
+
 
           <div className={css.mask}>
             <div className={css.content}>
@@ -102,16 +94,13 @@ const Header = ({ pathName }) => {
               <Link to={'/#Speakers'}>Speakers</Link>
             </li>
             <li>
-              <a href="https://ti.to/jsconf-bp/jsconf-budapest-2022">Tickets</a>
+              <Link to={'/updates/schedule'}>Schedule</Link>
             </li>
             <li>
               <Link to={'/scholarships'}>Scholarships</Link>
             </li>
             <li>
               <Link to={'/workshops'}>Workshops</Link>
-            </li>
-            <li>
-              <Link to={'/sponsorship'}>Sponsorship</Link>
             </li>
             {/* <li><Link to={ "/" }>Scholarship</Link></li> */}
             <li>

@@ -35,17 +35,7 @@ const UpdatesList = (props) => {
         <h2 id="Updates">Updates</h2>
 
         <ul className={classnames('unstyled', css.list)}>
-          <li className={css.updates_list_item}>
-            <h3>
-              <Link to={`/covid`}>Latest updates on COVID-19</Link>
-            </h3>
-            <small className={css.date}>2022-02-24</small>
-            <p>
-              We created a page for keeping track of the travel rules with
-              regards to COVID-19
-            </p>
-            <Link to={`/covid`}>Read more</Link>
-          </li>
+
           {data.allMdx.edges
             .filter(({ node }) => node.parent.sourceInstanceName === 'updates')
             .filter(({ node }) => !node.frontmatter.skip)
@@ -78,6 +68,18 @@ const UpdatesList = (props) => {
                 </Link>
               </li>
             ))}
+
+            <li className={css.updates_list_item}>
+              <h3>
+                <Link to={`/covid`}>Latest updates on COVID-19</Link>
+              </h3>
+              <small className={css.date}>2022-02-24</small>
+              <p>
+                We created a page for keeping track of the travel rules with
+                regards to COVID-19
+              </p>
+              <Link to={`/covid`}>Read more</Link>
+            </li>
         </ul>
       </div>
     </section>
