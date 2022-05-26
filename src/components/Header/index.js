@@ -72,6 +72,13 @@ const Header = ({ pathName }) => {
         </div>
 
         <div className={css.hero}>
+          <div className={css.cta}>
+            <span className={css.button}>
+              Sold Out
+              <small>See you in 2023?</small>
+            </span>
+          </div>
+
           <div className={css.mask}>
             <div className={css.content}>
               <DecorVideo source={videoSource} autoPlay={autoPlay} />
