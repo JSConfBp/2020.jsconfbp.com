@@ -52,7 +52,7 @@ const SponsorList = () => {
             <SponsorImage
               image="epam.png"
               alt="JSConf Budapest 2022 is sponsored by EPAM"
-              href="https://careers.epam.hu/"
+              href="https://epam.com/"
             />
           </li>
           <li>
