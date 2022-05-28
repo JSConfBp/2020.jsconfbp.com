@@ -114,11 +114,17 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 4rem;
+  padding-bottom: 4rem;
+
   li {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+  }
+
+  li.oracle {
+    margin-top: 2rem;
   }
 }
 
@@ -141,6 +147,27 @@
 
     &:last-child:nth-child(odd) {
       transform: translateX(calc(50% + 2rem));
+    }
+  }
+
+  &.perks  {
+    display: grid;
+    grid-template-columns: .5fr;
+    grid-template-rows: auto;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    justify-items: center;
+
+    li {
+      transform: translateX(50%);
+
+      &:last-child:nth-child(odd) {
+        transform: translateX(50%);
+      }
+      h4 {
+        margin-top: 1rem;
+        text-align: center;
+      }
     }
   }
 }

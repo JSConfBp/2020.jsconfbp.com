@@ -24,13 +24,45 @@ const SponsorList = () => {
               href="https://www.genesys.com/company/careers"
             />
           </li>
-
-          <li>
+          <li className={css.oracle}>
             <SponsorImage
               image="oracle.png"
               alt="JSConf Budapest 2022 is sponsored by Oracle"
               href="https://www.oracle.com/corporate/careers/"
             />
+          </li>
+        </ul>
+        <ul
+          className={classnames(
+            css.sponsor_list,
+            css.gold,
+            css.perks,
+            'unstyled'
+          )}
+        >
+          <li>
+            <SponsorImage
+              image="abbyy.png"
+              alt="JSConf Budapest 2022 is sponsored by ABBYY"
+              href="https://www.abbyy.com/company/careers/open-positions/"
+            />
+            <h4>Closed Captioning & Scholarship sponsor</h4>
+          </li>
+          <li>
+            <SponsorImage
+              image="auth0.png"
+              alt="JSConf Budapest 2022 is sponsored by Auth0"
+              href="https://a0.to/jsconfbp"
+            />
+            <h4>Party sponsor</h4>
+          </li>
+          <li>
+            <SponsorImage
+              image="hasura.png"
+              alt="JSConf Budapest 2022 is sponsored by Hasura"
+              href="https://hasura.com/"
+            />
+            <h4>Sketchnotes sponsor</h4>
           </li>
         </ul>
         <ul className={classnames(css.sponsor_list, css.gold, 'unstyled')}>
@@ -41,13 +73,7 @@ const SponsorList = () => {
               href="https://xata.io/"
             />
           </li>
-          <li>
-            <SponsorImage
-              image="abbyy.png"
-              alt="JSConf Budapest 2022 is sponsored by ABBYY"
-              href="https://www.abbyy.com/company/careers/open-positions/"
-            />
-          </li>
+
           <li>
             <SponsorImage
               image="epam.png"
@@ -55,13 +81,7 @@ const SponsorList = () => {
               href="https://epam.com/"
             />
           </li>
-          <li>
-            <SponsorImage
-              image="auth0.png"
-              alt="JSConf Budapest 2022 is sponsored by Auth0"
-              href="https://a0.to/jsconfbp"
-            />
-          </li>
+
           <li>
             <SponsorImage
               image="new_relic_logo.png"
@@ -83,13 +103,7 @@ const SponsorList = () => {
               href="https://exadel.com/"
             />
           </li>
-          <li>
-            <SponsorImage
-              image="hasura.png"
-              alt="JSConf Budapest 2022 is sponsored by Hasura"
-              href="https://hasura.com/"
-            />
-          </li>
+
           <li>
             <SponsorImage
               image="supercharge.png"
@@ -98,6 +112,7 @@ const SponsorList = () => {
             />
           </li>
         </ul>
+
         <ul className={classnames(css.sponsor_list, css.silver, 'unstyled')}>
           <li>
             <SponsorImage
