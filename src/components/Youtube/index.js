@@ -7,11 +7,10 @@ const Youtube = ({ src, title = '', className = '' }) => (
     <iframe
       title={`Embed video ${title}`}
       src={`https://www.youtube.com/embed/${src}`}
-      frameborder="0"
       gesture="media"
       frameBorder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
     ></iframe>
   </div>
 )
