@@ -75,7 +75,7 @@ const Header = ({ pathName }) => {
           <div className={css.cta}>
             <span className={css.button}>
               Sold Out
-              <small>See you in 2023?</small>
+              <small>See you in 2024!</small>
             </span>
           </div>
 
