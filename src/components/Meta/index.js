@@ -32,6 +32,7 @@ const SiteMetadata = ({ title, description, pathName, image }) => {
         <html lang="en" />
 
         <link rel="canonical" href={canonical} />
+        <link rel="me" href="https://mstdn.social/@jsconfbp" />
         <meta name="description" content={description || siteDescription} />
         <meta name="docsearch:version" content="2.0" />
         <meta
